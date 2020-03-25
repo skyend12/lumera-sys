@@ -1,0 +1,13 @@
+body{
+	padding: 0px;
+}
+
+.horizontal-center{
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.vertical-center{
+	top: 50%;
+	transform: translateY(-50%);
+}

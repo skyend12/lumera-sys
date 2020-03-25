@@ -7,24 +7,33 @@
 	const dispatch = createEventDispatcher();
 
 	let container_margin = 0;
-	let sidebar_visible = true;
+	let sidebar_visible = 0;
 	let navbar_margin = 250;
 	let masterdatachild_visible = false;
 	
 	function toggleSidebar(){
-		if(sidebar_visible == true){
-			navbar_margin = 0;
-			container_margin = 0;
-			sidebar_visible = false;
+		if(sidebar_visible == 0){
+
+      navbar_margin    = 0;
+      container_margin = 0;
+      dispatch('message', {
+          text: container_margin
+      });
+      setTimeout(() => {
+        sidebar_visible  = -250;
+      },100);
 		}
 		else{
-			container_margin = 250;
-			navbar_margin = 250;
-			sidebar_visible = true;
+			sidebar_visible = 0;
+      setTimeout(() => {
+        container_margin = 250;
+        navbar_margin = 250;
+        dispatch('message', {
+          text: container_margin
+        });
+      },295);
 		}
-		dispatch('message', {
-			text: container_margin
-		});
+
 	}
 	
 
@@ -42,11 +51,14 @@
 
 <style>
 
+.sidebar-anim{
+  transition:all 0.6s ease-out;
+}
+
 </style>
 
 <!-- Main Sidebar Container -->
-{#if sidebar_visible}
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" transition:slide="{{ x: -200, duration: 300 }}" style="position: fixed; height: 100vh">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-anim" style="position: fixed;height: 100vh;transform: translateX({sidebar_visible}px);">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="../public/assets/img/logo.jpeg" alt="Lumere Logo" class="brand-image img-circle elevation-3"
@@ -233,10 +245,8 @@
     <!-- /.sidebar -->
 </aside>
 
-{/if}
-
 <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-dark" style="margin-left:{navbar_margin}px">
+  <nav class="main-header navbar navbar-expand navbar-dark" style="margin-left:{navbar_margin}px;transition:all 0.3s linear">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">

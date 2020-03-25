@@ -18,15 +18,14 @@
 
 </style>
 	
-	<Router>
-		<Sidebar on:message={handleMessage}/>
-  		<div class="content-wrapper" style="margin-left: {containerMarginVisibletoSidebar}px">
-  			{containerMarginVisibletoSidebar}
-  			<Route path="dashboard" component="{Dashboard}" />
-    		<Route path="pengguna" component="{Pengguna}" />
-    		<Route path="tambahpengguna" component="{TambahPengguna}" />
-    	</div>
-	</Router>
+<Router>
+	<Sidebar on:message={handleMessage}/>
+  	<div class="content-wrapper" style="margin-left: {containerMarginVisibletoSidebar}px">
+  		<Route path="dashboard" component="{Dashboard}" />
+    	<Route path="pengguna" component="{Pengguna}" />
+    	<Route path="tambahpengguna" component="{TambahPengguna}" />
+    </div>
+</Router>
 	
 
 
