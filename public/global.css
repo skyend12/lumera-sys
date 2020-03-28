@@ -23,3 +23,8 @@ body{
 .position-absolute{
 	position: absolute;
 }
+
+.important-form::after{
+	content: '*';
+	color: red;
+}
