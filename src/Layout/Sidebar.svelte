@@ -4,6 +4,83 @@
 	import { Router, Link, Route } from "svelte-routing";
 	import { createEventDispatcher } from 'svelte';
 
+  // inisialisasi navbar
+  // navbar dibuat dalam bentuk json untuk mempermudah pengelolaan
+  let opened_navbar_item_tree = null;
+  let navbar_item = [
+    {
+      nav_id    : 0,
+      nav_body  : "Dashboard",
+      nav_icon  : "fa fa-tachometer-alt",
+      nav_child : [],
+      nav_to    : "dashboard"
+    },
+    {
+      nav_id    : 1,
+      nav_body  : "Masterdata",
+      nav_icon  : "fa fa-database",
+      nav_show_child : false,
+      nav_child : [
+        {
+          nav_body : "Pengguna",
+          nav_icon : "fa fa-user",
+          nav_to   : "pengguna"
+        }
+      ]
+    },
+    {
+      nav_id    : 2,
+      nav_body  : "Pembelian",
+      nav_icon  : "fas fa-cart-plus",
+      nav_child : [
+        {
+          nav_body : "Produk Kecantikan",
+          nav_icon : "far fa-circle",
+          nav_to   : "produkkecantikan"
+        },
+        {
+          nav_body : "Jasa",
+          nav_icon : "far fa-circle",
+          nav_to   : "jasa"
+        },
+      ]
+    },
+    {
+      nav_id    : 3,
+      nav_body  : "Penjualan",
+      nav_icon  : "fas fa-fax",
+      nav_child : [
+        {
+          nav_body : "Produk Kecantikan",
+          nav_icon : "far fa-circle",
+          nav_to   : "produkkecantikan"
+        },
+        {
+          nav_body : "Jasa",
+          nav_icon : "far fa-circle",
+          nav_to   : "jasa"
+        },
+      ]
+    },
+    {
+      nav_id    : 4,
+      nav_body  : "Laporan",
+      nav_icon  : "fas fa-print",
+      nav_child : [
+        {
+          nav_body : "Produk Kecantikan",
+          nav_icon : "far fa-circle",
+          nav_to   : "produkkecantikan"
+        },
+        {
+          nav_body : "Jasa",
+          nav_icon : "far fa-circle",
+          nav_to   : "jasa"
+        },
+      ]
+    },
+  ]
+
 	const dispatch = createEventDispatcher();
 
 	let container_margin = 0;
@@ -11,6 +88,7 @@
 	let navbar_margin = 250;
 	let masterdatachild_visible = false;
 	
+  // toggle sidebar
 	function toggleSidebar(){
 		if(sidebar_visible == 0){
       navbar_margin    = 0;
@@ -36,16 +114,28 @@
 	}
 	
 
-	function toggleNav(parameter){
-		if(parameter=="masterdata"){
-			if(masterdatachild_visible==true){
-				masterdatachild_visible=false;
-			}
-			else{
-				masterdatachild_visible=true;
-			}
-		}
-	}
+	function toggleNav(parameter_arr_index){
+
+    if(navbar_item[parameter_arr_index].nav_child.length){
+      
+      if(navbar_item[parameter_arr_index].nav_show_child == true){
+        navbar_item[parameter_arr_index].nav_show_child = false;
+        opened_navbar_item_tree = null;
+      }
+      
+      else{
+        // untuk menutup navbar tree lain yang sedang terbuka
+        if(opened_navbar_item_tree != null){
+          navbar_item[opened_navbar_item_tree].nav_show_child = false;
+        }
+        // menyimpan navbar terakhir yang dibuka
+        navbar_item[parameter_arr_index].nav_show_child = true;
+        opened_navbar_item_tree = parameter_arr_index;
+      }
+    }
+     
+}
+
 </script>
 
 <style type="scss">
@@ -64,10 +154,20 @@
   }
 }
 
+.nav-argon-item{
+    position: relative; 
+    cursor: pointer;
+    transition: all 0.1s ease;
+    &:hover{
+      opacity: 0.6;
+    }
+}
+
 .user-panel{
   border-radius: 6px;
   background-color: #fff !important;
   color: #0d0d0d;
+
   .user-authorization-info{
     margin-left: 12px;
   }
@@ -80,15 +180,22 @@
     font-weight: bold;
     margin-top: -3px;
   }
+
+  .nav-icon{
+    color: blue;
+  }
+
+
 }
 
 </style>
 
 <!-- Main Sidebar Container -->
-  <aside class="main-sidebar bg-primary elevation-4 sidebar-anim" style="position: fixed;height: 100vh;transform: translateX({sidebar_visible}px);">
-    <div class="text-white" style="margin:7px;"> 
+<aside class="main-sidebar bg-primary elevation-4 sidebar-anim" style="position: fixed;height: 100vh;transform: translateX({sidebar_visible}px);overflow-y: auto;">
+  
+  <div class="text-white" style="margin:7px;"> 
 
-    <!-- Brand Logo -->
+    <!-- sidebar header -->
     <a href="#" class="brand-link">
       <div class="row w-100">
         <div class="col-4">
@@ -114,174 +221,53 @@
             <p class="user-authorization-status">Administrator</p>
           </div>
       </div>
-      <hr class="mt-3 mb-3" />
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
 
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="has-treeview menu-open">
-            <Link to = "dashboard">
-            <span class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-          </span>
-        	</Link>
-          </li>
-          <li class="nav-item has-treeview" on:click={()=>toggleNav("masterdata")}>
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-database"></i>
-              <p>
-                Master Data
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
+      <hr class="mt-3 mb-4" />
 
-            {#if masterdatachild_visible}
-
-            <ul class="nav" transition:slide="{{ y: 100, duration: 300 }}">
-              <li class="nav-item">
-              	<Link to = "pengguna">
-              		<span class="nav-link">
-                  		<i class="far fa-user nav-icon"></i>
-                  		<p>Pengguna</p>
-              		</span>
-              	</Link>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Produk</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Beautician</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Beautician</p>
-                </a>
-              </li>
-            </ul>
-
+      <!-- sidebar menu -->
+      <nav class="mt-3 container">
+        {#each navbar_item as nav_item}
+          <!-- solusi sementara -->
+          {#if nav_item.nav_child.length > 0}
+            <div class="nav-argon-item mt-2" on:click={()=>toggleNav(nav_item.nav_id)}>
+              <div class="row text-white position-relative">
+                <i class="nav-icon {nav_item.nav_icon} mt-1 col-1 mr-0"></i>
+                <p class="mt-0 col-10">{nav_item.nav_body}</p>
+                {#if nav_item.nav_child.length > 0}
+                  <i class="fa fa-chevron-left" style="position: absolute;right: 10px;top: 7px;font-size:13px;"></i>
+                {/if}
+              </div>
+            </div> 
+            {#if nav_item.nav_show_child == true}
+              <div transition:slide="{{ y: 100, duration: 300 }}">
+                {#each nav_item.nav_child as nav_child}
+                  <Link to="{nav_child.nav_to}">
+                    <div class="nav-argon-item row text-white position-relative ml-1" on:click={()=>toggleNav(nav_item.nav_id)}>
+                      <i class="nav-icon {nav_child.nav_icon} mt-1 col-1 mr-0"></i>
+                      <p class="mt-0 col-10">{nav_child.nav_body}</p>
+                    </div> 
+                  </Link>             
+                {/each}
+              </div>
             {/if}
+          {/if}
 
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cart-plus"></i>
-              <p>
-                Pembelian
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Produk Kecantikan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Jasa</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-fax"></i>
-              <p>
-                Penjualan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Produk Kecantikan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Jasa</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-print"></i>
-              <p>
-                Laporan
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/navbar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Navbar & Tabs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/timeline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Timeline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/ribbons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ribbons</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          {#if nav_item.nav_child.length == 0}
+            <Link to="{nav_item.nav_to}">
+              <div class="nav-argon-item mt-2">
+                <div class="row text-white position-relative">
+                  <i class="nav-icon {nav_item.nav_icon} mt-1 col-1 mr-0"></i>
+                  <p class="mt-0 col-10">{nav_item.nav_body}</p>
+                  {#if nav_item.nav_child.length > 0}
+                    <i class="fa fa-chevron-left" style="position: absolute;right: 10px;top: 7px;font-size:13px;"></i>
+                  {/if}
+                </div>
+              </div> 
+            </Link>
+          {/if}
+        {/each}
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </div>
 </aside>
 
