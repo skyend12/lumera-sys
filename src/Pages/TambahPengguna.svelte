@@ -2,8 +2,22 @@
 	import { Router, Link, Route } from "svelte-routing";
 </script>
 
+<style type="scss">
+  
+  .page-heading{
+    display: flex;
+    position: relative;
+
+    i{
+      font-size: 30px;
+    }
+  }
+
+
+</style>
+
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="container">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -22,24 +36,26 @@
       </div><!-- /.container-fluid -->
     </section>
 
-    <!-- Main content -->
+        <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <!-- left column -->
           <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
+            <div class="card card-primary card-outline">
               <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-user-plus"></i>Tambah Pengguna</h3>
+                <div class="page-heading">
+                  <i class="fa fa-user-plus mr-3 mt-6 mb-0"></i>
+                    <h5 class="mb-0">Tambah Pengguna</h5>
+                </div>
+              
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form role="form">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" class="form-control" id="name" placeholder="Masukkan Nama">
+                    <label for="namalengkap">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="namalengkap" placeholder="Masukkan Nama Lengkap">
                   </div>
                   <div class="form-group">
                     <label for="username">Username</label>
@@ -50,26 +66,32 @@
                     <input type="text" class="form-control" id="password" placeholder="Masukkan Password">
                   </div>
                   <div class="form-group">
-                        <label>Hak Akses</label>
+                      <label>Posisi</label>
                         <select class="form-control">
-                          <option>-PILIH-</option>
                           <option>Administrator</option>
                           <option>Kasir</option>
                         </select>
-                      </div>
-                  
+                  </div>
+                  <div class="form-group">
+                    <label for="status">Status</label>
+                    <div class="custom-control custom-radio mb-3">
+                      <input name="radioStatus" class="custom-control-input" id="radioAktif" checked="radioAktif" type="radio">
+                      <label class="custom-control-label" for="radioAktif">Aktif</label>
+                    </div>
+                    <div class="custom-control custom-radio mb-3">
+                      <input name="radioStatus" class="custom-control-input" id="radioTidakAktif" checked="" type="radio">
+                      <label class="custom-control-label" for="radioTidakAktif">Tidak Aktif</label>
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
               </form>
-  
-          
-              
-          </div>
-          <!--/.col (right) -->
+            </div>
+            <!-- /.card -->
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -77,10 +99,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 1.0
-    </div>
-    <strong>Copyright &copy; 2020 <a href="#">Lumera System</a>.</strong> All rights
-    reserved.
-  </footer>
+  
