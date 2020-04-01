@@ -2,8 +2,12 @@
 	//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 	import '../node_modules/argon-design-system-free/assets/css/argon.min.css';
 	import Sidebar from './layout/Sidebar.svelte';
-	import Pengguna from './Pages/Pengguna.svelte';
-	import TambahPengguna from './Pages/TambahPengguna.svelte';
+	import Staf from './Pages/Staf.svelte';
+	import TambahStaf from './Pages/TambahStaf.svelte';
+	import ProdukKecantikan from './Pages/Produkkecantikan.svelte';
+	import TambahProdukKecantikan from './Pages/TambahProdukkecantikan.svelte';
+	import Layanan from './Pages/Layanan.svelte';
+	import TambahLayanan from './Pages/TambahLayanan.svelte';
 	import Dashboard from './Pages/Dashboard.svelte';
 	import { Router, Link, Route } from "svelte-routing";
 
@@ -33,8 +37,12 @@
 
   	<div class="content-wrapper" style="margin-left: {containerMarginVisibletoSidebar}px">
   		<Route path="dashboard" component="{Dashboard}" />
-    	<Route path="pengguna" component="{Pengguna}" />
-    	<Route path="tambahpengguna" component="{TambahPengguna}" />
+    	<Route path="staf" component="{Staf}" />
+    	<Route path="tambahstaf" component="{TambahStaf}" />
+    	<Route path="produkkecantikan" component="{ProdukKecantikan}" />
+    	<Route path="tambahprodukkecantikan" component="{TambahProdukKecantikan}" />
+    	<Route path="layanan" component="{Layanan}" />
+    	<Route path="tambahlayanan" component="{TambahLayanan}" />
     </div>
     
     <!-- /.content-wrapper -->

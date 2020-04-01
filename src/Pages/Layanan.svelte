@@ -1,18 +1,18 @@
 <script>
 	import { Router, Link, Route } from "svelte-routing";
 
-  let user_data = [
+  let service_data = [
     {
       id : '1',
-      nama_lengkap : "Andrew Mike",
-      posisi       : "Administrator",
-      status       : "aktif"
+      nama_layanan : "Slimming",
+      harga        : "Rp. 300.000",
+      kategori     : "Clinic"
     },
     {
       id : '2',
-      nama_lengkap : "John Doe",
-      posisi       : "Administrator",
-      status       : "aktif"
+      nama_layanan : "Gunting + Cuci",
+      harga       : "Rp. 150.000",
+      kategori    : "Salon"
     }
   ];
 </script>
@@ -50,7 +50,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><Link to = "dashboard">Dashboard</Link></li>
-              <li class="breadcrumb-item active">Pengguna</li>
+              <li class="breadcrumb-item active">Layanan</li>
             </ol>
           </div>
         </div>
@@ -65,10 +65,10 @@
             <div class="card card-primary card-outline">
               <div class="card-header">
                 <div class="page-heading">
-                  <i class="fa fa-users mr-3 mt-3"></i>
+                  <i class="fa fa-handshake mr-3 mt-3"></i>
                   <div>
-                    <h5 class="mb-0">Daftar Pengguna</h5>
-                    <p class="mt-1">Kelola pengguna disini</p>
+                    <h5 class="mb-0">Daftar Layanan</h5>
+                    <p class="mt-1">Kelola layanan disini</p>
                   </div>
                 </div>
                 <div class="heading-tools">
@@ -80,9 +80,9 @@
                       </div>
                     </div>
                   </div>
-                  <Link to="tambahpengguna">
+                  <Link to="tambahlayanan">
                     <button class="btn btn-primary btn-round btn-md">
-                      <i class="fa fa-plus mr-2"></i> Tambah Pengguna
+                      <i class="fa fa-plus mr-2"></i> Tambah Layanan
                     </button>
                   </Link>
                 </div>
@@ -92,19 +92,19 @@
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th>Nama Lengkap</th>
-                        <th>Posisi</th>
-                        <th>Status</th>
+                        <th>Nama Layanan</th>
+                        <th>Harga</th>
+                        <th>Kategori</th>
                         <th class="text-right">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {#each user_data as user}
+                    {#each service_data as service}
                       <tr>
-                          <td class="text-center">{user.id}</td>
-                          <td>{user.nama_lengkap}</td>
-                          <td>{user.posisi}</td>
-                          <td><span class="badge badge-success">{user.status}</span></td>
+                          <td class="text-center">{service.id}</td>
+                          <td>{service.nama_layanan}</td>
+                          <td>{service.harga}</td>
+                          <td><span class="badge badge-success">{service.kategori}</span></td>
                           <td class="td-actions text-right">
                             <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
                               <i class="fa fa-pencil-ruler pt-1"></i>
