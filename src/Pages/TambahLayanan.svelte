@@ -1,75 +1,72 @@
 <script>
+  export let apiBaseUrl = "http://127.0.0.1/lumeraAPI";
   import { Router, Link, Route } from "svelte-routing";
+  import InputEditForm from '../Component/InputEditForm.svelte';
+
+  let formController = {
+
+    header : {
+      title : "Tambah Layanan",
+      icon  : "fas fa-plus-square"
+    },
+
+    breadcrumb : [
+      {
+        link : "dashboard",
+        value : "Dashboard"
+      },
+      {
+        link : "layanan",
+        value : "Layanan"
+      }
+    ],
+    
+    api : {
+      apiUrl : apiBaseUrl + "/master_data/insertEditServices.php"
+    },
+
+    forms : [
+      {
+        label : "Nama Layanan",
+        required : true,
+        text : "",
+        placeholder : "Masukan Nama Layanan",
+        type : "text"
+      },
+      {
+        label : "Harga",
+        required : true,
+        text : "",
+        placeholder : "Masukan Harga",
+        type : "number"
+      },
+      {
+        label : "Kategori",
+        required : true,
+        text : "",
+        type : "select_box",
+        option : ["Klinik", "Salon"]
+      }
+      /*
+      {
+        label : "Status",
+        required : true,
+        text : 0,
+        type : "radio",
+        option : [
+          {
+            label : "Aktif",
+            value : 1
+          },
+          {
+            label : "Tidak Aktif",
+            value : 0
+          }
+        ]
+      }*/
+    ]
+  }
+
 </script>
 
-<style type="scss">
-</style>
-
-<!-- Content Wrapper. Contains page content -->
-<div class="container">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1></h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><Link to = "dashboard">Dashboard</Link></li>
-            <li class="breadcrumb-item"><Link to = "layanan">Layanan</Link></li>
-            <li class="breadcrumb-item active">Tambah Layanan</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="card card-primary card-outline">
-            <div class="card-header">
-              <h5 class="mt-1 mb-0"><i class="fas fa-plus-square mr-2"></i>Tambah Layanan</h5>
-            </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form role="form">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="service important-form">Nama Layanan</label>
-                    <input type="text" class="form-control" id="service" placeholder="Masukkan Nama Layanan">
-                  </div>
-                  <div class="form-group">
-                    <label for="harga">Harga</label>
-                    <input type="text" class="form-control" id="harga" placeholder="Masukkan Harga">
-                  </div>
-                  <div class="form-group">
-                    <label>Kategori</label>
-                    <select class="form-control">
-                      <option>-PILIH-</option>
-                      <option>Clinic</option>
-                      <option>Salon</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">TAMBAHKAN LAYANAN</button>
-                  <Link to="layanan"><button type="submit" class="btn btn-danger">BATAL</button></Link>
-                </div>
-              </form>
-              
-          </div>
-          <!--/.col (right) -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
+<InputEditForm formController={formController} />

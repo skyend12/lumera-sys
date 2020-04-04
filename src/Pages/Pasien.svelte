@@ -1,21 +1,21 @@
 <script>
   export let apiBaseUrl = "http://127.0.0.1/lumeraAPI";
-	import { Router, Link, Route } from "svelte-routing";
+  import { Router, Link, Route } from "svelte-routing";
   import { onMount } from 'svelte';
   import TableViewer from '../Component/TableViewer.svelte';
 
   let controller = {
-      title : "Daftar Produk Kecantikan",
-      sub_title : "Kelola produk kecantikan disini",
-      icon      : "fa fa-cubes",
-      search_selector : 2,
+      title : "Daftar Pasien",
+      sub_title : "Kelola pasien disini",
+      icon      : "fa fa-address-card",
+      search_selector : 1,
       button : {
-        text : "Tambah Produk Kecantikan",
+        text : "Tambah Pasien",
         icon : "fa fa-plus",
-        link : "tambahprodukkecantikan"
+        link : "tambahpasien"
       },
-      table_header : ["#", "Barcode", "Nama Produk", "Harga", "Stok", "Aksi"],
-      apiUrl : apiBaseUrl + "/master_data/getAllProduct.php"
+      table_header : ["#", "Nama Pasien", "Alamat", "No. HP", "Tanggal Lahir", "Aksi"],
+      apiUrl : apiBaseUrl + "/master_data/getAllPatients.php"
     }
   
 
@@ -53,7 +53,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><Link to = "dashboard">Dashboard</Link></li>
-            <li class="breadcrumb-item active">Produk Kecantikan</li>
+            <li class="breadcrumb-item active">Pasien</li>
           </ol>
         </div>
       </div>

@@ -35,6 +35,11 @@
           nav_body : "Layanan",
           nav_icon : "fa fa-handshake",
           nav_to   : "layanan"
+        },
+        {
+          nav_body : "Pasien",
+          nav_icon : "fa fa-address-book",
+          nav_to   : "pasien"
         }
       ]
     },

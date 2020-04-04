@@ -1,6 +1,7 @@
 <script>
 	//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 	import '../node_modules/argon-design-system-free/assets/css/argon.min.css';
+	import '../node_modules/argon-design-system-free/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.css';
 	import Sidebar from './layout/Sidebar.svelte';
 	import Staf from './Pages/Staf.svelte';
 	import TambahStaf from './Pages/TambahStaf.svelte';
@@ -8,6 +9,8 @@
 	import TambahProdukKecantikan from './Pages/TambahProdukkecantikan.svelte';
 	import Layanan from './Pages/Layanan.svelte';
 	import TambahLayanan from './Pages/TambahLayanan.svelte';
+	import Pasien from './Pages/Pasien.svelte';
+	import TambahPasien from './Pages/TambahPasien.svelte';
 	import Dashboard from './Pages/Dashboard.svelte';
 	import { Router, Link, Route } from "svelte-routing";
 
@@ -43,6 +46,8 @@
     	<Route path="tambahprodukkecantikan" component="{TambahProdukKecantikan}" />
     	<Route path="layanan" component="{Layanan}" />
     	<Route path="tambahlayanan" component="{TambahLayanan}" />
+    	<Route path="pasien" component="{Pasien}" />
+    	<Route path="tambahpasien" component="{TambahPasien}" />
     </div>
     
     <!-- /.content-wrapper -->
