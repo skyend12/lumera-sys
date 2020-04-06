@@ -122,7 +122,7 @@
                       </div>
                     </div>
                   </div>
-                  <Link to="{controller.button.link}">
+                  <Link to="{controller.name + "/" + controller.button.link}">
                     <button class="btn btn-primary btn-round btn-md">
                       <i class="{controller.button.icon} mr-2"></i> {controller.button.text}
                     </button>
@@ -139,21 +139,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {#each data_bind as parent_data}
+                    {#each data_bind as parent_data, i}
                       <tr>
                         {#each parent_data as child_data}
                           {#if child_data.type == "price"}
                             <td class="{child_data.class}">Rp. {formatRupiah(child_data.data)}</td>
                           {:else if child_data.type == "badge"}
                             <td><span class="{child_data.class}" style="font-size: 16px">{child_data.data}</span></td>
-                          {:else}
+                          {:else if child_data.type == "text"}
                             <td>{child_data.data}</td>
+                          {:else if child_data.type == "id"}
+                            <td>{i+1}</td>
                           {/if}
                         {/each}
                         <td class="td-actions">
-                          <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
-                            <i class="fa fa-pencil-ruler pt-1"></i>
-                          </button>
+                          <Link to="{controller.name + "/edit/" + parent_data[0].data}">
+                            <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
+                              <i class="fa fa-pencil-ruler pt-1"></i>
+                            </button>
+                          </Link>
                           <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title=""><i class="fa fa-trash pt-1"></i></button>
                         </td>
                       </tr>

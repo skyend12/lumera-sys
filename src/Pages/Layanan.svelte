@@ -5,6 +5,7 @@
   import TableViewer from '../Component/TableViewer.svelte';
 
   let controller = {
+      name : "layanan",
       title : "Daftar Layanan",
       sub_title : "Kelola layanan disini",
       icon      : "fa fa-handshake",
@@ -12,12 +13,11 @@
       button : {
         text : "Tambah Layanan",
         icon : "fa fa-plus",
-        link : "tambahlayanan"
+        link : "tambah"
       },
       table_header : ["#", "Nama Layanan", "Harga", "Kategori", "Aksi"],
       apiUrl : apiBaseUrl + "/master_data/getAllServices.php"
     }
-  
 
 </script>
 

@@ -44,8 +44,14 @@
     	<Route path="tambahstaf" component="{TambahStaf}" />
     	<Route path="produkkecantikan" component="{ProdukKecantikan}" />
     	<Route path="tambahprodukkecantikan" component="{TambahProdukKecantikan}" />
-    	<Route path="layanan" component="{Layanan}" />
-    	<Route path="tambahlayanan" component="{TambahLayanan}" />
+    	
+    	<!-- layanan -->
+    	<Route path="/layanan" component="{Layanan}" />
+    	<Route path="/layanan/tambah" component="{TambahLayanan}" />
+    	<Route path="/layanan/edit/:id" let:params>
+		  <TambahLayanan id="{params.id}" />
+		</Route>
+
     	<Route path="pasien" component="{Pasien}" />
     	<Route path="tambahpasien" component="{TambahPasien}" />
     </div>

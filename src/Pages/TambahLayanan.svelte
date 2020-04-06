@@ -1,10 +1,13 @@
 <script>
-  export let apiBaseUrl = "http://127.0.0.1/lumeraAPI";
+  let apiBaseUrl = "http://127.0.0.1/lumeraAPI";
+  export let id;
   import { Router, Link, Route } from "svelte-routing";
   import InputEditForm from '../Component/InputEditForm.svelte';
 
   let formController = {
 
+    mode : "edit", //atau edit
+    
     header : {
       title : "Tambah Layanan",
       icon  : "fas fa-plus-square"
@@ -13,16 +16,17 @@
     breadcrumb : [
       {
         link : "dashboard",
-        value : "Dashboard"
+        value : "dashboard"
       },
       {
         link : "layanan",
-        value : "Layanan"
+        value : "layanan"
       }
     ],
     
     api : {
-      apiUrl : apiBaseUrl + "/master_data/insertEditServices.php"
+      apiUrl : apiBaseUrl + "/master_data/insertEditServices.php",
+      apiRawData : apiBaseUrl + "/master_data/getAllServices.php?id=" + id
     },
 
     forms : [
@@ -38,7 +42,7 @@
         required : true,
         text : "",
         placeholder : "Masukan Harga",
-        type : "number"
+        type : "currency"
       },
       {
         label : "Kategori",
@@ -67,6 +71,13 @@
     ]
   }
 
-</script>
 
+  if(id = undefined){
+    formController.mode = "insert"
+  } 
+  else{
+    formController.mode = "edit";
+  }
+</script>
+{id}
 <InputEditForm formController={formController} />

@@ -4,9 +4,27 @@
 	import {Link} from 'svelte-routing'
 
 	export let formController;
+	let data_id = null;
+
+ 	$:formController;
+	// loading screen
+	let spinner = false;
 
 	onMount(async => {
-
+		
+		if(formController.mode == "edit"){
+			fetch(formController.api.apiRawData, {
+	        	method : 'GET'
+	    	}).then(res => res.json())
+	    	.then(data => {
+	    		let i = 0;
+	    		data_id = data[0][0].data;
+	    		for(i; i < formController.forms.length; i++){
+	    			formController.forms[i].text = data[0][i + 1].data;
+	    		}
+	    		console.log(data);
+	    	})
+		}
 	});
 
 	function post_request(){
@@ -37,36 +55,64 @@
 			}
 
 			if(validation == 1){
-
-				if(i == (formController.forms.length - 1)){
-					temporary_get_gate = temporary_get_gate + "data_" + i + "=" + formController.forms[i].text;
-				}
-				else{
-					temporary_get_gate = temporary_get_gate + "data_" + i + "=" + formController.forms[i].text + "&";
-				}
-				
+				temporary_get_gate = temporary_get_gate + "data_" + i + "=" + formController.forms[i].text + "&";
 			}
 
 		}
 
 		if(validation == 1){
-			httpRequest(formController + temporary_get_gate);
+
+			let confirm_changes = confirm("Anda yakin akan menyimpan perubahan ini?");
+			if (confirm_changes == true) {
+				let api_url = formController.api.apiUrl + temporary_get_gate + "data_id=" + data_id;
+			    httpRequest(api_url);
+			}
 		}
 	}
 
+	function formatRupiah(angka, prefix){
+
+		if(angka != undefined){
+			angka = angka.toString();
+		    var number_string = angka.replace(/[^,\d]/g, '').toString();
+		    var split         = number_string.split(',');
+		    var sisa          = split[0].length % 3;
+		    var rupiah        = split[0].substr(0, sisa);
+		    var ribuan        = split[0].substr(sisa).match(/\d{3}/gi);
+
+		    var separator;
+		    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+		    if(ribuan){
+		      separator = sisa ? '.' : '';
+		      rupiah += separator + ribuan.join('.');
+		     }
+		 
+		    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+		    return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+		}
+		return "Rp. 0"
+    }
+
 	function httpRequest(api){
+		
+		spinner = true;
 
 		fetch(api, {
 	        method : 'GET'
 	    }).then(res => res.json())
 
 	    .then(data => { 
-	      data_raw = data;
+	      let data_raw = data;
 	      console.log(data_raw);
+	      alert("Perubahan data berhasil disimpan");
+	      spinner = false;
+	      window.history.back();
 	    })
 
 	    .catch(err => {
-	           
+	      console.log(err);
+	      alert("Gagal menyimpan data ke basis data\n- Cek koneksi internet anda\n- Coba dalam beberapa saat lagi");
+	      spinner = false;
 	    })
 	}
 
@@ -131,6 +177,11 @@
 						    {:else if input.type == "number"}
 						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>
 
+						    <!-- input currency -->
+						    {:else if input.type == "currency"}
+						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>
+						    	<input type="text" style="margin-top: 10px;" disabled="true" value={formatRupiah((input.text),"Rp")} class="form-control" id="service" placeholder="Rp. 0">
+
 						    <!-- input select box -->
 						    {:else if input.type == "select_box"}
 						    	<select class="form-control" bind:value={input.text}>
@@ -139,7 +190,7 @@
 			                      <option>{option}</option>
 			                      {/each}
 			                    </select>
-					        
+	
 					        <!-- input select box -->
 						    {:else if input.type == "radio"}
 							{#each input.option as option}
@@ -156,7 +207,13 @@
                   			{/each}
 
 			                <div class="card-footer">
-			                  <button type="submit" class="btn btn-primary">TAMBAHKAN LAYANAN</button>
+			                  <button type="submit" class="btn btn-primary">
+			                  	{#if spinner == true}
+			                  		Loading..
+			                  	{:else if spinner == false}
+			                  		SIMPAN
+			                  	{/if}
+			              	  </button>
 			                </div>
               			
               			</form>
