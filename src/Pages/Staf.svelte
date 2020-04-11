@@ -3,8 +3,9 @@
   import { Router, Link, Route } from "svelte-routing";
   import { onMount } from 'svelte';
   import TableViewer from '../Component/TableViewer.svelte';
-
+ 
   let controller = {
+      name : "staf",
       title : "Daftar Staf",
       sub_title : "Kelola staf disini",
       icon      : "fa fa-users",
@@ -12,12 +13,11 @@
       button : {
         text : "Tambah Staf",
         icon : "fa fa-plus",
-        link : "tambahstaf"
+        link : "tambah"
       },
       table_header : ["#", "Nama Lengkap", "Posisi", "Status", "Aksi"],
       apiUrl : apiBaseUrl + "/master_data/getAllStaff.php"
     }
-  
 
 </script>
 

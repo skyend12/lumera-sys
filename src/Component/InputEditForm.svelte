@@ -18,10 +18,13 @@
 	    	}).then(res => res.json())
 	    	.then(data => {
 	    		let i = 0;
-	    		data_id = data[0][0].data;
-	    		for(i; i < formController.forms.length; i++){
-	    			formController.forms[i].text = data[0][i + 1].data;
-	    		}
+	    		console.log(data);
+	    		if(data.length > 0){
+		    		data_id = data[0][0].data;
+		    		for(i; i < formController.forms.length; i++){
+		    			formController.forms[i].text = data[0][i + 1].data;
+		    		}
+		    	}
 	    		console.log(data);
 	    	})
 		}
@@ -100,7 +103,6 @@
 		fetch(api, {
 	        method : 'GET'
 	    }).then(res => res.json())
-
 	    .then(data => { 
 	      let data_raw = data;
 	      console.log(data_raw);
@@ -108,7 +110,6 @@
 	      spinner = false;
 	      window.history.back();
 	    })
-
 	    .catch(err => {
 	      console.log(err);
 	      alert("Gagal menyimpan data ke basis data\n- Cek koneksi internet anda\n- Coba dalam beberapa saat lagi");
@@ -121,7 +122,7 @@
 <style type="scss">
 	
 </style>
-
+{formController.forms[3].text}
 <div class="container">
 
 	<!-- header -->
@@ -171,7 +172,7 @@
                 			
                 			<!-- input text -->
                 			{#if input.type == "text"}                  		
-						        <input type="text" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>
+						        <input type="text" required="{input.required}" bind:value={input.text} disabled="{input.disabled}" class="form-control" id="service" placeholder={input.placeholder}>
 
 						    <!-- input number -->
 						    {:else if input.type == "number"}

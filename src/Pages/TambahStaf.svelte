@@ -1,94 +1,90 @@
 <script>
+  let apiBaseUrl = "http://127.0.0.1/lumeraAPI";
+  export let id;
   import { Router, Link, Route } from "svelte-routing";
+  import InputEditForm from '../Component/InputEditForm.svelte';
+
+  let formController = {
+
+    mode : "edit", //atau edit
+    
+    header : {
+      title : "Tambah Staff",
+      icon  : "fas fa-plus-square"
+    },
+
+    breadcrumb : [
+      {
+        link : "dashboard",
+        value : "Dashboard"
+      },
+      {
+        link : "staf",
+        value : "Staf"
+      }
+    ],
+    
+    api : {
+      apiUrl     : apiBaseUrl + "/master_data/insertEditStaff.php",
+      apiRawData : apiBaseUrl + "/master_data/getAllStaff.php?id=" + id
+    },
+
+    forms : [
+      {
+        label : "Nama Staf",
+        required : true,
+        text : "",
+        placeholder : "Masukan Nama Staf",
+        type : "text"
+      },
+      {
+        label : "Username",
+        required : true,
+        text : "",
+        placeholder : "Masukan Username",
+        type : "text"
+      },
+      {
+        label : "Password",
+        required : true,
+        text : "",
+        placeholder : "Masukan Password",
+        type : "text"
+      },
+      {
+        label : "Posisi",
+        required : true,
+        text : "",
+        type : "select_box",
+        option : ["Administrator", "Kasir"]
+      },
+      {
+        label : "Status",
+        required : true,
+        text : "1",
+        type : "radio",
+        option : [
+          {
+            label : "Aktif",
+            value : "1"
+          },
+          {
+            label : "Tidak Aktif",
+            value : "0"
+          }
+        ]
+      }
+    ]
+  }
+
+
+  if(id = undefined){
+    formController.mode = "insert"
+  } 
+  else{
+    formController.mode = "edit";
+  }
+
 </script>
 
-<style type="scss">
-</style>
-
-<!-- Content Wrapper. Contains page content -->
-<div class="container">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1></h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><Link to = "dashboard">Dashboard</Link></li>
-            <li class="breadcrumb-item"><Link to = "staf">Staf</Link></li>
-            <li class="breadcrumb-item active">Tambah Staf</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="card card-primary card-outline">
-            <div class="card-header">
-              <h5 class="mt-1 mb-0"><i class="fas fa-user-plus mr-2"></i>Tambah Staf</h5>
-            </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form role="form">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="namaLengkap important-form">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Nama Lengkap">
-                  </div>
-                  <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Masukkan Username">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="text" class="form-control" id="password" placeholder="Masukkan Password">
-                  </div>
-                  <div class="form-group">
-                    <label>Posisi</label>
-                    <select class="form-control">
-                      <option>-PILIH-</option>
-                      <option>Administrator</option>
-                      <option>Kasir</option>
-                      <option>Bautician</option>
-                      <option>Stylist</option>
-                      <option>Hair washer</option>
-                    </select>
-                  </div>
-                   <div class="form-group">
-                    <label for="status">Status</label>
-                    <div class="custom-control custom-radio mb-3">
-                      <input name="radioStatus" class="custom-control-input" id="radioAktif" checked="radioAktif" type="radio">
-                      <label class="custom-control-label" for="radioAktif">Aktif</label>
-                    </div>
-                    <div class="custom-control custom-radio mb-3">
-                      <input name="radioStatus" class="custom-control-input" id="radioTidakAktif" checked="" type="radio">
-                      <label class="custom-control-label" for="radioTidakAktif">Tidak Aktif</label>
-                    </div>
-                  </div>
-                  
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">TAMBAHKAN STAF</button>
-                  <Link to="staf"><button type="submit" class="btn btn-danger">BATAL</button></Link>
-                </div>
-              </form>
-              
-          </div>
-          <!--/.col (right) -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
+<InputEditForm formController={formController} />

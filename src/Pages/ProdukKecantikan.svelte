@@ -5,16 +5,17 @@
   import TableViewer from '../Component/TableViewer.svelte';
 
   let controller = {
-      title : "Daftar Produk Kecantikan",
+      name      : "produkkecantikan",
+      title     : "Daftar Produk Kecantikan",
       sub_title : "Kelola produk kecantikan disini",
       icon      : "fa fa-cubes",
-      search_selector : 2,
+      search_selector : 1,
       button : {
         text : "Tambah Produk Kecantikan",
         icon : "fa fa-plus",
-        link : "tambahprodukkecantikan"
+        link : "tambah"
       },
-      table_header : ["#", "Barcode", "Nama Produk", "Harga", "Stok", "Aksi"],
+      table_header : ["#", "Nama Produk", "Harga", "Stok", "Status", "Aksi"],
       apiUrl : apiBaseUrl + "/master_data/getAllProduct.php"
     }
   

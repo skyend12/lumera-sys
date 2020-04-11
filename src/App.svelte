@@ -40,16 +40,27 @@
 
   	<div class="content-wrapper" style="margin-left: {containerMarginVisibletoSidebar}px">
   		<Route path="dashboard" component="{Dashboard}" />
-    	<Route path="staf" component="{Staf}" />
-    	<Route path="tambahstaf" component="{TambahStaf}" />
-    	<Route path="produkkecantikan" component="{ProdukKecantikan}" />
-    	<Route path="tambahprodukkecantikan" component="{TambahProdukKecantikan}" />
+    	
     	
     	<!-- layanan -->
     	<Route path="/layanan" component="{Layanan}" />
     	<Route path="/layanan/tambah" component="{TambahLayanan}" />
     	<Route path="/layanan/edit/:id" let:params>
 		  <TambahLayanan id="{params.id}" />
+		</Route>
+
+		<!-- staf -->
+    	<Route path="/staf" component="{Staf}" />
+    	<Route path="/staf/tambah" component="{TambahStaf}" />
+    	<Route path="/staf/edit/:id" let:params>
+		  <TambahStaf id="{params.id}" />
+		</Route>
+
+		<!-- produk -->
+    	<Route path="/produkkecantikan" component="{ProdukKecantikan}" />
+    	<Route path="/produkkecantikan/tambah" component="{TambahProdukKecantikan}" />
+    	<Route path="/produkkecantikan/edit/:id" let:params>
+		  <TambahProdukKecantikan id="{params.id}" />
 		</Route>
 
     	<Route path="pasien" component="{Pasien}" />

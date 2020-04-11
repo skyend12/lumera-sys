@@ -8,10 +8,20 @@
   let data_bind = [];
   let data_raw = [];
   let searchBox = "";
+  let num_of_page = [];
+  let active_first = 1;
+  let active_last = 15;
+  let active_now = 1;
+
+  let per_page_date = 15;
 
   // search controller
   $: {
     if (searchBox != "" && data_raw != []){
+      // reset page
+      active_first = 1;
+      active_last = 15;
+      active_now = 1;
       data_bind = [];
       let i =0;
       let counter = 0;
@@ -30,14 +40,20 @@
           }
           if(confirmed == 1){
             data_bind[counter] = data_raw[j];
+            counter++;
           }
         }
+        counter = 0;
       }
       console.log("Found " + counter + " matchs");
     }
     else if(searchBox == "" && data_raw != []){
       data_bind = data_raw;
     }
+
+    // menghitung jumlah page yang akan digunakan
+    bindPage(data_bind.length);
+
   }
 
   // on mount
@@ -49,6 +65,7 @@
 
     .then(data => { 
       data_raw = data;
+      bindPage(data_raw.length);
       console.log(data_raw);
     })
 
@@ -75,6 +92,34 @@
       return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
 
+  function bindPage(amount_of_data){
+    let i = 0;
+    num_of_page = [];
+    while(amount_of_data >= per_page_date){
+      i = i + 1;
+      num_of_page.push(i);
+      amount_of_data -= per_page_date;
+    }
+    if(amount_of_data < per_page_date){
+      i = i + 1;
+      num_of_page.push(i);
+    }
+    console.log(num_of_page);
+  }
+
+  function choosePage(page){
+    if(page == 1){
+      active_first = 1;
+      active_last = 15;
+    }
+    else{
+      active_first = ((page - 1) * per_page_date) + 1;
+      active_last  = page * per_page_date;
+    }
+    active_now = page;
+    console.log(active_first);
+    console.log(active_last);
+  }
 
 </script>
 
@@ -140,12 +185,15 @@
                 </thead>
                 <tbody>
                     {#each data_bind as parent_data, i}
-                      <tr>
+                      {#if i >= active_first - 1 && i < active_last}
+                        <tr>
                         {#each parent_data as child_data}
                           {#if child_data.type == "price"}
                             <td class="{child_data.class}">Rp. {formatRupiah(child_data.data)}</td>
                           {:else if child_data.type == "badge"}
                             <td><span class="{child_data.class}" style="font-size: 16px">{child_data.data}</span></td>
+                          {:else if child_data.type == "badge_radio"}
+                            <td><span class="{child_data.class}" style="font-size: 16px">{child_data.value}</span></td>
                           {:else if child_data.type == "text"}
                             <td>{child_data.data}</td>
                           {:else if child_data.type == "id"}
@@ -158,11 +206,21 @@
                               <i class="fa fa-pencil-ruler pt-1"></i>
                             </button>
                           </Link>
-                          <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title=""><i class="fa fa-trash pt-1"></i></button>
+                          <!--
+                          <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title=""><i class="fa fa-trash pt-1"></i></button>-->
                         </td>
-                      </tr>
+                        </tr>
+                      {/if}
                     {/each}
                 </tbody>
           </table>
       </div><!-- /.container-fluid -->
     </section>
+
+    <nav style="position: absolute;right: 100px;margin-top: 12px;}">
+      <ul class="pagination pagination-lg">
+        {#each num_of_page as page}
+          <li on:click="{choosePage(page)}" class="page-item" class:active="{active_now === page}"><a class="page-link">{page}</a></li>
+        {/each}
+      </ul>
+    </nav>

@@ -15,7 +15,7 @@
         icon : "fa fa-plus",
         link : "tambah"
       },
-      table_header : ["#", "Nama Layanan", "Harga", "Kategori", "Aksi"],
+      table_header : ["#", "Nama Layanan", "Harga", "Kategori", "Status", "Aksi"],
       apiUrl : apiBaseUrl + "/master_data/getAllServices.php"
     }
 

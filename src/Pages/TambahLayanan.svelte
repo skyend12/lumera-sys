@@ -50,24 +50,23 @@
         text : "",
         type : "select_box",
         option : ["Klinik", "Salon"]
-      }
-      /*
+      },
       {
         label : "Status",
         required : true,
-        text : 0,
+        text : "1",
         type : "radio",
         option : [
           {
             label : "Aktif",
-            value : 1
+            value : "1"
           },
           {
             label : "Tidak Aktif",
-            value : 0
+            value : "0"
           }
         ]
-      }*/
+      }
     ]
   }
 
@@ -78,6 +77,7 @@
   else{
     formController.mode = "edit";
   }
+
 </script>
-{id}
+
 <InputEditForm formController={formController} />
