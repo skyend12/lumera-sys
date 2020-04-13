@@ -63,8 +63,13 @@
 		  <TambahProdukKecantikan id="{params.id}" />
 		</Route>
 
-    	<Route path="pasien" component="{Pasien}" />
-    	<Route path="tambahpasien" component="{TambahPasien}" />
+		<!-- pasien -->
+    	<Route path="/pasien" component="{Pasien}" />
+    	<Route path="/pasien/tambah" component="{TambahPasien}" />
+    	<Route path="/pasien/edit/:id" let:params>
+		  <TambahPasien id="{params.id}" />
+		</Route>
+
     </div>
     
     <!-- /.content-wrapper -->

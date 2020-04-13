@@ -92,6 +92,31 @@
       return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
     }
 
+  function formatTanggal(formattedtanggal){
+    var format = formattedtanggal.toString()
+    format = format.split("-");
+    console.log(format);
+    var bulan = 0;
+    // mapping bulan
+    switch(format[1]){
+      case "01" : bulan = "Januari"; break;
+      case "02" : bulan = "Februari"; break; 
+      case "03" : bulan = "Maret"; break;
+      case "04" : bulan = "April"; break;
+      case "05" : bulan = "Mei"; break; 
+      case "06" : bulan = "Juni"; break;
+      case "07" : bulan = "Juli"; break;
+      case "08" : bulan = "Agustus"; break; 
+      case "09" : bulan = "September"; break;
+      case "10" : bulan = "Oktober"; break;
+      case "11" : bulan = "November"; break; 
+      case "12" : bulan = "Desember"; break;
+    }
+    
+
+    return format[2] + " " + bulan + " " + format[0];
+  }
+
   function bindPage(amount_of_data){
     let i = 0;
     num_of_page = [];
@@ -196,6 +221,8 @@
                             <td><span class="{child_data.class}" style="font-size: 16px">{child_data.value}</span></td>
                           {:else if child_data.type == "text"}
                             <td>{child_data.data}</td>
+                            {:else if child_data.type == "date"}
+                            <td>{formatTanggal(child_data.data)}</td>
                           {:else if child_data.type == "id"}
                             <td>{i+1}</td>
                           {/if}

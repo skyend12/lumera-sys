@@ -18,13 +18,16 @@
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
-    "svelte-preprocess": "^3.4.0"
+    "svelte-preprocess": "^3.4.0",
+    "vanillajs-datepicker": "^1.0.1"
   },
   "dependencies": {
+    "@popperjs/core": "^2.3.1",
     "argon-design-system-free": "^1.1.0",
     "bootstrap": "^4.4.1",
     "page.js": "^4.13.3",
     "sirv-cli": "^0.4.4",
+    "svelte-calendar": "^1.5.0",
     "svelte-routing": "^1.4.2"
   }
 }

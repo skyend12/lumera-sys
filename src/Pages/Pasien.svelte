@@ -3,21 +3,21 @@
   import { Router, Link, Route } from "svelte-routing";
   import { onMount } from 'svelte';
   import TableViewer from '../Component/TableViewer.svelte';
-
+ 
   let controller = {
+      name : "pasien",
       title : "Daftar Pasien",
       sub_title : "Kelola pasien disini",
-      icon      : "fa fa-address-card",
+      icon      : "fa fa-users",
       search_selector : 1,
       button : {
         text : "Tambah Pasien",
         icon : "fa fa-plus",
-        link : "tambahpasien"
+        link : "tambah"
       },
-      table_header : ["#", "Nama Pasien", "Alamat", "No. HP", "Tanggal Lahir", "Aksi"],
+      table_header : ["#", "Nama Pasien", "Alamat", "No. HP", "Tanggal Lahir", "Status", "Aksi"],
       apiUrl : apiBaseUrl + "/master_data/getAllPatients.php"
     }
-  
 
 </script>
 

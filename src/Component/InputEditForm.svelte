@@ -2,16 +2,16 @@
 
 	import {onMount} from 'svelte'
 	import {Link} from 'svelte-routing'
-
 	export let formController;
 	let data_id = null;
 
  	$:formController;
+
 	// loading screen
 	let spinner = false;
 
 	onMount(async => {
-		
+
 		if(formController.mode == "edit"){
 			fetch(formController.api.apiRawData, {
 	        	method : 'GET'
@@ -117,13 +117,20 @@
 	    })
 	}
 
+	let formattedSelected;
+	let dateChosen;
+
 </script>
 
 <style type="scss">
 	
 </style>
-{formController.forms[3].text}
+
 <div class="container">
+
+	<div class='button-container'>
+		<button id='test'>My Custom Button</button>
+	</div>
 
 	<!-- header -->
 	<section class="content-header">
@@ -174,10 +181,17 @@
                 			{#if input.type == "text"}                  		
 						        <input type="text" required="{input.required}" bind:value={input.text} disabled="{input.disabled}" class="form-control" id="service" placeholder={input.placeholder}>
 
+						    <!-- input textarea -->
+                			{:else if input.type == "textarea"}   
+						        <textarea required="{input.required}" bind:value={input.text} disabled="{input.disabled}" class="form-control" id="service" placeholder={input.placeholder}></textarea>
+
 						    <!-- input number -->
 						    {:else if input.type == "number"}
-						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>
+						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>	
 
+						    {:else if input.type == "date"}
+						    	<input type="date" required="{input.required}" bind:value={input.text} class="form-control" id="service">
+						    	<input type="text" name="foo"/>
 						    <!-- input currency -->
 						    {:else if input.type == "currency"}
 						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>
