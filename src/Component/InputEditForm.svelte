@@ -128,10 +128,6 @@
 
 <div class="container">
 
-	<div class='button-container'>
-		<button id='test'>My Custom Button</button>
-	</div>
-
 	<!-- header -->
 	<section class="content-header">
 	    <div class="container-fluid">
@@ -191,7 +187,7 @@
 
 						    {:else if input.type == "date"}
 						    	<input type="date" required="{input.required}" bind:value={input.text} class="form-control" id="service">
-						    	<input type="text" name="foo"/>
+						    	
 						    <!-- input currency -->
 						    {:else if input.type == "currency"}
 						    	<input type="number" required="{input.required}" bind:value={input.text} class="form-control" id="service" placeholder={input.placeholder}>

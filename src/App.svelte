@@ -12,6 +12,7 @@
 	import Pasien from './Pages/Pasien.svelte';
 	import TambahPasien from './Pages/TambahPasien.svelte';
 	import Dashboard from './Pages/Dashboard.svelte';
+	import PembelianProdukKecantikan from './Pages/PembelianProdukKecantikan.svelte';
 	import { Router, Link, Route } from "svelte-routing";
 
 	let containerMarginVisibletoSidebar = 250;
@@ -69,6 +70,8 @@
     	<Route path="/pasien/edit/:id" let:params>
 		  <TambahPasien id="{params.id}" />
 		</Route>
+
+		<Route path="/pembelian-produk-kecantikan" component="{PembelianProdukKecantikan}" />
 
     </div>
     

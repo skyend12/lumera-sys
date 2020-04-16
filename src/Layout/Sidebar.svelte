@@ -51,12 +51,12 @@
         {
           nav_body : "Produk Kecantikan",
           nav_icon : "far fa-circle",
-          nav_to   : "produkkecantikan"
+          nav_to   : "pembelian-produk-kecantikan"
         },
         {
-          nav_body : "Jasa",
+          nav_body : "Inventaris",
           nav_icon : "far fa-circle",
-          nav_to   : "jasa"
+          nav_to   : "pembelian-inventaris"
         },
       ]
     },
