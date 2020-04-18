@@ -8193,47 +8193,208 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[19] = list[i];
+    	child_ctx[20] = list;
+    	child_ctx[21] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
-    	child_ctx[12] = i;
+    	child_ctx[22] = list[i];
     	return child_ctx;
     }
 
-    // (84:19) {#each data_raw as data, i}
-    function create_each_block_1$3(ctx) {
-    	let option;
-    	let t_value = /*data*/ ctx[10][1].data + "";
-    	let t;
-    	let option_value_value;
+    function get_each_context_2$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[25] = list[i];
+    	child_ctx[21] = i;
+    	return child_ctx;
+    }
+
+    // (301:6) {#if i >= active_first - 1 && i < active_last}
+    function create_if_block_2$3(ctx) {
+    	let div1;
+    	let div0;
+    	let p0;
+    	let t0_value = /*product*/ ctx[25].product_name + "";
+    	let t0;
+    	let t1;
+    	let p1;
+    	let t2_value = formatRupiah$2(/*product*/ ctx[25].product_price, "Rp. ") + "";
+    	let t2;
+    	let t3;
+    	let t4;
+    	let button;
+    	let i;
+    	let t5;
+    	let t6;
+    	let dispose;
+
+    	function click_handler(...args) {
+    		return /*click_handler*/ ctx[15](/*i*/ ctx[21], ...args);
+    	}
 
     	const block = {
     		c: function create() {
-    			option = element("option");
-    			t = text(t_value);
-    			option.__value = option_value_value = /*data*/ ctx[10][1].data;
-    			option.value = option.__value;
-    			add_location(option, file$9, 84, 20, 2234);
+    			div1 = element("div");
+    			div0 = element("div");
+    			p0 = element("p");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			p1 = element("p");
+    			t2 = text(t2_value);
+    			t3 = text("/pcs");
+    			t4 = space();
+    			button = element("button");
+    			i = element("i");
+    			t5 = text("TAMBAHKAN");
+    			t6 = space();
+    			attr_dev(p0, "class", "mb-1");
+    			set_style(p0, "font-size", "1.0rem");
+    			add_location(p0, file$9, 303, 9, 6760);
+    			attr_dev(p1, "class", "mb-2");
+    			set_style(p1, "font-weight", "bold");
+    			set_style(p1, "font-size", "0.8rem");
+    			add_location(p1, file$9, 304, 9, 6838);
+    			attr_dev(i, "class", "fa fa-plus p-2 bg-success ");
+    			add_location(i, file$9, 305, 76, 7028);
+    			attr_dev(button, "class", "btn btn-success btn-sm");
+    			add_location(button, file$9, 305, 9, 6961);
+    			attr_dev(div0, "class", "card p-3");
+    			add_location(div0, file$9, 302, 8, 6727);
+    			attr_dev(div1, "class", "col-lg-4");
+    			add_location(div1, file$9, 301, 7, 6694);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, option, anchor);
-    			append_dev(option, t);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, p0);
+    			append_dev(p0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, p1);
+    			append_dev(p1, t2);
+    			append_dev(p1, t3);
+    			append_dev(div0, t4);
+    			append_dev(div0, button);
+    			append_dev(button, i);
+    			append_dev(button, t5);
+    			append_dev(div1, t6);
+    			dispose = listen_dev(button, "click", click_handler, false, false, false);
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*data_raw*/ 2 && t_value !== (t_value = /*data*/ ctx[10][1].data + "")) set_data_dev(t, t_value);
-
-    			if (dirty & /*data_raw*/ 2 && option_value_value !== (option_value_value = /*data*/ ctx[10][1].data)) {
-    				prop_dev(option, "__value", option_value_value);
-    			}
-
-    			option.value = option.__value;
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*data_bind*/ 2 && t0_value !== (t0_value = /*product*/ ctx[25].product_name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*data_bind*/ 2 && t2_value !== (t2_value = formatRupiah$2(/*product*/ ctx[25].product_price, "Rp. ") + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(option);
+    			if (detaching) detach_dev(div1);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_2$3.name,
+    		type: "if",
+    		source: "(301:6) {#if i >= active_first - 1 && i < active_last}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (300:5) {#each data_bind as product, i}
+    function create_each_block_2$2(ctx) {
+    	let if_block_anchor;
+    	let if_block = /*i*/ ctx[21] >= /*active_first*/ ctx[6] - 1 && /*i*/ ctx[21] < /*active_last*/ ctx[7] && create_if_block_2$3(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*i*/ ctx[21] >= /*active_first*/ ctx[6] - 1 && /*i*/ ctx[21] < /*active_last*/ ctx[7]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_2$3(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_2$2.name,
+    		type: "each",
+    		source: "(300:5) {#each data_bind as product, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (314:12) {#each num_of_page as page}
+    function create_each_block_1$3(ctx) {
+    	let li;
+    	let a;
+    	let t_value = /*page*/ ctx[22] + "";
+    	let t;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			a = element("a");
+    			t = text(t_value);
+    			attr_dev(a, "class", "page-link");
+    			add_location(a, file$9, 314, 106, 7432);
+    			attr_dev(li, "class", "page-item");
+    			toggle_class(li, "active", /*active_now*/ ctx[5] === /*page*/ ctx[22]);
+    			add_location(li, file$9, 314, 15, 7341);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, a);
+    			append_dev(a, t);
+
+    			dispose = listen_dev(
+    				li,
+    				"click",
+    				function () {
+    					if (is_function(/*choosePage*/ ctx[10](/*page*/ ctx[22]))) /*choosePage*/ ctx[10](/*page*/ ctx[22]).apply(this, arguments);
+    				},
+    				false,
+    				false,
+    				false
+    			);
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*num_of_page*/ 16 && t_value !== (t_value = /*page*/ ctx[22] + "")) set_data_dev(t, t_value);
+
+    			if (dirty & /*active_now, num_of_page*/ 48) {
+    				toggle_class(li, "active", /*active_now*/ ctx[5] === /*page*/ ctx[22]);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			dispose();
     		}
     	};
 
@@ -8241,23 +8402,60 @@ var app = (function () {
     		block,
     		id: create_each_block_1$3.name,
     		type: "each",
-    		source: "(84:19) {#each data_raw as data, i}",
+    		source: "(314:12) {#each num_of_page as page}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (133:32) 
+    // (340:31) 
     function create_if_block_1$4(ctx) {
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			p.textContent = "Belum ada produk yang dipilih";
+    			add_location(p, file$9, 340, 5, 8592);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$4.name,
+    		type: "if",
+    		source: "(340:31) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (328:4) {#if cart.length > 0}
+    function create_if_block$4(ctx) {
     	let each_1_anchor;
-    	let each_value = /*cart*/ ctx[2];
+    	let current;
+    	let each_value = /*cart*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
     	for (let i = 0; i < each_value.length; i += 1) {
     		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
     	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
 
     	const block = {
     		c: function create() {
@@ -8273,10 +8471,11 @@ var app = (function () {
     			}
 
     			insert_dev(target, each_1_anchor, anchor);
+    			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*formatRupiah, cart*/ 4) {
-    				each_value = /*cart*/ ctx[2];
+    			if (dirty & /*formatRupiah, cart, itemQuantity*/ 513) {
+    				each_value = /*cart*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -8285,19 +8484,41 @@ var app = (function () {
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
     					} else {
     						each_blocks[i] = create_each_block$3(child_ctx);
     						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
     						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
     					}
     				}
 
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
+    				group_outros();
+
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out(i);
     				}
 
-    				each_blocks.length = each_value.length;
+    				check_outros();
     			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
     		},
     		d: function destroy(detaching) {
     			destroy_each(each_blocks, detaching);
@@ -8307,137 +8528,147 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$4.name,
-    		type: "if",
-    		source: "(133:32) ",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (130:6) {#if cart.length == 0}
-    function create_if_block$4(ctx) {
-    	let td;
-
-    	const block = {
-    		c: function create() {
-    			td = element("td");
-    			td.textContent = "Belum ada data di cart";
-    			add_location(td, file$9, 130, 7, 3602);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, td, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(td);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(130:6) {#if cart.length == 0}",
+    		source: "(328:4) {#if cart.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:7) {#each cart as cart_item}
+    // (329:5) {#each cart as cart_item, i}
     function create_each_block$3(ctx) {
-    	let tr;
-    	let td0;
-    	let t0_value = /*cart_item*/ ctx[7].product_name + "";
+    	let div1;
+    	let p0;
+    	let t0_value = /*cart_item*/ ctx[19].product_name + "";
     	let t0;
     	let t1;
-    	let td1;
-    	let t2_value = formatRupiah$2(/*cart_item*/ ctx[7].product_price, "Rp. ") + "";
+    	let div0;
+    	let i0;
     	let t2;
+    	let input;
+    	let input_updating = false;
     	let t3;
-    	let td2;
-    	let t4_value = /*cart_item*/ ctx[7].product_qty + "";
+    	let i1;
     	let t4;
+    	let p1;
     	let t5;
+    	let t6_value = formatRupiah$2(/*cart_item*/ ctx[19].product_price * /*cart_item*/ ctx[19].product_qty, "Rp. ") + "";
     	let t6;
-    	let td3;
     	let t7;
-    	let t8_value = formatRupiah$2(/*cart_item*/ ctx[7].product_price * /*cart_item*/ ctx[7].product_qty) + "";
-    	let t8;
-    	let t9;
-    	let td4;
-    	let button;
-    	let i;
-    	let t10;
+    	let div1_transition;
+    	let current;
+    	let dispose;
+
+    	function click_handler_1(...args) {
+    		return /*click_handler_1*/ ctx[16](/*i*/ ctx[21], ...args);
+    	}
+
+    	function input_input_handler_1() {
+    		input_updating = true;
+    		/*input_input_handler_1*/ ctx[17].call(input, /*cart_item*/ ctx[19]);
+    	}
+
+    	function click_handler_2(...args) {
+    		return /*click_handler_2*/ ctx[18](/*i*/ ctx[21], ...args);
+    	}
 
     	const block = {
     		c: function create() {
-    			tr = element("tr");
-    			td0 = element("td");
+    			div1 = element("div");
+    			p0 = element("p");
     			t0 = text(t0_value);
     			t1 = space();
-    			td1 = element("td");
-    			t2 = text(t2_value);
+    			div0 = element("div");
+    			i0 = element("i");
+    			t2 = space();
+    			input = element("input");
     			t3 = space();
-    			td2 = element("td");
-    			t4 = text(t4_value);
-    			t5 = text(" pcs");
-    			t6 = space();
-    			td3 = element("td");
-    			t7 = text("Rp. ");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			td4 = element("td");
-    			button = element("button");
-    			i = element("i");
-    			t10 = space();
-    			add_location(td0, file$9, 136, 8, 3728);
-    			add_location(td1, file$9, 137, 8, 3771);
-    			add_location(td2, file$9, 138, 8, 3837);
-    			add_location(td3, file$9, 139, 8, 3883);
-    			attr_dev(i, "class", "fa fa-trash pt-1");
-    			add_location(i, file$9, 141, 137, 4131);
-    			attr_dev(button, "type", "button");
-    			attr_dev(button, "rel", "tooltip");
-    			attr_dev(button, "class", "btn btn-danger btn-icon btn-sm ");
-    			attr_dev(button, "data-original-title", "");
-    			attr_dev(button, "title", "");
-    			add_location(button, file$9, 141, 29, 4023);
-    			attr_dev(td4, "class", "td-actions");
-    			add_location(td4, file$9, 140, 8, 3969);
-    			add_location(tr, file$9, 135, 7, 3714);
+    			i1 = element("i");
+    			t4 = space();
+    			p1 = element("p");
+    			t5 = text("@");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			attr_dev(p0, "class", "m-0 ml-2 product-name svelte-1g115y4");
+    			add_location(p0, file$9, 330, 7, 7849);
+    			attr_dev(i0, "class", "fa fa-plus p-2 bg-success mr-2 svelte-1g115y4");
+    			add_location(i0, file$9, 332, 8, 7991);
+    			attr_dev(input, "class", "form-control pl-0 pr-0 svelte-1g115y4");
+    			set_style(input, "width", "42px");
+    			set_style(input, "height", "26px");
+    			set_style(input, "font-size", "0.7rem");
+    			set_style(input, "text-align", "center");
+    			attr_dev(input, "min", "1");
+    			attr_dev(input, "max", "999");
+    			attr_dev(input, "type", "number");
+    			attr_dev(input, "oninput", "validity.valid||(value=1);");
+    			add_location(input, file$9, 333, 8, 8083);
+    			attr_dev(i1, "class", "fa fa-minus p-2 bg-danger ml-2 svelte-1g115y4");
+    			add_location(i1, file$9, 334, 8, 8307);
+    			attr_dev(p1, "class", "m-0 ml-2 product-price svelte-1g115y4");
+    			add_location(p1, file$9, 335, 8, 8399);
+    			attr_dev(div0, "class", "cart-item-quantity-container ml-2 mt-1 mb-1 flex svelte-1g115y4");
+    			add_location(div0, file$9, 331, 7, 7919);
+    			attr_dev(div1, "class", "card p-2 cart-item mb-2 svelte-1g115y4");
+    			add_location(div1, file$9, 329, 6, 7757);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, tr, anchor);
-    			append_dev(tr, td0);
-    			append_dev(td0, t0);
-    			append_dev(tr, t1);
-    			append_dev(tr, td1);
-    			append_dev(td1, t2);
-    			append_dev(tr, t3);
-    			append_dev(tr, td2);
-    			append_dev(td2, t4);
-    			append_dev(td2, t5);
-    			append_dev(tr, t6);
-    			append_dev(tr, td3);
-    			append_dev(td3, t7);
-    			append_dev(td3, t8);
-    			append_dev(tr, t9);
-    			append_dev(tr, td4);
-    			append_dev(td4, button);
-    			append_dev(button, i);
-    			append_dev(tr, t10);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, p0);
+    			append_dev(p0, t0);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(div0, i0);
+    			append_dev(div0, t2);
+    			append_dev(div0, input);
+    			set_input_value(input, /*cart_item*/ ctx[19].product_qty);
+    			append_dev(div0, t3);
+    			append_dev(div0, i1);
+    			append_dev(div0, t4);
+    			append_dev(div0, p1);
+    			append_dev(p1, t5);
+    			append_dev(p1, t6);
+    			append_dev(div1, t7);
+    			current = true;
+
+    			dispose = [
+    				listen_dev(i0, "click", click_handler_1, false, false, false),
+    				listen_dev(input, "input", input_input_handler_1),
+    				listen_dev(i1, "click", click_handler_2, false, false, false)
+    			];
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*cart*/ 4 && t0_value !== (t0_value = /*cart_item*/ ctx[7].product_name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*cart*/ 4 && t2_value !== (t2_value = formatRupiah$2(/*cart_item*/ ctx[7].product_price, "Rp. ") + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*cart*/ 4 && t4_value !== (t4_value = /*cart_item*/ ctx[7].product_qty + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*cart*/ 4 && t8_value !== (t8_value = formatRupiah$2(/*cart_item*/ ctx[7].product_price * /*cart_item*/ ctx[7].product_qty) + "")) set_data_dev(t8, t8_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty & /*cart*/ 1) && t0_value !== (t0_value = /*cart_item*/ ctx[19].product_name + "")) set_data_dev(t0, t0_value);
+
+    			if (!input_updating && dirty & /*cart*/ 1) {
+    				set_input_value(input, /*cart_item*/ ctx[19].product_qty);
+    			}
+
+    			input_updating = false;
+    			if ((!current || dirty & /*cart*/ 1) && t6_value !== (t6_value = formatRupiah$2(/*cart_item*/ ctx[19].product_price * /*cart_item*/ ctx[19].product_qty, "Rp. ") + "")) set_data_dev(t6, t6_value);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fly, { y: -200, duration: 650 }, true);
+    				div1_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fly, { y: -200, duration: 650 }, false);
+    			div1_transition.run(0);
+    			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(tr);
+    			if (detaching) detach_dev(div1);
+    			if (detaching && div1_transition) div1_transition.end();
+    			run_all(dispose);
     		}
     	};
 
@@ -8445,7 +8676,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(135:7) {#each cart as cart_item}",
+    		source: "(329:5) {#each cart as cart_item, i}",
     		ctx
     	});
 
@@ -8453,54 +8684,77 @@ var app = (function () {
     }
 
     function create_fragment$g(ctx) {
-    	let div9;
-    	let div8;
+    	let div20;
+    	let div19;
+    	let div6;
     	let div5;
     	let div4;
-    	let form;
-    	let h5;
-    	let t1;
     	let div0;
-    	let label0;
+    	let h50;
+    	let t1;
+    	let p0;
     	let t3;
-    	let select;
-    	let option;
-    	let t5;
-    	let div1;
-    	let label1;
-    	let t7;
-    	let input0;
-    	let input0_updating = false;
-    	let t8;
-    	let input1;
-    	let input1_value_value;
-    	let t9;
-    	let div2;
-    	let label2;
-    	let t11;
-    	let input2;
-    	let input2_updating = false;
-    	let t12;
     	let div3;
-    	let button;
-    	let t14;
+    	let div2;
+    	let input;
+    	let t4;
+    	let div1;
+    	let span;
+    	let i;
+    	let t5;
+    	let t6;
+    	let nav;
+    	let ul;
+    	let t7;
+    	let div18;
     	let div7;
-    	let div6;
-    	let table;
-    	let thead;
-    	let th0;
+    	let h51;
+    	let t9;
+    	let current_block_type_index;
+    	let if_block;
+    	let t10;
+    	let div17;
+    	let div10;
+    	let div8;
+    	let p1;
+    	let t12;
+    	let div9;
+    	let p2;
+    	let t13_value = formatRupiah$2(/*bill*/ ctx[3].sub_total, "Rp. ") + "";
+    	let t13;
+    	let t14;
+    	let div13;
+    	let div11;
+    	let p3;
     	let t16;
-    	let th1;
+    	let div12;
+    	let p4;
+    	let t17_value = formatRupiah$2(/*bill*/ ctx[3].taxes, "Rp. ") + "";
+    	let t17;
     	let t18;
-    	let th2;
+    	let div16;
+    	let div14;
+    	let p5;
     	let t20;
-    	let th3;
+    	let div15;
+    	let p6;
+    	let t21_value = formatRupiah$2(/*bill*/ ctx[3].total, "Rp. ") + "";
+    	let t21;
     	let t22;
-    	let th4;
-    	let t24;
-    	let tbody;
+    	let hr;
+    	let t23;
+    	let button;
+    	let current;
     	let dispose;
-    	let each_value_1 = /*data_raw*/ ctx[1];
+    	let each_value_2 = /*data_bind*/ ctx[1];
+    	validate_each_argument(each_value_2);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
+    	}
+
+    	let each_value_1 = /*num_of_page*/ ctx[4];
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -8508,222 +8762,285 @@ var app = (function () {
     		each_blocks[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
     	}
 
-    	function input0_input_handler() {
-    		input0_updating = true;
-    		/*input0_input_handler*/ ctx[5].call(input0);
-    	}
-
-    	function input2_input_handler() {
-    		input2_updating = true;
-    		/*input2_input_handler*/ ctx[6].call(input2);
-    	}
+    	const if_block_creators = [create_if_block$4, create_if_block_1$4];
+    	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*cart*/ ctx[2].length == 0) return create_if_block$4;
-    		if (/*cart*/ ctx[2].length > 0) return create_if_block_1$4;
+    		if (/*cart*/ ctx[0].length > 0) return 0;
+    		if (/*cart*/ ctx[0].length == 0) return 1;
+    		return -1;
     	}
 
-    	let current_block_type = select_block_type(ctx);
-    	let if_block = current_block_type && current_block_type(ctx);
+    	if (~(current_block_type_index = select_block_type(ctx))) {
+    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
 
     	const block = {
     		c: function create() {
-    			div9 = element("div");
-    			div8 = element("div");
+    			div20 = element("div");
+    			div19 = element("div");
+    			div6 = element("div");
     			div5 = element("div");
     			div4 = element("div");
-    			form = element("form");
-    			h5 = element("h5");
-    			h5.textContent = "Tambah Pembelian Produk";
-    			t1 = space();
     			div0 = element("div");
-    			label0 = element("label");
-    			label0.textContent = "Nama Item";
+    			h50 = element("h5");
+    			h50.textContent = "Daftar Pembelian Produk";
+    			t1 = space();
+    			p0 = element("p");
+    			p0.textContent = "Lakukan pembelian produk disini";
     			t3 = space();
-    			select = element("select");
-    			option = element("option");
-    			option.textContent = "-PILIH-";
+    			div3 = element("div");
+    			div2 = element("div");
+    			input = element("input");
+    			t4 = space();
+    			div1 = element("div");
+    			span = element("span");
+    			i = element("i");
+    			t5 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t6 = space();
+    			nav = element("nav");
+    			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t5 = space();
-    			div1 = element("div");
-    			label1 = element("label");
-    			label1.textContent = "Harga Item";
     			t7 = space();
-    			input0 = element("input");
-    			t8 = space();
-    			input1 = element("input");
-    			t9 = space();
-    			div2 = element("div");
-    			label2 = element("label");
-    			label2.textContent = "Jumlah Item";
-    			t11 = space();
-    			input2 = element("input");
-    			t12 = space();
-    			div3 = element("div");
-    			button = element("button");
-    			button.textContent = "SIMPAN";
-    			t14 = space();
+    			div18 = element("div");
     			div7 = element("div");
-    			div6 = element("div");
-    			table = element("table");
-    			thead = element("thead");
-    			th0 = element("th");
-    			th0.textContent = "Nama Produk";
-    			t16 = space();
-    			th1 = element("th");
-    			th1.textContent = "Harga Satuan";
-    			t18 = space();
-    			th2 = element("th");
-    			th2.textContent = "Qty";
-    			t20 = space();
-    			th3 = element("th");
-    			th3.textContent = "Total";
-    			t22 = space();
-    			th4 = element("th");
-    			th4.textContent = "Aksi";
-    			t24 = space();
-    			tbody = element("tbody");
+    			h51 = element("h5");
+    			h51.textContent = "Checkout";
+    			t9 = space();
     			if (if_block) if_block.c();
-    			add_location(h5, file$9, 76, 5, 1844);
-    			attr_dev(label0, "for", "service important-form");
-    			add_location(label0, file$9, 80, 6, 1963);
-    			option.selected = true;
-    			option.disabled = true;
-    			option.__value = "-PILIH-";
-    			option.value = option.__value;
-    			add_location(option, file$9, 82, 19, 2122);
-    			select.required = true;
-    			attr_dev(select, "class", "form-control");
-    			if (/*input_data*/ ctx[0].product_name === void 0) add_render_callback(() => /*select_change_handler*/ ctx[4].call(select));
-    			add_location(select, file$9, 81, 6, 2024);
-    			attr_dev(div0, "class", "form-group col-md-12 ml-1 mr-1");
-    			add_location(div0, file$9, 79, 5, 1911);
-    			attr_dev(label1, "for", "service important-form");
-    			add_location(label1, file$9, 91, 6, 2420);
-    			attr_dev(input0, "type", "number");
-    			input0.required = "true";
-    			attr_dev(input0, "class", "form-control");
-    			attr_dev(input0, "id", "service");
-    			add_location(input0, file$9, 92, 6, 2482);
-    			attr_dev(input1, "type", "text");
-    			set_style(input1, "margin-top", "10px");
-    			input1.disabled = "true";
-    			input1.value = input1_value_value = formatRupiah$2(/*input_data*/ ctx[0].product_price, "Rp");
-    			attr_dev(input1, "class", "form-control");
-    			attr_dev(input1, "id", "service");
-    			attr_dev(input1, "placeholder", "Rp. 0");
-    			add_location(input1, file$9, 93, 6, 2601);
-    			attr_dev(div1, "class", "form-group col-md-12 ml-1 mr-1");
-    			add_location(div1, file$9, 90, 5, 2368);
-    			attr_dev(label2, "for", "service important-form");
-    			add_location(label2, file$9, 98, 6, 2870);
-    			attr_dev(input2, "type", "number");
-    			input2.required = "true";
-    			attr_dev(input2, "class", "form-control");
-    			attr_dev(input2, "id", "service");
-    			add_location(input2, file$9, 99, 6, 2933);
-    			attr_dev(div2, "class", "form-group col-md-12 ml-1 mr-1");
-    			add_location(div2, file$9, 97, 5, 2818);
-    			attr_dev(button, "type", "submit");
+    			t10 = space();
+    			div17 = element("div");
+    			div10 = element("div");
+    			div8 = element("div");
+    			p1 = element("p");
+    			p1.textContent = "Subtotal";
+    			t12 = space();
+    			div9 = element("div");
+    			p2 = element("p");
+    			t13 = text(t13_value);
+    			t14 = space();
+    			div13 = element("div");
+    			div11 = element("div");
+    			p3 = element("p");
+    			p3.textContent = "Pajak";
+    			t16 = space();
+    			div12 = element("div");
+    			p4 = element("p");
+    			t17 = text(t17_value);
+    			t18 = space();
+    			div16 = element("div");
+    			div14 = element("div");
+    			p5 = element("p");
+    			p5.textContent = "Total";
+    			t20 = space();
+    			div15 = element("div");
+    			p6 = element("p");
+    			t21 = text(t21_value);
+    			t22 = space();
+    			hr = element("hr");
+    			t23 = space();
+    			button = element("button");
+    			button.textContent = "Checkout";
+    			attr_dev(h50, "class", "title mb-1 svelte-1g115y4");
+    			add_location(h50, file$9, 288, 6, 6050);
+    			add_location(p0, file$9, 289, 6, 6109);
+    			attr_dev(div0, "class", "col-lg-8 mb-3");
+    			add_location(div0, file$9, 287, 5, 6015);
+    			attr_dev(input, "class", "form-control svelte-1g115y4");
+    			attr_dev(input, "placeholder", "Cari disini..");
+    			attr_dev(input, "type", "text");
+    			add_location(input, file$9, 293, 23, 6252);
+    			set_style(i, "cursor", "pointer");
+    			attr_dev(i, "class", "fa fa-search");
+    			add_location(i, file$9, 295, 56, 6460);
+    			attr_dev(span, "class", "input-group-text");
+    			add_location(span, file$9, 295, 25, 6429);
+    			attr_dev(div1, "class", "input-group-append");
+    			add_location(div1, file$9, 294, 23, 6370);
+    			attr_dev(div2, "class", "input-group mt-2");
+    			add_location(div2, file$9, 292, 6, 6197);
+    			attr_dev(div3, "class", "col-lg-4");
+    			add_location(div3, file$9, 291, 5, 6167);
+    			attr_dev(div4, "class", "row");
+    			add_location(div4, file$9, 286, 4, 5991);
+    			attr_dev(ul, "class", "pagination pagination-lg");
+    			add_location(ul, file$9, 312, 10, 7246);
+    			set_style(nav, "margin-top", "12px");
+    			set_style(nav, "position", "absolute");
+    			set_style(nav, "left", "20px");
+    			set_style(nav, "bottom", "10px");
+    			add_location(nav, file$9, 311, 4, 7164);
+    			attr_dev(div5, "class", "product svelte-1g115y4");
+    			set_style(div5, "height", "640px");
+    			add_location(div5, file$9, 285, 3, 5942);
+    			attr_dev(div6, "class", "col-lg-8");
+    			add_location(div6, file$9, 284, 2, 5915);
+    			attr_dev(h51, "class", "title mb-3 svelte-1g115y4");
+    			add_location(h51, file$9, 326, 4, 7651);
+    			attr_dev(div7, "class", "cart card p-3 svelte-1g115y4");
+    			add_location(div7, file$9, 325, 3, 7618);
+    			add_location(p1, file$9, 347, 22, 8758);
+    			attr_dev(div8, "class", "col");
+    			add_location(div8, file$9, 347, 5, 8741);
+    			set_style(p2, "text-align", "right");
+    			add_location(p2, file$9, 348, 22, 8803);
+    			attr_dev(div9, "class", "col");
+    			add_location(div9, file$9, 348, 5, 8786);
+    			attr_dev(div10, "class", "row bill_row_1");
+    			add_location(div10, file$9, 346, 4, 8706);
+    			add_location(p3, file$9, 351, 22, 8949);
+    			attr_dev(div11, "class", "col");
+    			add_location(div11, file$9, 351, 5, 8932);
+    			set_style(p4, "text-align", "right");
+    			add_location(p4, file$9, 352, 22, 8991);
+    			attr_dev(div12, "class", "col");
+    			add_location(div12, file$9, 352, 5, 8974);
+    			attr_dev(div13, "class", "row bill_row_2");
+    			add_location(div13, file$9, 350, 4, 8897);
+    			attr_dev(p5, "class", "svelte-1g115y4");
+    			add_location(p5, file$9, 355, 22, 9133);
+    			attr_dev(div14, "class", "col");
+    			add_location(div14, file$9, 355, 5, 9116);
+    			set_style(p6, "text-align", "right");
+    			attr_dev(p6, "class", "svelte-1g115y4");
+    			add_location(p6, file$9, 356, 22, 9175);
+    			attr_dev(div15, "class", "col");
+    			add_location(div15, file$9, 356, 5, 9158);
+    			attr_dev(div16, "class", "row bill_row_3 svelte-1g115y4");
+    			add_location(div16, file$9, 354, 4, 9081);
+    			attr_dev(hr, "class", "mt-0 mb-3");
+    			add_location(hr, file$9, 358, 4, 9266);
     			attr_dev(button, "class", "btn btn-primary");
-    			add_location(button, file$9, 103, 15, 3106);
-    			attr_dev(div3, "class", "card-footer");
-    			add_location(div3, file$9, 102, 5, 3064);
-    			attr_dev(form, "class", "mt-3");
-    			add_location(form, file$9, 74, 4, 1779);
-    			attr_dev(div4, "class", "card card-primary card-outline");
-    			add_location(div4, file$9, 72, 3, 1727);
-    			attr_dev(div5, "class", "col-lg-5");
-    			add_location(div5, file$9, 70, 2, 1695);
-    			add_location(th0, file$9, 121, 6, 3414);
-    			add_location(th1, file$9, 122, 6, 3442);
-    			add_location(th2, file$9, 123, 6, 3471);
-    			add_location(th3, file$9, 124, 6, 3491);
-    			add_location(th4, file$9, 125, 6, 3513);
-    			add_location(thead, file$9, 120, 5, 3399);
-    			add_location(tbody, file$9, 127, 5, 3548);
-    			attr_dev(table, "class", "table");
-    			add_location(table, file$9, 119, 4, 3371);
-    			attr_dev(div6, "class", "card card-primary card-outline");
-    			add_location(div6, file$9, 117, 3, 3316);
-    			attr_dev(div7, "class", "col-lg-7");
-    			add_location(div7, file$9, 115, 2, 3284);
-    			attr_dev(div8, "class", "row");
-    			add_location(div8, file$9, 67, 1, 1644);
-    			attr_dev(div9, "class", "container");
-    			add_location(div9, file$9, 65, 0, 1616);
+    			add_location(button, file$9, 359, 4, 9296);
+    			attr_dev(div17, "class", "card p-3");
+    			add_location(div17, file$9, 345, 3, 8678);
+    			attr_dev(div18, "class", "col-lg-4");
+    			add_location(div18, file$9, 322, 2, 7571);
+    			attr_dev(div19, "class", "row");
+    			add_location(div19, file$9, 283, 1, 5894);
+    			attr_dev(div20, "class", "container svelte-1g115y4");
+    			set_style(div20, "margin-bottom", "-150px");
+    			set_style(div20, "margin-top", "30px");
+    			add_location(div20, file$9, 281, 0, 5820);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div9, anchor);
-    			append_dev(div9, div8);
-    			append_dev(div8, div5);
+    			insert_dev(target, div20, anchor);
+    			append_dev(div20, div19);
+    			append_dev(div19, div6);
+    			append_dev(div6, div5);
     			append_dev(div5, div4);
-    			append_dev(div4, form);
-    			append_dev(form, h5);
-    			append_dev(form, t1);
-    			append_dev(form, div0);
-    			append_dev(div0, label0);
-    			append_dev(div0, t3);
-    			append_dev(div0, select);
-    			append_dev(select, option);
+    			append_dev(div4, div0);
+    			append_dev(div0, h50);
+    			append_dev(div0, t1);
+    			append_dev(div0, p0);
+    			append_dev(div4, t3);
+    			append_dev(div4, div3);
+    			append_dev(div3, div2);
+    			append_dev(div2, input);
+    			set_input_value(input, /*searchBox*/ ctx[2]);
+    			append_dev(div2, t4);
+    			append_dev(div2, div1);
+    			append_dev(div1, span);
+    			append_dev(span, i);
+    			append_dev(div4, t5);
 
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(select, null);
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(div4, null);
     			}
 
-    			select_option(select, /*input_data*/ ctx[0].product_name);
-    			append_dev(form, t5);
-    			append_dev(form, div1);
-    			append_dev(div1, label1);
-    			append_dev(div1, t7);
-    			append_dev(div1, input0);
-    			set_input_value(input0, /*input_data*/ ctx[0].product_price);
-    			append_dev(div1, t8);
-    			append_dev(div1, input1);
-    			append_dev(form, t9);
-    			append_dev(form, div2);
-    			append_dev(div2, label2);
-    			append_dev(div2, t11);
-    			append_dev(div2, input2);
-    			set_input_value(input2, /*input_data*/ ctx[0].product_qty);
-    			append_dev(form, t12);
-    			append_dev(form, div3);
-    			append_dev(div3, button);
-    			append_dev(div8, t14);
-    			append_dev(div8, div7);
-    			append_dev(div7, div6);
-    			append_dev(div6, table);
-    			append_dev(table, thead);
-    			append_dev(thead, th0);
-    			append_dev(thead, t16);
-    			append_dev(thead, th1);
-    			append_dev(thead, t18);
-    			append_dev(thead, th2);
-    			append_dev(thead, t20);
-    			append_dev(thead, th3);
-    			append_dev(thead, t22);
-    			append_dev(thead, th4);
-    			append_dev(table, t24);
-    			append_dev(table, tbody);
-    			if (if_block) if_block.m(tbody, null);
+    			append_dev(div5, t6);
+    			append_dev(div5, nav);
+    			append_dev(nav, ul);
 
-    			dispose = [
-    				listen_dev(select, "change", /*select_change_handler*/ ctx[4]),
-    				listen_dev(input0, "input", input0_input_handler),
-    				listen_dev(input2, "input", input2_input_handler),
-    				listen_dev(form, "submit", prevent_default(/*addToCart*/ ctx[3]), false, true, false)
-    			];
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			append_dev(div19, t7);
+    			append_dev(div19, div18);
+    			append_dev(div18, div7);
+    			append_dev(div7, h51);
+    			append_dev(div7, t9);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(div7, null);
+    			}
+
+    			append_dev(div18, t10);
+    			append_dev(div18, div17);
+    			append_dev(div17, div10);
+    			append_dev(div10, div8);
+    			append_dev(div8, p1);
+    			append_dev(div10, t12);
+    			append_dev(div10, div9);
+    			append_dev(div9, p2);
+    			append_dev(p2, t13);
+    			append_dev(div17, t14);
+    			append_dev(div17, div13);
+    			append_dev(div13, div11);
+    			append_dev(div11, p3);
+    			append_dev(div13, t16);
+    			append_dev(div13, div12);
+    			append_dev(div12, p4);
+    			append_dev(p4, t17);
+    			append_dev(div17, t18);
+    			append_dev(div17, div16);
+    			append_dev(div16, div14);
+    			append_dev(div14, p5);
+    			append_dev(div16, t20);
+    			append_dev(div16, div15);
+    			append_dev(div15, p6);
+    			append_dev(p6, t21);
+    			append_dev(div17, t22);
+    			append_dev(div17, hr);
+    			append_dev(div17, t23);
+    			append_dev(div17, button);
+    			current = true;
+    			dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[14]);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*data_raw*/ 2) {
-    				each_value_1 = /*data_raw*/ ctx[1];
+    			if (dirty & /*searchBox*/ 4 && input.value !== /*searchBox*/ ctx[2]) {
+    				set_input_value(input, /*searchBox*/ ctx[2]);
+    			}
+
+    			if (dirty & /*addToCart, formatRupiah, data_bind, active_first, active_last*/ 450) {
+    				each_value_2 = /*data_bind*/ ctx[1];
+    				validate_each_argument(each_value_2);
+    				let i;
+
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_2$2(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(div4, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_2.length;
+    			}
+
+    			if (dirty & /*active_now, num_of_page, choosePage*/ 1072) {
+    				each_value_1 = /*num_of_page*/ ctx[4];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -8735,7 +9052,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block_1$3(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(select, null);
+    						each_blocks[i].m(ul, null);
     					}
     				}
 
@@ -8746,49 +9063,62 @@ var app = (function () {
     				each_blocks.length = each_value_1.length;
     			}
 
-    			if (dirty & /*input_data*/ 1) {
-    				select_option(select, /*input_data*/ ctx[0].product_name);
-    			}
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
 
-    			if (!input0_updating && dirty & /*input_data*/ 1) {
-    				set_input_value(input0, /*input_data*/ ctx[0].product_price);
-    			}
-
-    			input0_updating = false;
-
-    			if (dirty & /*input_data*/ 1 && input1_value_value !== (input1_value_value = formatRupiah$2(/*input_data*/ ctx[0].product_price, "Rp")) && input1.value !== input1_value_value) {
-    				prop_dev(input1, "value", input1_value_value);
-    			}
-
-    			if (!input2_updating && dirty & /*input_data*/ 1) {
-    				set_input_value(input2, /*input_data*/ ctx[0].product_qty);
-    			}
-
-    			input2_updating = false;
-
-    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
-    				if_block.p(ctx, dirty);
+    			if (current_block_type_index === previous_block_index) {
+    				if (~current_block_type_index) {
+    					if_blocks[current_block_type_index].p(ctx, dirty);
+    				}
     			} else {
-    				if (if_block) if_block.d(1);
-    				if_block = current_block_type && current_block_type(ctx);
-
     				if (if_block) {
-    					if_block.c();
-    					if_block.m(tbody, null);
+    					group_outros();
+
+    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    						if_blocks[previous_block_index] = null;
+    					});
+
+    					check_outros();
+    				}
+
+    				if (~current_block_type_index) {
+    					if_block = if_blocks[current_block_type_index];
+
+    					if (!if_block) {
+    						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    						if_block.c();
+    					}
+
+    					transition_in(if_block, 1);
+    					if_block.m(div7, null);
+    				} else {
+    					if_block = null;
     				}
     			}
+
+    			if ((!current || dirty & /*bill*/ 8) && t13_value !== (t13_value = formatRupiah$2(/*bill*/ ctx[3].sub_total, "Rp. ") + "")) set_data_dev(t13, t13_value);
+    			if ((!current || dirty & /*bill*/ 8) && t17_value !== (t17_value = formatRupiah$2(/*bill*/ ctx[3].taxes, "Rp. ") + "")) set_data_dev(t17, t17_value);
+    			if ((!current || dirty & /*bill*/ 8) && t21_value !== (t21_value = formatRupiah$2(/*bill*/ ctx[3].total, "Rp. ") + "")) set_data_dev(t21, t21_value);
     		},
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div9);
+    			if (detaching) detach_dev(div20);
+    			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
 
-    			if (if_block) {
-    				if_block.d();
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d();
     			}
 
-    			run_all(dispose);
+    			dispose();
     		}
     	};
 
@@ -8830,40 +9160,139 @@ var app = (function () {
     }
 
     function instance$g($$self, $$props, $$invalidate) {
-    	let input_data = {
-    		product_name: "",
-    		product_price: "",
-    		product_qty: ""
-    	};
+    	let data_raw = [
+    		{
+    			product_name: "Pewangi",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Pembersih",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Lumera sys [Lotion]",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Pembersih Lantai",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Lumera Face Masks",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Lumera Night Cream",
+    			product_price: 1000000
+    		},
+    		{
+    			product_name: "Pembersih Wajah",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Lumera Day",
+    			product_price: 1000000
+    		},
+    		{
+    			product_name: "Hand Sanitizer",
+    			product_price: 20000
+    		},
+    		{
+    			product_name: "Hand Wash",
+    			product_price: 20000
+    		}
+    	];
 
-    	let data_raw = [];
     	let cart = [];
+    	let data_bind = [];
+    	let searchBox = "";
+    	let bill = { sub_total: 0, taxes: 0, total: 0 };
+
+    	// settings for pagination
+    	let num_of_page = [];
+
+    	let active_now = 1;
+    	let active_first = 1;
+    	let active_last = 9;
+    	let per_page_date = 9;
 
     	// on mount
-    	onMount(async () => {
-    		fetch("http://127.0.0.1/lumeraAPI/master_data/getAllProduct.php", { method: "GET" }).then(res => res.json()).then(data => {
-    			$$invalidate(1, data_raw = data);
-    			console.log(data_raw);
-    		}).catch(err => {
-    			
-    		});
+    	//onMount(async() => {
+    	fetch("http://127.0.0.1/lumeraAPI/master_data/getAllProduct.php", { method: "GET" }).then(res => res.json()).then(data => {
+    		$$invalidate(11, data_raw = data);
+    		console.log(data_raw);
+    	}).catch(err => {
+    		
     	});
 
-    	function addToCart() {
-    		alert("Data berhasil ditambahkan");
+    	function addToCart(id) {
+    		let i = 0;
+    		let alreadyOnCart = false;
 
-    		$$invalidate(2, cart = [
-    			...cart,
-    			{
-    				product_name: input_data.product_name,
-    				product_price: input_data.product_price,
-    				product_qty: input_data.product_qty
+    		for (i; i < cart.length; i++) {
+    			// only add the qty, if the same item already listed in cart
+    			if (cart[i].product_name == data_bind[id].product_name) {
+    				alreadyOnCart = true;
+    				$$invalidate(0, cart[i].product_qty += 1, cart);
     			}
-    		]);
+    		}
 
-    		$$invalidate(0, input_data.product_name = "", input_data);
-    		$$invalidate(0, input_data.product_price = "", input_data);
-    		$$invalidate(0, input_data.product_qty = "", input_data);
+    		// add new item to the cart if the same item didn't exist yet
+    		if (alreadyOnCart == false) {
+    			$$invalidate(0, cart = [
+    				...cart,
+    				{
+    					product_name: data_bind[id].product_name,
+    					product_price: data_bind[id].product_price,
+    					product_qty: 1
+    				}
+    			]);
+    		}
+    	}
+
+    	function itemQuantity(operand, i) {
+    		if (operand == "+") {
+    			$$invalidate(0, cart[i].product_qty++, cart);
+    		} else if (operand == "-") {
+    			if (cart[i].product_qty > 1) {
+    				$$invalidate(0, cart[i].product_qty--, cart);
+    			} else {
+    				cart.splice(i, 1);
+    				$$invalidate(0, cart);
+    			}
+    		}
+    	}
+
+    	function bindPage(amount_of_data) {
+    		let i = 0;
+    		$$invalidate(4, num_of_page = []);
+
+    		while (amount_of_data > per_page_date) {
+    			i = i + 1;
+    			num_of_page.push(i);
+    			amount_of_data -= per_page_date;
+    		}
+
+    		if (amount_of_data <= per_page_date) {
+    			i = i + 1;
+    			num_of_page.push(i);
+    		}
+
+    		console.log(num_of_page);
+    	}
+
+    	function choosePage(page) {
+    		if (page == 1) {
+    			$$invalidate(6, active_first = 1);
+    			$$invalidate(7, active_last = per_page_date);
+    		} else {
+    			$$invalidate(6, active_first = (page - 1) * per_page_date + 1);
+    			$$invalidate(7, active_last = page * per_page_date);
+    		}
+
+    		$$invalidate(5, active_now = page);
+    		console.log(active_first);
+    		console.log(active_last);
     	}
 
     	const writable_props = [];
@@ -8875,51 +9304,135 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("PembelianProdukKecantikan", $$slots, []);
 
-    	function select_change_handler() {
-    		input_data.product_name = select_value(this);
-    		$$invalidate(0, input_data);
-    		$$invalidate(1, data_raw);
+    	function input_input_handler() {
+    		searchBox = this.value;
+    		$$invalidate(2, searchBox);
     	}
 
-    	function input0_input_handler() {
-    		input_data.product_price = to_number(this.value);
-    		$$invalidate(0, input_data);
-    		$$invalidate(1, data_raw);
+    	const click_handler = i => addToCart(i);
+    	const click_handler_1 = i => itemQuantity("+", i);
+
+    	function input_input_handler_1(cart_item) {
+    		cart_item.product_qty = to_number(this.value);
+    		$$invalidate(0, cart);
     	}
 
-    	function input2_input_handler() {
-    		input_data.product_qty = to_number(this.value);
-    		$$invalidate(0, input_data);
-    		$$invalidate(1, data_raw);
-    	}
+    	const click_handler_2 = i => itemQuantity("-", i);
 
     	$$self.$capture_state = () => ({
     		onMount,
-    		input_data,
+    		fade,
+    		fly,
     		data_raw,
     		cart,
+    		data_bind,
+    		searchBox,
+    		bill,
+    		num_of_page,
+    		active_now,
+    		active_first,
+    		active_last,
+    		per_page_date,
     		formatRupiah: formatRupiah$2,
-    		addToCart
+    		addToCart,
+    		itemQuantity,
+    		bindPage,
+    		choosePage
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("input_data" in $$props) $$invalidate(0, input_data = $$props.input_data);
-    		if ("data_raw" in $$props) $$invalidate(1, data_raw = $$props.data_raw);
-    		if ("cart" in $$props) $$invalidate(2, cart = $$props.cart);
+    		if ("data_raw" in $$props) $$invalidate(11, data_raw = $$props.data_raw);
+    		if ("cart" in $$props) $$invalidate(0, cart = $$props.cart);
+    		if ("data_bind" in $$props) $$invalidate(1, data_bind = $$props.data_bind);
+    		if ("searchBox" in $$props) $$invalidate(2, searchBox = $$props.searchBox);
+    		if ("bill" in $$props) $$invalidate(3, bill = $$props.bill);
+    		if ("num_of_page" in $$props) $$invalidate(4, num_of_page = $$props.num_of_page);
+    		if ("active_now" in $$props) $$invalidate(5, active_now = $$props.active_now);
+    		if ("active_first" in $$props) $$invalidate(6, active_first = $$props.active_first);
+    		if ("active_last" in $$props) $$invalidate(7, active_last = $$props.active_last);
+    		if ("per_page_date" in $$props) per_page_date = $$props.per_page_date;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*cart, bill*/ 9) {
+    			// recalculate sub total and total when new or deleted item from cart 
+    			 {
+    				let i;
+    				$$invalidate(3, bill.sub_total = 0, bill);
+    				$$invalidate(3, bill.total = 0, bill);
+
+    				for (i = 0; i < cart.length; i++) {
+    					$$invalidate(3, bill.sub_total += cart[i].product_price * cart[i].product_qty, bill);
+    				}
+
+    				$$invalidate(3, bill.total = bill.sub_total - bill.taxes, bill);
+    			}
+    		}
+
+    		if ($$self.$$.dirty & /*searchBox, data_raw, data_bind*/ 2054) {
+    			 {
+    				if (searchBox != "" && data_raw != []) {
+    					// reset page
+    					$$invalidate(1, data_bind = []);
+
+    					let i = 0;
+    					let counter = 0;
+
+    					for (i = 0; i < searchBox.length; i++) {
+    						for (let j = 0; j < data_raw.length; j++) {
+    							let confirmed = 0;
+    							let name = data_raw[j].product_name;
+
+    							for (let c = 0; c < searchBox.length; c++) {
+    								if (searchBox[c].toLowerCase() == name[c].toLowerCase()) {
+    									confirmed = 1;
+    								} else {
+    									confirmed = 0;
+    									break;
+    								}
+    							}
+
+    							if (confirmed == 1) {
+    								$$invalidate(1, data_bind[counter] = data_raw[j], data_bind);
+    								counter++;
+    							}
+    						}
+
+    						counter = 0;
+    					}
+    				} else if (searchBox == "" && data_raw != []) {
+    					$$invalidate(1, data_bind = data_raw);
+    				}
+
+    				bindPage(data_bind.length);
+    			}
+    		}
+    	};
+
     	return [
-    		input_data,
-    		data_raw,
     		cart,
+    		data_bind,
+    		searchBox,
+    		bill,
+    		num_of_page,
+    		active_now,
+    		active_first,
+    		active_last,
     		addToCart,
-    		select_change_handler,
-    		input0_input_handler,
-    		input2_input_handler
+    		itemQuantity,
+    		choosePage,
+    		data_raw,
+    		per_page_date,
+    		bindPage,
+    		input_input_handler,
+    		click_handler,
+    		click_handler_1,
+    		input_input_handler_1,
+    		click_handler_2
     	];
     }
 
