@@ -2,48 +2,9 @@
 
 	import {onMount} from 'svelte'
 	import { fade, fly } from 'svelte/transition';
+	import {Link} from 'svelte-routing'
 
-	let data_raw = [
-		{
-			product_name  : "Pewangi",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Pembersih",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Lumera sys [Lotion]",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Pembersih Lantai",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Lumera Face Masks",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Lumera Night Cream",
-			product_price : 1000000,
-		},
-		{
-			product_name  : "Pembersih Wajah",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Lumera Day",
-			product_price : 1000000,
-		},
-		{
-			product_name  : "Hand Sanitizer",
-			product_price : 20000,
-		},
-		{
-			product_name  : "Hand Wash",
-			product_price : 20000,
-		}];
+	let data_raw = [];
 
 	let cart = [];
 	let data_bind = [];
@@ -52,6 +13,10 @@
 		sub_total : 0,
 		taxes : 0,
 		total : 0}
+	let purchaseDetail = {
+  		purchase_id : '102',
+  		purchase_items : []
+  	}
 
 	// settings for pagination
 	let num_of_page   = [];
@@ -59,6 +24,7 @@
   	let active_first  = 1;
   	let active_last   = 9;
   	let per_page_date = 9;
+
 
 	// recalculate sub total and total when new or deleted item from cart 
 	$: {
@@ -82,7 +48,7 @@
 	      for(i = 0; i < searchBox.length;i++){
 	        for(let j = 0; j < data_raw.length;j++){
 	          let confirmed = 0;
-	          let name = data_raw[j].product_name;
+	          let name = data_raw[j][1].data;
 	          for(let c = 0; c < searchBox.length;c++){
 	            if(searchBox[c].toLowerCase() == name[c].toLowerCase()){
 	              confirmed = 1;
@@ -109,19 +75,21 @@
 	}
 
 	// on mount
-	//onMount(async() => {
+	onMount(async() => {
 
+		purchaseDetail.purchase_id = generateNewPurchaseId();
 		fetch("http://127.0.0.1/lumeraAPI/master_data/getAllProduct.php", {
 		    method : 'GET'
 		}).then(res => res.json())
-		.then(data => { 
+		.then(data => {
 		  	data_raw = data;
-		    console.log(data_raw);
+		  	data_bind = data;
+		    console.log(data_bind[1][1].data);
 		})
 		.catch(err => {
 		           
 		})
-	//})
+	})
 
 	function formatRupiah(angka, prefix){
 
@@ -152,7 +120,7 @@
 		for(i; i < cart.length; i++){
 			
 			// only add the qty, if the same item already listed in cart
-			if(cart[i].product_name == data_bind[id].product_name){
+			if(cart[i].product_name == data_bind[id][1].data){
 				alreadyOnCart = true;
 				cart[i].product_qty += 1;
 			}
@@ -161,8 +129,8 @@
 		// add new item to the cart if the same item didn't exist yet
 		if(alreadyOnCart == false){
 			cart = [...cart, {
-				product_name  : data_bind[id].product_name, 
-				product_price : data_bind[id].product_price,
+				product_name  : data_bind[id][1].data, 
+				product_price : data_bind[id][2].data,
 				product_qty   : 1
 			}];
 		}
@@ -213,6 +181,11 @@
 	    active_now = page;
 	    console.log(active_first);
 	    console.log(active_last);
+  	}
+
+  	function generateNewPurchaseId(){
+  		var randVal = 101+(Math.random()*(999-101));
+  		return "102-" + Date.now() + "" + Math.round(randVal);
   	}
 
 </script>
@@ -279,14 +252,18 @@
 
 </style>
 
-<div class="container" style="margin-bottom:-150px;margin-top:30px;">
+<div class="container" style="margin-bottom:-150px;margin-top:20px;">
+	<span class="badge badge-pill badge-primary">ID PEMBELIAN #{purchaseDetail.purchase_id}</span>
+	<span class="badge badge-pill badge-success">PEMBELIAN BARU</span>
+	<span class="badge badge-pill badge-success">CHECKOUT</span>
+	<span class="badge badge-pill badge-danger">BELUM CHECKOUT</span>
 
 	<div class="row">
 		<div class="col-lg-8">
-			<div class="product" style="height:640px;">
+			<div class="product mt-1" style="height:640px;">
 				<div class="row">
 					<div class="col-lg-8 mb-3">
-						<h5 class="title mb-1">Daftar Pembelian Produk</h5>
+						<h5 class="title mb-1 mt-1">Daftar Pembelian Produk</h5>
 						<p>Lakukan pembelian produk disini</p>
 					</div>
 					<div class="col-lg-4">
@@ -301,8 +278,8 @@
 						{#if i >= active_first - 1 && i < active_last}
 							<div class="col-lg-4"> 
 								<div class="card p-3">
-									<p class="mb-1" style="font-size:1.0rem">{product.product_name}</p>
-									<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product.product_price, "Rp. ")}/pcs</p>
+									<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
+									<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
 									<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
 								</div>
 							</div>
@@ -356,8 +333,12 @@
 					<div class="col"><p>Total</p></div>
 					<div class="col"><p style="text-align:right;">{formatRupiah(bill.total, "Rp. ")}</p></div>
 				</div>
-				<hr class="mt-0 mb-3" />
-				<button class="btn btn-primary">Checkout</button>	
+				<hr class="mt-0 mb-3"/>
+				<div class="row ml-2 mr-2">
+					<button class="col-lg-12 btn btn-primary">Checkout</button>	
+					<button class="col-lg-12 btn btn-outline-success mt-2">Simpan</button>
+					<button class="col-lg-12 btn btn-outline-danger mt-2"><Link to="beli-produkkecantikan"><span class="text-danger">Batal</span></Link></button>
+				</div>
 			</div>
 
 		</div>

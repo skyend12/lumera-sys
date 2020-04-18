@@ -51,7 +51,7 @@
         {
           nav_body : "Produk Kecantikan",
           nav_icon : "far fa-circle",
-          nav_to   : "pembelian-produk-kecantikan"
+          nav_to   : "beli-produkkecantikan"
         },
         {
           nav_body : "Inventaris",
