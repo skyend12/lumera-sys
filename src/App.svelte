@@ -73,7 +73,6 @@
 		</Route>
 
 		<Route path="/beli-produkkecantikan" component="{TabelPembelianProdukKecantikan}"/>
-		<Route path="/beli-produkkecantikan/pembelian-baru" component="{PembelianProdukKecantikan}" />
 		<Route path="/beli-produkkecantikan/:id" let:params>
 		  <PembelianProdukKecantikan id="{params.id}" />
 		</Route>

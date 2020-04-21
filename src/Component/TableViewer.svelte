@@ -2,6 +2,8 @@
 
   // controller
   export let controller;
+  export let action = null;
+
 	import { Router, Link, Route } from "svelte-routing";
   import { onMount } from 'svelte';
 
@@ -228,11 +230,19 @@
                           {/if}
                         {/each}
                         <td class="td-actions">
-                          <Link to="{controller.name + "/edit/" + parent_data[0].data}">
-                            <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
-                              <i class="fa fa-pencil-ruler pt-1"></i>
-                            </button>
-                          </Link>
+                          {#if action == null}
+                            <Link to="{controller.name + "/edit/" + parent_data[0].data}">
+                              <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
+                                <i class="fa fa-pencil-ruler pt-1"></i>
+                              </button>
+                            </Link>
+                          {:else if action != null}
+                            <Link to="{controller.name + "/" + parent_data[0].data}">
+                              <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
+                                <i class="fa fa-pencil-ruler pt-1"></i>
+                              </button>
+                            </Link>
+                          {/if}
                           <!--
                           <button type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm " data-original-title="" title=""><i class="fa fa-trash pt-1"></i></button>-->
                         </td>

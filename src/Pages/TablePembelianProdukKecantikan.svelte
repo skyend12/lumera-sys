@@ -6,7 +6,7 @@
  
   let controller = {
       name : "beli-produkkecantikan",
-      title : "Pembelian Produk Kecantian",
+      title : "Pembelian Produk Kecantikan",
       sub_title : "Kelola pembelian produk",
       icon      : "fa fa-users",
       search_selector : 1,
@@ -15,8 +15,8 @@
         icon : "fa fa-plus",
         link : "pembelian-baru"
       },
-      table_header : ["#", "No. Invoice", "Total", "Status", "Tipe", "Aksi"],
-      apiUrl : apiBaseUrl + "/"
+      table_header : ["#", "No. Invoice", "Total", "Status", "Tipe", "Tanggal Pembelian", "Aksi"],
+      apiUrl : apiBaseUrl + "/pos_purchase/getAllproductPurchase.php"
     }
 
 </script>
@@ -53,12 +53,12 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><Link to = "dashboard">Dashboard</Link></li>
-            <li class="breadcrumb-item active">Staf</li>
+            <li class="breadcrumb-item active">Pembelian Produk Kecantikan</li>
           </ol>
         </div>
       </div>
     </div><!-- /.container-fluid -->
   </section>
 
-  <TableViewer controller={controller} />
+  <TableViewer action="purchase" controller={controller} />
 </div>

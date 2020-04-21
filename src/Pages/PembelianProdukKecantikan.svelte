@@ -1,20 +1,24 @@
 <script>
 
+	// import data
 	import {onMount} from 'svelte'
-	import { fade, fly } from 'svelte/transition';
+	import {fade,fly } from 'svelte/transition';
 	import {Link} from 'svelte-routing'
+	export let id;
 
-	let data_raw = [];
-
-	let cart = [];
+	let data_raw  = [];
+	let cart      = [];
 	let data_bind = [];
 	let searchBox = "";
 	let bill = {
 		sub_total : 0,
 		taxes : 0,
-		total : 0}
+		total : 0
+	}
 	let purchaseDetail = {
   		purchase_id : '102',
+  		purchase_total : 0,
+  		purchase_status : 0,
   		purchase_items : []
   	}
 
@@ -24,7 +28,6 @@
   	let active_first  = 1;
   	let active_last   = 9;
   	let per_page_date = 9;
-
 
 	// recalculate sub total and total when new or deleted item from cart 
 	$: {
@@ -69,21 +72,39 @@
 	    else if(searchBox == "" && data_raw != []){
 	      data_bind = data_raw;
 	    }
-	    
-	    bindPage(data_bind.length);
 
+	    bindPage(data_bind.length);
+	
 	}
 
 	// on mount
 	onMount(async() => {
 
-		purchaseDetail.purchase_id = generateNewPurchaseId();
+		if(id != "pembelian-baru"){
+			fetch("http://127.0.0.1/lumeraAPI/pos_purchase/getAllproductPurchase.php?purchase_id=" + id, {
+			    method : 'GET'
+			}).then(res => res.json())
+			.then(data => {
+				purchaseDetail.purchase_id = data.purchase_id;
+				purchaseDetail.purchase_status = data.purchase_status;
+				cart = data.cart;
+			})
+			.catch(err => {
+			           
+			})
+		}
+
+		else{
+			purchaseDetail.purchase_id = generateNewPurchaseId();
+		}
+
 		fetch("http://127.0.0.1/lumeraAPI/master_data/getAllProduct.php", {
 		    method : 'GET'
 		}).then(res => res.json())
 		.then(data => {
 		  	data_raw = data;
 		  	data_bind = data;
+		  	console.log(data_bind);
 		    console.log(data_bind[1][1].data);
 		})
 		.catch(err => {
@@ -129,6 +150,7 @@
 		// add new item to the cart if the same item didn't exist yet
 		if(alreadyOnCart == false){
 			cart = [...cart, {
+				product_id    : data_bind[id][0].data,
 				product_name  : data_bind[id][1].data, 
 				product_price : data_bind[id][2].data,
 				product_qty   : 1
@@ -186,6 +208,61 @@
   	function generateNewPurchaseId(){
   		var randVal = 101+(Math.random()*(999-101));
   		return "102-" + Date.now() + "" + Math.round(randVal);
+  	}
+
+  	function goBack(){
+  		window.history.back();
+  	}
+
+  	function checkoutToApi(statusChooser){
+  		
+  		// if status is 0 it means only save
+  		// if status is 1 it means checkout
+  		let status = 0;
+  		if(statusChooser == "checkout"){
+  			status = 1;
+  		}
+
+  		if(cart.length == 0){
+  			alert("Keranjang checkout tidak boleh kosong");
+  		}
+
+  		else{
+  			let confirm_changes;
+  			if(status == 0){
+  				confirm_changes = confirm("Anda yakin akan menyimpan pembelian ini?\n* Data masih bisa dirubah");
+  			}
+
+  			else{
+  				confirm_changes = confirm("Anda yakin akan menyimpan pembelian ini?\n* Dengan melakukan checkout data sudah tidak bisa dirubah lagi");
+  			}
+
+			if (confirm_changes == true) {
+	  			// fill the object 
+	  			purchaseDetail.purchase_total = bill.total
+	  			purchaseDetail.purchase_items = cart;
+	  			purchaseDetail.purchase_status = status; 
+	  			
+	  			fetch("http://127.0.0.1/lumeraAPI/pos_purchase/saveProductPurchase.php", {
+				  method: "POST",
+				  body: JSON.stringify(purchaseDetail),
+				  headers: {
+				    "Content-Type": "application/x-www-form-urlencoded"
+				  }
+				}).then(function(response) {
+				  response.status     //=> number 100–599
+				  response.statusText //=> String
+				  response.headers    //=> Headers
+				  response.url        //=> String
+				  alert("Data berhasil disimpan");
+				  goBack();
+				  console.log(response)
+				}, function(error) {
+				  error.message //=> String
+				})
+			}
+  		}
+
   	}
 
 </script>
@@ -254,10 +331,14 @@
 
 <div class="container" style="margin-bottom:-150px;margin-top:20px;">
 	<span class="badge badge-pill badge-primary">ID PEMBELIAN #{purchaseDetail.purchase_id}</span>
-	<span class="badge badge-pill badge-success">PEMBELIAN BARU</span>
-	<span class="badge badge-pill badge-success">CHECKOUT</span>
-	<span class="badge badge-pill badge-danger">BELUM CHECKOUT</span>
-
+	{#if id == "pembelian-baru"}
+		<span class="badge badge-pill badge-success">PEMBELIAN BARU</span>
+	{:else if id != "pembelian-baru"}
+		{#if purchaseDetail.purchase_status == 0}
+			<span class="badge badge-pill badge-danger">BELUM CHECKOUT</span>
+		{/if}
+	{/if}
+		
 	<div class="row">
 		<div class="col-lg-8">
 			<div class="product mt-1" style="height:640px;">
@@ -335,9 +416,9 @@
 				</div>
 				<hr class="mt-0 mb-3"/>
 				<div class="row ml-2 mr-2">
-					<button class="col-lg-12 btn btn-primary">Checkout</button>	
-					<button class="col-lg-12 btn btn-outline-success mt-2">Simpan</button>
-					<button class="col-lg-12 btn btn-outline-danger mt-2"><Link to="beli-produkkecantikan"><span class="text-danger">Batal</span></Link></button>
+					<button on:click={() => checkoutToApi("checkout")} class="col-lg-12 btn btn-primary">Checkout</button>	
+					<button on:click={() => checkoutToApi("save")} class="col-lg-12 btn btn-outline-success mt-2">Simpan</button>
+					<button on:click={() => goBack()} class="col-lg-12 btn btn-outline-danger mt-2">Batal</button>
 				</div>
 			</div>
 
