@@ -2,6 +2,7 @@
 
 	// import data
 	import {onMount} from 'svelte'
+	import Invoice from '../component/invoice.svelte';
 	import {fade,fly } from 'svelte/transition';
 	import {Link} from 'svelte-routing'
 	export let id;
@@ -19,6 +20,7 @@
   		purchase_id : '102',
   		purchase_total : 0,
   		purchase_status : 0,
+  		purchase_date : 0,
   		purchase_items : []
   	}
 
@@ -85,8 +87,11 @@
 			    method : 'GET'
 			}).then(res => res.json())
 			.then(data => {
-				purchaseDetail.purchase_id = data.purchase_id;
+				purchaseDetail.purchase_id     = data.purchase_id;
 				purchaseDetail.purchase_status = data.purchase_status;
+				purchaseDetail.purchase_total  = data.purchase_total;
+				purchaseDetail.purchase_date   = data.purchase_date;
+				purchaseDetail.purchase_items  = data.cart;
 				cart = data.cart;
 			})
 			.catch(err => {
@@ -336,49 +341,46 @@
 	{:else if id != "pembelian-baru"}
 		{#if purchaseDetail.purchase_status == 0}
 			<span class="badge badge-pill badge-danger">BELUM CHECKOUT</span>
-		{/if}
-	{/if}
-		
-	<div class="row">
-		<div class="col-lg-8">
-			<div class="product mt-1" style="height:640px;">
-				<div class="row">
-					<div class="col-lg-8 mb-3">
-						<h5 class="title mb-1 mt-1">Daftar Pembelian Produk</h5>
-						<p>Lakukan pembelian produk disini</p>
-					</div>
-					<div class="col-lg-4">
-						<div class="input-group mt-2">
-	                      <input class="form-control" bind:value="{searchBox}" placeholder="Cari disini.." type="text">
-	                      <div class="input-group-append">
-	                        <span class="input-group-text"><i style="cursor: pointer;" class="fa fa-search"></i></span>
-	                      </div>
-	                    </div>
-					</div>
-					{#each data_bind as product, i}
-						{#if i >= active_first - 1 && i < active_last}
-							<div class="col-lg-4"> 
-								<div class="card p-3">
-									<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
-									<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
-									<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
-								</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="product mt-1" style="height:640px;">
+						<div class="row">
+							<div class="col-lg-8 mb-3">
+								<h5 class="title mb-1 mt-1">Daftar Pembelian Produk</h5>
+								<p>Lakukan pembelian produk disini</p>
 							</div>
-						{/if}
-					{/each}
+							<div class="col-lg-4">
+								<div class="input-group mt-2">
+			                      <input class="form-control" bind:value="{searchBox}" placeholder="Cari disini.." type="text">
+			                      <div class="input-group-append">
+			                        <span class="input-group-text"><i style="cursor: pointer;" class="fa fa-search"></i></span>
+			                      </div>
+			                    </div>
+							</div>
+							{#each data_bind as product, i}
+								{#if i >= active_first - 1 && i < active_last}
+									<div class="col-lg-4"> 
+										<div class="card p-3">
+											<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
+											<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
+											<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
+										</div>
+									</div>
+								{/if}
+							{/each}
+						</div>
+						<nav style="margin-top: 12px;position:absolute;left:20px;bottom:10px">
+					      	<ul class="pagination pagination-lg">
+					        	{#each num_of_page as page}
+					          		<li on:click="{choosePage(page)}" class="page-item"  class:active="{active_now === page}" ><a class="page-link">{page}</a></li>
+					        	{/each}
+					      	</ul>
+					    </nav>
+					</div>
 				</div>
-				<nav style="margin-top: 12px;position:absolute;left:20px;bottom:10px">
-			      	<ul class="pagination pagination-lg">
-			        	{#each num_of_page as page}
-			          		<li on:click="{choosePage(page)}" class="page-item"  class:active="{active_now === page}" ><a class="page-link">{page}</a></li>
-			        	{/each}
-			      	</ul>
-			    </nav>
-			</div>
-		</div>
 
-		<!-- cart, bill -->
-		<div class="col-lg-4">
+			<!-- cart, bill -->
+			<div class="col-lg-4">
 
 			<!-- cart -->
 			<div class="cart card p-3">
@@ -421,9 +423,10 @@
 					<button on:click={() => goBack()} class="col-lg-12 btn btn-outline-danger mt-2">Batal</button>
 				</div>
 			</div>
-
-		</div>
-
-	</div>
+			</div></div>
+		{:else if purchaseDetail.purchase_status == 1}
+			<Invoice invoice_data={purchaseDetail} />
+		{/if}
+	{/if}
 
 </div>

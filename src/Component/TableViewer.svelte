@@ -236,10 +236,16 @@
                                 <i class="fa fa-pencil-ruler pt-1"></i>
                               </button>
                             </Link>
-                          {:else if action != null}
+                          {:else if action != null && data_bind[i][3].data == 0}
                             <Link to="{controller.name + "/" + parent_data[0].data}">
-                              <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm " data-original-title="" title="">
+                              <button type="button" rel="tooltip" class="btn btn-info btn-icon btn-sm" data-original-title="" title="">
                                 <i class="fa fa-pencil-ruler pt-1"></i>
+                              </button>
+                            </Link>
+                          {:else if action != null && data_bind[i][3].data == 1}
+                            <Link to="{controller.name + "/" + parent_data[0].data}">
+                              <button type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm" data-original-title="" title="">
+                                <i class="fa fa-print pt-1"></i>
                               </button>
                             </Link>
                           {/if}
