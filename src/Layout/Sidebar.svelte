@@ -50,20 +50,20 @@
       nav_child : [
         {
           nav_body : "Produk Kecantikan",
-          nav_icon : "far fa-circle",
+          nav_icon : "fas fa-spa",
           nav_to   : "beli-produkkecantikan"
         },
         {
           nav_body : "Inventaris",
           nav_icon : "far fa-circle",
-          nav_to   : "pembelian-inventaris"
+          nav_to   : "beli-inventaris"
         },
       ]
     },
     {
       nav_id    : 3,
       nav_body  : "Penjualan",
-      nav_icon  : "fas fa-fax",
+      nav_icon  : "fas fa-cash-register",
       nav_child : [
         {
           nav_body : "Produk Kecantikan",

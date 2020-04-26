@@ -338,6 +338,90 @@
 	<span class="badge badge-pill badge-primary">ID PEMBELIAN #{purchaseDetail.purchase_id}</span>
 	{#if id == "pembelian-baru"}
 		<span class="badge badge-pill badge-success">PEMBELIAN BARU</span>
+		<div class="row">
+				<div class="col-lg-8">
+					<div class="product mt-1" style="height:640px;">
+						<div class="row">
+							<div class="col-lg-8 mb-3">
+								<h5 class="title mb-1 mt-1">Daftar Pembelian Produk</h5>
+								<p>Lakukan pembelian produk disini</p>
+							</div>
+							<div class="col-lg-4">
+								<div class="input-group mt-2">
+			                      <input class="form-control" bind:value="{searchBox}" placeholder="Cari disini.." type="text">
+			                      <div class="input-group-append">
+			                        <span class="input-group-text"><i style="cursor: pointer;" class="fa fa-search"></i></span>
+			                      </div>
+			                    </div>
+							</div>
+							{#each data_bind as product, i}
+								{#if i >= active_first - 1 && i < active_last && product[4].data == 1}
+									<div class="col-lg-4"> 
+										<div class="card p-3">
+											<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
+											<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
+											<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
+										</div>
+									</div>
+								{/if}
+							{/each}
+						</div>
+						<nav style="margin-top: 12px;position:absolute;left:20px;bottom:10px">
+					      	<ul class="pagination pagination-lg">
+					        	{#each num_of_page as page}
+					          		<li on:click="{choosePage(page)}" class="page-item"  class:active="{active_now === page}" ><a class="page-link">{page}</a></li>
+					        	{/each}
+					      	</ul>
+					    </nav>
+					</div>
+				</div>
+
+			<!-- cart, bill -->
+			<div class="col-lg-4">
+
+			<!-- cart -->
+			<div class="cart card p-3">
+				<h5 class="title mb-3">Checkout</h5>
+				{#if cart.length > 0}
+					{#each cart as cart_item, i}
+						
+							<div transition:fly="{{ y: -200, duration: 650 }}" class="card p-2 cart-item mb-2">
+								<p class="m-0 ml-2 product-name">{cart_item.product_name}</p>
+								<div class="cart-item-quantity-container ml-2 mt-1 mb-1 flex">
+									<i class="fa fa-plus p-2 bg-success mr-2" on:click={()=>itemQuantity("+", i)}></i>
+									<input class="form-control pl-0 pr-0" style="width: 42px;height: 26px;font-size: 0.7rem;text-align: center;" min=1 max=999  type="number" oninput="validity.valid||(value=1);" bind:value="{cart_item.product_qty}" />
+									<i class="fa fa-minus p-2 bg-danger ml-2" on:click={()=>itemQuantity("-", i)}></i>
+									<p class="m-0 ml-2 product-price">@{formatRupiah(cart_item.product_price * cart_item.product_qty, "Rp. ")}</p>
+								</div>
+							</div>
+					{/each}
+				{:else if cart.length == 0}
+					<p>Belum ada produk yang dipilih</p>
+				{/if}
+			</div>
+			
+			<!-- bill -->
+			<div class="card p-3">
+				<div class="row bill_row_1">
+					<div class="col"><p>Subtotal</p></div>
+					<div class="col"><p style="text-align:right">{formatRupiah(bill.sub_total, "Rp. ")}</p></div>
+				</div>
+				<div class="row bill_row_2">
+					<div class="col"><p>Pajak</p></div>
+					<div class="col"><p style="text-align:right">{formatRupiah(bill.taxes, "Rp. ")}</p></div>
+				</div>
+				<div class="row bill_row_3">
+					<div class="col"><p>Total</p></div>
+					<div class="col"><p style="text-align:right;">{formatRupiah(bill.total, "Rp. ")}</p></div>
+				</div>
+				<hr class="mt-0 mb-3"/>
+				<div class="row ml-2 mr-2">
+					<button on:click={() => checkoutToApi("checkout")} class="col-lg-12 btn btn-primary">Checkout</button>	
+					<button on:click={() => checkoutToApi("save")} class="col-lg-12 btn btn-outline-success mt-2">Simpan</button>
+					<button on:click={() => goBack()} class="col-lg-12 btn btn-outline-danger mt-2">Batal</button>
+				</div>
+			</div>
+			</div></div>
 	{:else if id != "pembelian-baru"}
 		{#if purchaseDetail.purchase_status == 0}
 			<span class="badge badge-pill badge-danger">BELUM CHECKOUT</span>
@@ -358,7 +442,7 @@
 			                    </div>
 							</div>
 							{#each data_bind as product, i}
-								{#if i >= active_first - 1 && i < active_last}
+								{#if i >= active_first - 1 && i < active_last && product[4].data == 1}
 									<div class="col-lg-4"> 
 										<div class="card p-3">
 											<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>

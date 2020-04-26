@@ -13,7 +13,9 @@
 	import TambahPasien from './Pages/TambahPasien.svelte';
 	import Dashboard from './Pages/Dashboard.svelte';
 	import PembelianProdukKecantikan from './Pages/PembelianProdukKecantikan.svelte';
+	import PembelianInventaris from './Pages/PembelianInventaris.svelte';
 	import TabelPembelianProdukKecantikan from './Pages/TablePembelianProdukKecantikan.svelte'
+	import TabelPembelianInventaris from './Pages/TablePembelianInventaris.svelte'
 	import { Router, Link, Route } from "svelte-routing";
 
 	let containerMarginVisibletoSidebar = 250;
@@ -75,6 +77,11 @@
 		<Route path="/beli-produkkecantikan" component="{TabelPembelianProdukKecantikan}"/>
 		<Route path="/beli-produkkecantikan/:id" let:params>
 		  <PembelianProdukKecantikan id="{params.id}" />
+		</Route>
+
+		<Route path="/beli-inventaris" component="{TabelPembelianInventaris}"/>
+		<Route path="/beli-inventaris/:id" let:params>
+		  <PembelianInventaris id="{params.id}" />
 		</Route>
 
     </div>

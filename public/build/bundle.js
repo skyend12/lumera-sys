@@ -2527,13 +2527,13 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_item*/ ctx[11].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 229, 16, 6191);
+    			add_location(i, file$2, 229, 16, 6193);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 230, 16, 6268);
+    			add_location(p, file$2, 230, 16, 6270);
     			attr_dev(div0, "class", "row text-white position-relative");
-    			add_location(div0, file$2, 228, 14, 6128);
+    			add_location(div0, file$2, 228, 14, 6130);
     			attr_dev(div1, "class", "nav-argon-item mt-2 svelte-j1xut8");
-    			add_location(div1, file$2, 227, 12, 6038);
+    			add_location(div1, file$2, 227, 12, 6040);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -2632,7 +2632,7 @@ var app = (function () {
     			set_style(i, "right", "10px");
     			set_style(i, "top", "7px");
     			set_style(i, "font-size", "13px");
-    			add_location(i, file$2, 232, 18, 6385);
+    			add_location(i, file$2, 232, 18, 6387);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -2678,7 +2678,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(div, file$2, 237, 14, 6611);
+    			add_location(div, file$2, 237, 14, 6613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2786,11 +2786,11 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = space();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_child*/ ctx[14].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 241, 22, 6920);
+    			add_location(i, file$2, 241, 22, 6922);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 242, 22, 7004);
+    			add_location(p, file$2, 242, 22, 7006);
     			attr_dev(div, "class", "nav-argon-item row text-white position-relative ml-1 svelte-j1xut8");
-    			add_location(div, file$2, 240, 20, 6789);
+    			add_location(div, file$2, 240, 20, 6791);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2952,7 +2952,7 @@ var app = (function () {
     			set_style(i, "right", "10px");
     			set_style(i, "top", "7px");
     			set_style(i, "font-size", "13px");
-    			add_location(i, file$2, 257, 20, 7617);
+    			add_location(i, file$2, 257, 20, 7619);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -2999,13 +2999,13 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t3 = space();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_item*/ ctx[11].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 254, 18, 7417);
+    			add_location(i, file$2, 254, 18, 7419);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 255, 18, 7496);
+    			add_location(p, file$2, 255, 18, 7498);
     			attr_dev(div0, "class", "row text-white position-relative");
-    			add_location(div0, file$2, 253, 16, 7352);
+    			add_location(div0, file$2, 253, 16, 7354);
     			attr_dev(div1, "class", "nav-argon-item mt-2 svelte-j1xut8");
-    			add_location(div1, file$2, 252, 14, 7302);
+    			add_location(div1, file$2, 252, 14, 7304);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3251,78 +3251,78 @@ var app = (function () {
     			attr_dev(img0, "alt", "Lumera Logo");
     			set_style(img0, "width", "80px");
     			set_style(img0, "height", "80px");
-    			add_location(img0, file$2, 197, 10, 4888);
+    			add_location(img0, file$2, 197, 10, 4890);
     			attr_dev(div0, "class", "col-4");
-    			add_location(div0, file$2, 196, 8, 4858);
+    			add_location(div0, file$2, 196, 8, 4860);
     			attr_dev(p0, "class", "brand-text-1 mb-1 font-weight-light svelte-j1xut8");
-    			add_location(p0, file$2, 200, 10, 5037);
+    			add_location(p0, file$2, 200, 10, 5039);
     			attr_dev(p1, "class", "brand-text-2 mt-0 font-weight-bold svelte-j1xut8");
-    			add_location(p1, file$2, 201, 10, 5108);
+    			add_location(p1, file$2, 201, 10, 5110);
     			attr_dev(div1, "class", "col-6 mt-3 ml-2");
-    			add_location(div1, file$2, 199, 8, 4997);
+    			add_location(div1, file$2, 199, 8, 4999);
     			attr_dev(div2, "class", "row w-100");
-    			add_location(div2, file$2, 195, 6, 4826);
+    			add_location(div2, file$2, 195, 6, 4828);
     			attr_dev(a0, "href", "#");
     			attr_dev(a0, "class", "brand-link");
-    			add_location(a0, file$2, 194, 4, 4788);
+    			add_location(a0, file$2, 194, 4, 4790);
     			attr_dev(img1, "alt", "Image placeholder");
     			if (img1.src !== (img1_src_value = "./assets/img/profile_picture/avatar_1.jpg")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file$2, 212, 14, 5500);
+    			add_location(img1, file$2, 212, 14, 5502);
     			attr_dev(a1, "href", "javascript:;");
     			attr_dev(a1, "class", "avatar rounded-circle");
-    			add_location(a1, file$2, 211, 10, 5432);
+    			add_location(a1, file$2, 211, 10, 5434);
     			attr_dev(p2, "class", "user-authorization-name m-0 mb-1 svelte-j1xut8");
-    			add_location(p2, file$2, 215, 12, 5653);
+    			add_location(p2, file$2, 215, 12, 5655);
     			attr_dev(p3, "class", "user-authorization-status svelte-j1xut8");
-    			add_location(p3, file$2, 216, 12, 5723);
+    			add_location(p3, file$2, 216, 12, 5725);
     			attr_dev(div3, "class", "user-authorization-info svelte-j1xut8");
-    			add_location(div3, file$2, 214, 10, 5603);
+    			add_location(div3, file$2, 214, 10, 5605);
     			attr_dev(div4, "class", "user-panel mt-1 ml-0 d-flex elevation-2 pt-3 pl-3 pb-1 svelte-j1xut8");
-    			add_location(div4, file$2, 209, 6, 5315);
+    			add_location(div4, file$2, 209, 6, 5317);
     			attr_dev(hr, "class", "mt-3 mb-4");
-    			add_location(hr, file$2, 220, 6, 5815);
+    			add_location(hr, file$2, 220, 6, 5817);
     			attr_dev(nav0, "class", "mt-3 container");
-    			add_location(nav0, file$2, 223, 6, 5875);
+    			add_location(nav0, file$2, 223, 6, 5877);
     			attr_dev(div5, "class", "sidebar");
-    			add_location(div5, file$2, 207, 4, 5242);
+    			add_location(div5, file$2, 207, 4, 5244);
     			attr_dev(div6, "class", "text-white");
     			set_style(div6, "margin", "7px");
-    			add_location(div6, file$2, 191, 2, 4709);
+    			add_location(div6, file$2, 191, 2, 4711);
     			attr_dev(aside, "class", "main-sidebar bg-primary elevation-4 sidebar-anim svelte-j1xut8");
     			set_style(aside, "position", "fixed");
     			set_style(aside, "height", "100vh");
     			set_style(aside, "transform", "translateX(" + /*sidebar_visible*/ ctx[1] + "px)");
     			set_style(aside, "overflow-y", "auto");
-    			add_location(aside, file$2, 189, 0, 4540);
+    			add_location(aside, file$2, 189, 0, 4542);
     			attr_dev(i0, "class", "fas fa-bars");
-    			add_location(i0, file$2, 274, 80, 8265);
+    			add_location(i0, file$2, 274, 80, 8267);
     			attr_dev(a2, "class", "nav-link text-primary");
     			attr_dev(a2, "role", "button");
-    			add_location(a2, file$2, 274, 8, 8193);
+    			add_location(a2, file$2, 274, 8, 8195);
     			attr_dev(li0, "class", "nav-item");
     			set_style(li0, "cursor", "pointer");
-    			add_location(li0, file$2, 273, 6, 8138);
+    			add_location(li0, file$2, 273, 6, 8140);
     			attr_dev(ul0, "class", "navbar-nav");
-    			add_location(ul0, file$2, 272, 4, 8108);
+    			add_location(ul0, file$2, 272, 4, 8110);
     			attr_dev(i1, "class", "fas fa-cogs");
-    			add_location(i1, file$2, 280, 99, 8514);
+    			add_location(i1, file$2, 280, 99, 8516);
     			attr_dev(a3, "class", "nav-link");
     			attr_dev(a3, "data-widget", "control-sidebar");
     			attr_dev(a3, "data-slide", "true");
     			attr_dev(a3, "href", "#");
     			attr_dev(a3, "role", "button");
-    			add_location(a3, file$2, 280, 8, 8423);
+    			add_location(a3, file$2, 280, 8, 8425);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file$2, 279, 6, 8393);
+    			add_location(li1, file$2, 279, 6, 8395);
     			attr_dev(ul1, "class", "navbar-nav ml-auto");
-    			add_location(ul1, file$2, 278, 4, 8355);
+    			add_location(ul1, file$2, 278, 4, 8357);
     			attr_dev(nav1, "class", "main-header navbar navbar-expand");
     			set_style(nav1, "margin-left", /*navbar_margin*/ ctx[2] + "px");
     			set_style(nav1, "transition", "all 0.5s linear");
     			set_style(nav1, "padding", "0px 0px 18px 0px ");
     			set_style(nav1, "height", "auto");
     			set_style(nav1, "background-color", "#fff");
-    			add_location(nav1, file$2, 270, 2, 7898);
+    			add_location(nav1, file$2, 270, 2, 7900);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3493,20 +3493,20 @@ var app = (function () {
     			nav_child: [
     				{
     					nav_body: "Produk Kecantikan",
-    					nav_icon: "far fa-circle",
+    					nav_icon: "fas fa-spa",
     					nav_to: "beli-produkkecantikan"
     				},
     				{
     					nav_body: "Inventaris",
     					nav_icon: "far fa-circle",
-    					nav_to: "pembelian-inventaris"
+    					nav_to: "beli-inventaris"
     				}
     			]
     		},
     		{
     			nav_id: 3,
     			nav_body: "Penjualan",
-    			nav_icon: "fas fa-fax",
+    			nav_icon: "fas fa-cash-register",
     			nav_child: [
     				{
     					nav_body: "Produk Kecantikan",
@@ -8870,43 +8870,64 @@ var app = (function () {
     const { console: console_1$3 } = globals;
     const file$a = "src/Pages/PembelianProdukKecantikan.svelte";
 
+    function get_each_context_3$2(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[33] = list[i];
+    	child_ctx[41] = list;
+    	child_ctx[35] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_4(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[36] = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_5(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[39] = list[i];
+    	child_ctx[35] = i;
+    	return child_ctx;
+    }
+
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
-    	child_ctx[26] = list;
-    	child_ctx[27] = i;
+    	child_ctx[33] = list[i];
+    	child_ctx[34] = list;
+    	child_ctx[35] = i;
     	return child_ctx;
     }
 
     function get_each_context_1$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[28] = list[i];
+    	child_ctx[36] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[31] = list[i];
-    	child_ctx[27] = i;
+    	child_ctx[39] = list[i];
+    	child_ctx[35] = i;
     	return child_ctx;
     }
 
-    // (341:34) 
-    function create_if_block_1$4(ctx) {
+    // (425:34) 
+    function create_if_block_4$3(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block_2$3, create_if_block_6$2];
+    	const if_block_creators = [create_if_block_5$2, create_if_block_9$2];
     	const if_blocks = [];
 
-    	function select_block_type_1(ctx, dirty) {
+    	function select_block_type_2(ctx, dirty) {
     		if (/*purchaseDetail*/ ctx[5].purchase_status == 0) return 0;
     		if (/*purchaseDetail*/ ctx[5].purchase_status == 1) return 1;
     		return -1;
     	}
 
-    	if (~(current_block_type_index = select_block_type_1(ctx))) {
+    	if (~(current_block_type_index = select_block_type_2(ctx))) {
     		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
@@ -8925,7 +8946,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			let previous_block_index = current_block_type_index;
-    			current_block_type_index = select_block_type_1(ctx);
+    			current_block_type_index = select_block_type_2(ctx);
 
     			if (current_block_type_index === previous_block_index) {
     				if (~current_block_type_index) {
@@ -8977,9 +8998,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$4.name,
+    		id: create_if_block_4$3.name,
     		type: "if",
-    		source: "(341:34) ",
+    		source: "(425:34) ",
     		ctx
     	});
 
@@ -8988,86 +9009,6 @@ var app = (function () {
 
     // (339:1) {#if id == "pembelian-baru"}
     function create_if_block$4(ctx) {
-    	let span;
-
-    	const block = {
-    		c: function create() {
-    			span = element("span");
-    			span.textContent = "PEMBELIAN BARU";
-    			attr_dev(span, "class", "badge badge-pill badge-success");
-    			add_location(span, file$a, 339, 2, 7622);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, span, anchor);
-    		},
-    		p: noop,
-    		i: noop,
-    		o: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(span);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$4.name,
-    		type: "if",
-    		source: "(339:1) {#if id == \\\"pembelian-baru\\\"}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (427:48) 
-    function create_if_block_6$2(ctx) {
-    	let current;
-
-    	const invoice = new Invoice({
-    			props: { invoice_data: /*purchaseDetail*/ ctx[5] },
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(invoice.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(invoice, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const invoice_changes = {};
-    			if (dirty[0] & /*purchaseDetail*/ 32) invoice_changes.invoice_data = /*purchaseDetail*/ ctx[5];
-    			invoice.$set(invoice_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(invoice.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(invoice.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(invoice, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_6$2.name,
-    		type: "if",
-    		source: "(427:48) ",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (342:2) {#if purchaseDetail.purchase_status == 0}
-    function create_if_block_2$3(ctx) {
     	let span0;
     	let t1;
     	let div20;
@@ -9152,23 +9093,23 @@ var app = (function () {
     		each_blocks[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
     	}
 
-    	const if_block_creators = [create_if_block_3$3, create_if_block_4$3];
+    	const if_block_creators = [create_if_block_1$4, create_if_block_2$3];
     	const if_blocks = [];
 
-    	function select_block_type_2(ctx, dirty) {
+    	function select_block_type_1(ctx, dirty) {
     		if (/*cart*/ ctx[1].length > 0) return 0;
     		if (/*cart*/ ctx[1].length == 0) return 1;
     		return -1;
     	}
 
-    	if (~(current_block_type_index = select_block_type_2(ctx))) {
+    	if (~(current_block_type_index = select_block_type_1(ctx))) {
     		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
     	}
 
     	const block = {
     		c: function create() {
     			span0 = element("span");
-    			span0.textContent = "BELUM CHECKOUT";
+    			span0.textContent = "PEMBELIAN BARU";
     			t1 = space();
     			div20 = element("div");
     			div6 = element("div");
@@ -9249,91 +9190,91 @@ var app = (function () {
     			t29 = space();
     			button2 = element("button");
     			button2.textContent = "Batal";
-    			attr_dev(span0, "class", "badge badge-pill badge-danger");
-    			add_location(span0, file$a, 342, 3, 7771);
+    			attr_dev(span0, "class", "badge badge-pill badge-success");
+    			add_location(span0, file$a, 339, 2, 7622);
     			attr_dev(h50, "class", "title mb-1 mt-1 svelte-p5mhsi");
-    			add_location(h50, file$a, 348, 8, 8006);
-    			add_location(p0, file$a, 349, 8, 8071);
+    			add_location(h50, file$a, 345, 8, 7857);
+    			add_location(p0, file$a, 346, 8, 7922);
     			attr_dev(div0, "class", "col-lg-8 mb-3");
-    			add_location(div0, file$a, 347, 7, 7970);
+    			add_location(div0, file$a, 344, 7, 7821);
     			attr_dev(input, "class", "form-control svelte-p5mhsi");
     			attr_dev(input, "placeholder", "Cari disini..");
     			attr_dev(input, "type", "text");
-    			add_location(input, file$a, 353, 25, 8218);
+    			add_location(input, file$a, 350, 25, 8069);
     			set_style(i, "cursor", "pointer");
     			attr_dev(i, "class", "fa fa-search");
-    			add_location(i, file$a, 355, 58, 8428);
+    			add_location(i, file$a, 352, 58, 8279);
     			attr_dev(span1, "class", "input-group-text");
-    			add_location(span1, file$a, 355, 27, 8397);
+    			add_location(span1, file$a, 352, 27, 8248);
     			attr_dev(div1, "class", "input-group-append");
-    			add_location(div1, file$a, 354, 25, 8337);
+    			add_location(div1, file$a, 351, 25, 8188);
     			attr_dev(div2, "class", "input-group mt-2");
-    			add_location(div2, file$a, 352, 8, 8162);
+    			add_location(div2, file$a, 349, 8, 8013);
     			attr_dev(div3, "class", "col-lg-4");
-    			add_location(div3, file$a, 351, 7, 8131);
+    			add_location(div3, file$a, 348, 7, 7982);
     			attr_dev(div4, "class", "row");
-    			add_location(div4, file$a, 346, 6, 7945);
+    			add_location(div4, file$a, 343, 6, 7796);
     			attr_dev(ul, "class", "pagination pagination-lg");
-    			add_location(ul, file$a, 372, 12, 9220);
+    			add_location(ul, file$a, 369, 12, 9095);
     			set_style(nav, "margin-top", "12px");
     			set_style(nav, "position", "absolute");
     			set_style(nav, "left", "20px");
     			set_style(nav, "bottom", "10px");
-    			add_location(nav, file$a, 371, 6, 9137);
+    			add_location(nav, file$a, 368, 6, 9012);
     			attr_dev(div5, "class", "product mt-1 svelte-p5mhsi");
     			set_style(div5, "height", "640px");
-    			add_location(div5, file$a, 345, 5, 7890);
+    			add_location(div5, file$a, 342, 5, 7741);
     			attr_dev(div6, "class", "col-lg-8");
-    			add_location(div6, file$a, 344, 4, 7862);
+    			add_location(div6, file$a, 341, 4, 7713);
     			attr_dev(h51, "class", "title mb-3 svelte-p5mhsi");
-    			add_location(h51, file$a, 386, 4, 9627);
+    			add_location(h51, file$a, 383, 4, 9502);
     			attr_dev(div7, "class", "cart card p-3 svelte-p5mhsi");
-    			add_location(div7, file$a, 385, 3, 9595);
-    			add_location(p1, file$a, 407, 22, 10713);
+    			add_location(div7, file$a, 382, 3, 9470);
+    			add_location(p1, file$a, 405, 22, 10604);
     			attr_dev(div8, "class", "col");
-    			add_location(div8, file$a, 407, 5, 10696);
+    			add_location(div8, file$a, 405, 5, 10587);
     			set_style(p2, "text-align", "right");
-    			add_location(p2, file$a, 408, 22, 10757);
+    			add_location(p2, file$a, 406, 22, 10648);
     			attr_dev(div9, "class", "col");
-    			add_location(div9, file$a, 408, 5, 10740);
+    			add_location(div9, file$a, 406, 5, 10631);
     			attr_dev(div10, "class", "row bill_row_1");
-    			add_location(div10, file$a, 406, 4, 10662);
-    			add_location(p3, file$a, 411, 22, 10900);
+    			add_location(div10, file$a, 404, 4, 10553);
+    			add_location(p3, file$a, 409, 22, 10791);
     			attr_dev(div11, "class", "col");
-    			add_location(div11, file$a, 411, 5, 10883);
+    			add_location(div11, file$a, 409, 5, 10774);
     			set_style(p4, "text-align", "right");
-    			add_location(p4, file$a, 412, 22, 10941);
+    			add_location(p4, file$a, 410, 22, 10832);
     			attr_dev(div12, "class", "col");
-    			add_location(div12, file$a, 412, 5, 10924);
+    			add_location(div12, file$a, 410, 5, 10815);
     			attr_dev(div13, "class", "row bill_row_2");
-    			add_location(div13, file$a, 410, 4, 10849);
+    			add_location(div13, file$a, 408, 4, 10740);
     			attr_dev(p5, "class", "svelte-p5mhsi");
-    			add_location(p5, file$a, 415, 22, 11080);
+    			add_location(p5, file$a, 413, 22, 10971);
     			attr_dev(div14, "class", "col");
-    			add_location(div14, file$a, 415, 5, 11063);
+    			add_location(div14, file$a, 413, 5, 10954);
     			set_style(p6, "text-align", "right");
     			attr_dev(p6, "class", "svelte-p5mhsi");
-    			add_location(p6, file$a, 416, 22, 11121);
+    			add_location(p6, file$a, 414, 22, 11012);
     			attr_dev(div15, "class", "col");
-    			add_location(div15, file$a, 416, 5, 11104);
+    			add_location(div15, file$a, 414, 5, 10995);
     			attr_dev(div16, "class", "row bill_row_3 svelte-p5mhsi");
-    			add_location(div16, file$a, 414, 4, 11029);
+    			add_location(div16, file$a, 412, 4, 10920);
     			attr_dev(hr, "class", "mt-0 mb-3");
-    			add_location(hr, file$a, 418, 4, 11210);
+    			add_location(hr, file$a, 416, 4, 11101);
     			attr_dev(button0, "class", "col-lg-12 btn btn-primary");
-    			add_location(button0, file$a, 420, 5, 11271);
+    			add_location(button0, file$a, 418, 5, 11162);
     			attr_dev(button1, "class", "col-lg-12 btn btn-outline-success mt-2");
-    			add_location(button1, file$a, 421, 5, 11380);
+    			add_location(button1, file$a, 419, 5, 11271);
     			attr_dev(button2, "class", "col-lg-12 btn btn-outline-danger mt-2");
-    			add_location(button2, file$a, 422, 5, 11495);
+    			add_location(button2, file$a, 420, 5, 11386);
     			attr_dev(div17, "class", "row ml-2 mr-2");
-    			add_location(div17, file$a, 419, 4, 11238);
+    			add_location(div17, file$a, 417, 4, 11129);
     			attr_dev(div18, "class", "card p-3");
-    			add_location(div18, file$a, 405, 3, 10635);
+    			add_location(div18, file$a, 403, 3, 10526);
     			attr_dev(div19, "class", "col-lg-4");
-    			add_location(div19, file$a, 382, 3, 9551);
+    			add_location(div19, file$a, 379, 3, 9426);
     			attr_dev(div20, "class", "row");
-    			add_location(div20, file$a, 343, 3, 7840);
+    			add_location(div20, file$a, 340, 2, 7691);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span0, anchor);
@@ -9476,7 +9417,7 @@ var app = (function () {
     			}
 
     			let previous_block_index = current_block_type_index;
-    			current_block_type_index = select_block_type_2(ctx);
+    			current_block_type_index = select_block_type_1(ctx);
 
     			if (current_block_type_index === previous_block_index) {
     				if (~current_block_type_index) {
@@ -9538,25 +9479,553 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2$3.name,
+    		id: create_if_block$4.name,
     		type: "if",
-    		source: "(342:2) {#if purchaseDetail.purchase_status == 0}",
+    		source: "(339:1) {#if id == \\\"pembelian-baru\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (361:8) {#if i >= active_first - 1 && i < active_last}
+    // (511:48) 
+    function create_if_block_9$2(ctx) {
+    	let current;
+
+    	const invoice = new Invoice({
+    			props: { invoice_data: /*purchaseDetail*/ ctx[5] },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(invoice.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(invoice, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const invoice_changes = {};
+    			if (dirty[0] & /*purchaseDetail*/ 32) invoice_changes.invoice_data = /*purchaseDetail*/ ctx[5];
+    			invoice.$set(invoice_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(invoice.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(invoice.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(invoice, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_9$2.name,
+    		type: "if",
+    		source: "(511:48) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (426:2) {#if purchaseDetail.purchase_status == 0}
     function create_if_block_5$2(ctx) {
+    	let span0;
+    	let t1;
+    	let div20;
+    	let div6;
+    	let div5;
+    	let div4;
+    	let div0;
+    	let h50;
+    	let t3;
+    	let p0;
+    	let t5;
+    	let div3;
+    	let div2;
+    	let input;
+    	let t6;
+    	let div1;
+    	let span1;
+    	let i;
+    	let t7;
+    	let t8;
+    	let nav;
+    	let ul;
+    	let t9;
+    	let div19;
+    	let div7;
+    	let h51;
+    	let t11;
+    	let current_block_type_index;
+    	let if_block;
+    	let t12;
+    	let div18;
+    	let div10;
+    	let div8;
+    	let p1;
+    	let t14;
+    	let div9;
+    	let p2;
+    	let t15_value = formatRupiah$3(/*bill*/ ctx[4].sub_total, "Rp. ") + "";
+    	let t15;
+    	let t16;
+    	let div13;
+    	let div11;
+    	let p3;
+    	let t18;
+    	let div12;
+    	let p4;
+    	let t19_value = formatRupiah$3(/*bill*/ ctx[4].taxes, "Rp. ") + "";
+    	let t19;
+    	let t20;
+    	let div16;
+    	let div14;
+    	let p5;
+    	let t22;
+    	let div15;
+    	let p6;
+    	let t23_value = formatRupiah$3(/*bill*/ ctx[4].total, "Rp. ") + "";
+    	let t23;
+    	let t24;
+    	let hr;
+    	let t25;
+    	let div17;
+    	let button0;
+    	let t27;
+    	let button1;
+    	let t29;
+    	let button2;
+    	let current;
+    	let dispose;
+    	let each_value_5 = /*data_bind*/ ctx[2];
+    	validate_each_argument(each_value_5);
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_5.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_5(get_each_context_5(ctx, each_value_5, i));
+    	}
+
+    	let each_value_4 = /*num_of_page*/ ctx[6];
+    	validate_each_argument(each_value_4);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_4.length; i += 1) {
+    		each_blocks[i] = create_each_block_4(get_each_context_4(ctx, each_value_4, i));
+    	}
+
+    	const if_block_creators = [create_if_block_6$2, create_if_block_7$2];
+    	const if_blocks = [];
+
+    	function select_block_type_3(ctx, dirty) {
+    		if (/*cart*/ ctx[1].length > 0) return 0;
+    		if (/*cart*/ ctx[1].length == 0) return 1;
+    		return -1;
+    	}
+
+    	if (~(current_block_type_index = select_block_type_3(ctx))) {
+    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			span0 = element("span");
+    			span0.textContent = "BELUM CHECKOUT";
+    			t1 = space();
+    			div20 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div4 = element("div");
+    			div0 = element("div");
+    			h50 = element("h5");
+    			h50.textContent = "Daftar Pembelian Produk";
+    			t3 = space();
+    			p0 = element("p");
+    			p0.textContent = "Lakukan pembelian produk disini";
+    			t5 = space();
+    			div3 = element("div");
+    			div2 = element("div");
+    			input = element("input");
+    			t6 = space();
+    			div1 = element("div");
+    			span1 = element("span");
+    			i = element("i");
+    			t7 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t8 = space();
+    			nav = element("nav");
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t9 = space();
+    			div19 = element("div");
+    			div7 = element("div");
+    			h51 = element("h5");
+    			h51.textContent = "Checkout";
+    			t11 = space();
+    			if (if_block) if_block.c();
+    			t12 = space();
+    			div18 = element("div");
+    			div10 = element("div");
+    			div8 = element("div");
+    			p1 = element("p");
+    			p1.textContent = "Subtotal";
+    			t14 = space();
+    			div9 = element("div");
+    			p2 = element("p");
+    			t15 = text(t15_value);
+    			t16 = space();
+    			div13 = element("div");
+    			div11 = element("div");
+    			p3 = element("p");
+    			p3.textContent = "Pajak";
+    			t18 = space();
+    			div12 = element("div");
+    			p4 = element("p");
+    			t19 = text(t19_value);
+    			t20 = space();
+    			div16 = element("div");
+    			div14 = element("div");
+    			p5 = element("p");
+    			p5.textContent = "Total";
+    			t22 = space();
+    			div15 = element("div");
+    			p6 = element("p");
+    			t23 = text(t23_value);
+    			t24 = space();
+    			hr = element("hr");
+    			t25 = space();
+    			div17 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "Checkout";
+    			t27 = space();
+    			button1 = element("button");
+    			button1.textContent = "Simpan";
+    			t29 = space();
+    			button2 = element("button");
+    			button2.textContent = "Batal";
+    			attr_dev(span0, "class", "badge badge-pill badge-danger");
+    			add_location(span0, file$a, 426, 3, 11600);
+    			attr_dev(h50, "class", "title mb-1 mt-1 svelte-p5mhsi");
+    			add_location(h50, file$a, 432, 8, 11835);
+    			add_location(p0, file$a, 433, 8, 11900);
+    			attr_dev(div0, "class", "col-lg-8 mb-3");
+    			add_location(div0, file$a, 431, 7, 11799);
+    			attr_dev(input, "class", "form-control svelte-p5mhsi");
+    			attr_dev(input, "placeholder", "Cari disini..");
+    			attr_dev(input, "type", "text");
+    			add_location(input, file$a, 437, 25, 12047);
+    			set_style(i, "cursor", "pointer");
+    			attr_dev(i, "class", "fa fa-search");
+    			add_location(i, file$a, 439, 58, 12257);
+    			attr_dev(span1, "class", "input-group-text");
+    			add_location(span1, file$a, 439, 27, 12226);
+    			attr_dev(div1, "class", "input-group-append");
+    			add_location(div1, file$a, 438, 25, 12166);
+    			attr_dev(div2, "class", "input-group mt-2");
+    			add_location(div2, file$a, 436, 8, 11991);
+    			attr_dev(div3, "class", "col-lg-4");
+    			add_location(div3, file$a, 435, 7, 11960);
+    			attr_dev(div4, "class", "row");
+    			add_location(div4, file$a, 430, 6, 11774);
+    			attr_dev(ul, "class", "pagination pagination-lg");
+    			add_location(ul, file$a, 456, 12, 13073);
+    			set_style(nav, "margin-top", "12px");
+    			set_style(nav, "position", "absolute");
+    			set_style(nav, "left", "20px");
+    			set_style(nav, "bottom", "10px");
+    			add_location(nav, file$a, 455, 6, 12990);
+    			attr_dev(div5, "class", "product mt-1 svelte-p5mhsi");
+    			set_style(div5, "height", "640px");
+    			add_location(div5, file$a, 429, 5, 11719);
+    			attr_dev(div6, "class", "col-lg-8");
+    			add_location(div6, file$a, 428, 4, 11691);
+    			attr_dev(h51, "class", "title mb-3 svelte-p5mhsi");
+    			add_location(h51, file$a, 470, 4, 13480);
+    			attr_dev(div7, "class", "cart card p-3 svelte-p5mhsi");
+    			add_location(div7, file$a, 469, 3, 13448);
+    			add_location(p1, file$a, 491, 22, 14566);
+    			attr_dev(div8, "class", "col");
+    			add_location(div8, file$a, 491, 5, 14549);
+    			set_style(p2, "text-align", "right");
+    			add_location(p2, file$a, 492, 22, 14610);
+    			attr_dev(div9, "class", "col");
+    			add_location(div9, file$a, 492, 5, 14593);
+    			attr_dev(div10, "class", "row bill_row_1");
+    			add_location(div10, file$a, 490, 4, 14515);
+    			add_location(p3, file$a, 495, 22, 14753);
+    			attr_dev(div11, "class", "col");
+    			add_location(div11, file$a, 495, 5, 14736);
+    			set_style(p4, "text-align", "right");
+    			add_location(p4, file$a, 496, 22, 14794);
+    			attr_dev(div12, "class", "col");
+    			add_location(div12, file$a, 496, 5, 14777);
+    			attr_dev(div13, "class", "row bill_row_2");
+    			add_location(div13, file$a, 494, 4, 14702);
+    			attr_dev(p5, "class", "svelte-p5mhsi");
+    			add_location(p5, file$a, 499, 22, 14933);
+    			attr_dev(div14, "class", "col");
+    			add_location(div14, file$a, 499, 5, 14916);
+    			set_style(p6, "text-align", "right");
+    			attr_dev(p6, "class", "svelte-p5mhsi");
+    			add_location(p6, file$a, 500, 22, 14974);
+    			attr_dev(div15, "class", "col");
+    			add_location(div15, file$a, 500, 5, 14957);
+    			attr_dev(div16, "class", "row bill_row_3 svelte-p5mhsi");
+    			add_location(div16, file$a, 498, 4, 14882);
+    			attr_dev(hr, "class", "mt-0 mb-3");
+    			add_location(hr, file$a, 502, 4, 15063);
+    			attr_dev(button0, "class", "col-lg-12 btn btn-primary");
+    			add_location(button0, file$a, 504, 5, 15124);
+    			attr_dev(button1, "class", "col-lg-12 btn btn-outline-success mt-2");
+    			add_location(button1, file$a, 505, 5, 15233);
+    			attr_dev(button2, "class", "col-lg-12 btn btn-outline-danger mt-2");
+    			add_location(button2, file$a, 506, 5, 15348);
+    			attr_dev(div17, "class", "row ml-2 mr-2");
+    			add_location(div17, file$a, 503, 4, 15091);
+    			attr_dev(div18, "class", "card p-3");
+    			add_location(div18, file$a, 489, 3, 14488);
+    			attr_dev(div19, "class", "col-lg-4");
+    			add_location(div19, file$a, 466, 3, 13404);
+    			attr_dev(div20, "class", "row");
+    			add_location(div20, file$a, 427, 3, 11669);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div20, anchor);
+    			append_dev(div20, div6);
+    			append_dev(div6, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, div0);
+    			append_dev(div0, h50);
+    			append_dev(div0, t3);
+    			append_dev(div0, p0);
+    			append_dev(div4, t5);
+    			append_dev(div4, div3);
+    			append_dev(div3, div2);
+    			append_dev(div2, input);
+    			set_input_value(input, /*searchBox*/ ctx[3]);
+    			append_dev(div2, t6);
+    			append_dev(div2, div1);
+    			append_dev(div1, span1);
+    			append_dev(span1, i);
+    			append_dev(div4, t7);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(div4, null);
+    			}
+
+    			append_dev(div5, t8);
+    			append_dev(div5, nav);
+    			append_dev(nav, ul);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			append_dev(div20, t9);
+    			append_dev(div20, div19);
+    			append_dev(div19, div7);
+    			append_dev(div7, h51);
+    			append_dev(div7, t11);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(div7, null);
+    			}
+
+    			append_dev(div19, t12);
+    			append_dev(div19, div18);
+    			append_dev(div18, div10);
+    			append_dev(div10, div8);
+    			append_dev(div8, p1);
+    			append_dev(div10, t14);
+    			append_dev(div10, div9);
+    			append_dev(div9, p2);
+    			append_dev(p2, t15);
+    			append_dev(div18, t16);
+    			append_dev(div18, div13);
+    			append_dev(div13, div11);
+    			append_dev(div11, p3);
+    			append_dev(div13, t18);
+    			append_dev(div13, div12);
+    			append_dev(div12, p4);
+    			append_dev(p4, t19);
+    			append_dev(div18, t20);
+    			append_dev(div18, div16);
+    			append_dev(div16, div14);
+    			append_dev(div14, p5);
+    			append_dev(div16, t22);
+    			append_dev(div16, div15);
+    			append_dev(div15, p6);
+    			append_dev(p6, t23);
+    			append_dev(div18, t24);
+    			append_dev(div18, hr);
+    			append_dev(div18, t25);
+    			append_dev(div18, div17);
+    			append_dev(div17, button0);
+    			append_dev(div17, t27);
+    			append_dev(div17, button1);
+    			append_dev(div17, t29);
+    			append_dev(div17, button2);
+    			current = true;
+
+    			dispose = [
+    				listen_dev(input, "input", /*input_input_handler_2*/ ctx[25]),
+    				listen_dev(button0, "click", /*click_handler_9*/ ctx[30], false, false, false),
+    				listen_dev(button1, "click", /*click_handler_10*/ ctx[31], false, false, false),
+    				listen_dev(button2, "click", /*click_handler_11*/ ctx[32], false, false, false)
+    			];
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*searchBox*/ 8 && input.value !== /*searchBox*/ ctx[3]) {
+    				set_input_value(input, /*searchBox*/ ctx[3]);
+    			}
+
+    			if (dirty[0] & /*addToCart, data_bind, active_first, active_last*/ 1796) {
+    				each_value_5 = /*data_bind*/ ctx[2];
+    				validate_each_argument(each_value_5);
+    				let i;
+
+    				for (i = 0; i < each_value_5.length; i += 1) {
+    					const child_ctx = get_each_context_5(ctx, each_value_5, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks_1[i] = create_each_block_5(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(div4, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+
+    				each_blocks_1.length = each_value_5.length;
+    			}
+
+    			if (dirty[0] & /*active_now, num_of_page, choosePage*/ 4288) {
+    				each_value_4 = /*num_of_page*/ ctx[6];
+    				validate_each_argument(each_value_4);
+    				let i;
+
+    				for (i = 0; i < each_value_4.length; i += 1) {
+    					const child_ctx = get_each_context_4(ctx, each_value_4, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_4.length;
+    			}
+
+    			let previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type_3(ctx);
+
+    			if (current_block_type_index === previous_block_index) {
+    				if (~current_block_type_index) {
+    					if_blocks[current_block_type_index].p(ctx, dirty);
+    				}
+    			} else {
+    				if (if_block) {
+    					group_outros();
+
+    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    						if_blocks[previous_block_index] = null;
+    					});
+
+    					check_outros();
+    				}
+
+    				if (~current_block_type_index) {
+    					if_block = if_blocks[current_block_type_index];
+
+    					if (!if_block) {
+    						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    						if_block.c();
+    					}
+
+    					transition_in(if_block, 1);
+    					if_block.m(div7, null);
+    				} else {
+    					if_block = null;
+    				}
+    			}
+
+    			if ((!current || dirty[0] & /*bill*/ 16) && t15_value !== (t15_value = formatRupiah$3(/*bill*/ ctx[4].sub_total, "Rp. ") + "")) set_data_dev(t15, t15_value);
+    			if ((!current || dirty[0] & /*bill*/ 16) && t19_value !== (t19_value = formatRupiah$3(/*bill*/ ctx[4].taxes, "Rp. ") + "")) set_data_dev(t19, t19_value);
+    			if ((!current || dirty[0] & /*bill*/ 16) && t23_value !== (t23_value = formatRupiah$3(/*bill*/ ctx[4].total, "Rp. ") + "")) set_data_dev(t23, t23_value);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(span0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div20);
+    			destroy_each(each_blocks_1, detaching);
+    			destroy_each(each_blocks, detaching);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d();
+    			}
+
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_5$2.name,
+    		type: "if",
+    		source: "(426:2) {#if purchaseDetail.purchase_status == 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (445:8) {#if i >= active_first - 1 && i < active_last && product[4].data == 1}
+    function create_if_block_8$2(ctx) {
     	let div1;
     	let div0;
     	let p0;
-    	let t0_value = /*product*/ ctx[31][1].data + "";
+    	let t0_value = /*product*/ ctx[39][1].data + "";
     	let t0;
     	let t1;
     	let p1;
-    	let t2_value = formatRupiah$3(/*product*/ ctx[31][2].data, "Rp. ") + "";
+    	let t2_value = formatRupiah$3(/*product*/ ctx[39][2].data, "Rp. ") + "";
     	let t2;
     	let t3;
     	let t4;
@@ -9566,8 +10035,8 @@ var app = (function () {
     	let t6;
     	let dispose;
 
-    	function click_handler(...args) {
-    		return /*click_handler*/ ctx[18](/*i*/ ctx[27], ...args);
+    	function click_handler_6(...args) {
+    		return /*click_handler_6*/ ctx[26](/*i*/ ctx[35], ...args);
     	}
 
     	const block = {
@@ -9587,19 +10056,490 @@ var app = (function () {
     			t6 = space();
     			attr_dev(p0, "class", "mb-1");
     			set_style(p0, "font-size", "1.0rem");
-    			add_location(p0, file$a, 363, 11, 8736);
+    			add_location(p0, file$a, 447, 11, 12589);
     			attr_dev(p1, "class", "mb-2");
     			set_style(p1, "font-weight", "bold");
     			set_style(p1, "font-size", "0.8rem");
-    			add_location(p1, file$a, 364, 11, 8810);
+    			add_location(p1, file$a, 448, 11, 12663);
     			attr_dev(i, "class", "fa fa-plus p-2 bg-success ");
-    			add_location(i, file$a, 365, 78, 8995);
+    			add_location(i, file$a, 449, 78, 12848);
     			attr_dev(button, "class", "btn btn-success btn-sm");
-    			add_location(button, file$a, 365, 11, 8928);
+    			add_location(button, file$a, 449, 11, 12781);
     			attr_dev(div0, "class", "card p-3");
-    			add_location(div0, file$a, 362, 10, 8702);
+    			add_location(div0, file$a, 446, 10, 12555);
     			attr_dev(div1, "class", "col-lg-4");
-    			add_location(div1, file$a, 361, 9, 8668);
+    			add_location(div1, file$a, 445, 9, 12521);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, p0);
+    			append_dev(p0, t0);
+    			append_dev(div0, t1);
+    			append_dev(div0, p1);
+    			append_dev(p1, t2);
+    			append_dev(p1, t3);
+    			append_dev(div0, t4);
+    			append_dev(div0, button);
+    			append_dev(button, i);
+    			append_dev(button, t5);
+    			append_dev(div1, t6);
+    			dispose = listen_dev(button, "click", click_handler_6, false, false, false);
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty[0] & /*data_bind*/ 4 && t0_value !== (t0_value = /*product*/ ctx[39][1].data + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*data_bind*/ 4 && t2_value !== (t2_value = formatRupiah$3(/*product*/ ctx[39][2].data, "Rp. ") + "")) set_data_dev(t2, t2_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_8$2.name,
+    		type: "if",
+    		source: "(445:8) {#if i >= active_first - 1 && i < active_last && product[4].data == 1}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (444:7) {#each data_bind as product, i}
+    function create_each_block_5(ctx) {
+    	let if_block_anchor;
+    	let if_block = /*i*/ ctx[35] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[35] < /*active_last*/ ctx[9] && /*product*/ ctx[39][4].data == 1 && create_if_block_8$2(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*i*/ ctx[35] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[35] < /*active_last*/ ctx[9] && /*product*/ ctx[39][4].data == 1) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_8$2(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_5.name,
+    		type: "each",
+    		source: "(444:7) {#each data_bind as product, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (458:14) {#each num_of_page as page}
+    function create_each_block_4(ctx) {
+    	let li;
+    	let a;
+    	let t_value = /*page*/ ctx[36] + "";
+    	let t;
+    	let dispose;
+
+    	const block = {
+    		c: function create() {
+    			li = element("li");
+    			a = element("a");
+    			t = text(t_value);
+    			attr_dev(a, "class", "page-link");
+    			add_location(a, file$a, 458, 108, 13261);
+    			attr_dev(li, "class", "page-item");
+    			toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[36]);
+    			add_location(li, file$a, 458, 17, 13170);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, li, anchor);
+    			append_dev(li, a);
+    			append_dev(a, t);
+
+    			dispose = listen_dev(
+    				li,
+    				"click",
+    				function () {
+    					if (is_function(/*choosePage*/ ctx[12](/*page*/ ctx[36]))) /*choosePage*/ ctx[12](/*page*/ ctx[36]).apply(this, arguments);
+    				},
+    				false,
+    				false,
+    				false
+    			);
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty[0] & /*num_of_page*/ 64 && t_value !== (t_value = /*page*/ ctx[36] + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*active_now, num_of_page*/ 192) {
+    				toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[36]);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(li);
+    			dispose();
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_4.name,
+    		type: "each",
+    		source: "(458:14) {#each num_of_page as page}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (484:31) 
+    function create_if_block_7$2(ctx) {
+    	let p;
+
+    	const block = {
+    		c: function create() {
+    			p = element("p");
+    			p.textContent = "Belum ada produk yang dipilih";
+    			add_location(p, file$a, 484, 5, 14407);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, p, anchor);
+    		},
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(p);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_7$2.name,
+    		type: "if",
+    		source: "(484:31) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (472:4) {#if cart.length > 0}
+    function create_if_block_6$2(ctx) {
+    	let each_1_anchor;
+    	let current;
+    	let each_value_3 = /*cart*/ ctx[1];
+    	validate_each_argument(each_value_3);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks[i] = create_each_block_3$2(get_each_context_3$2(ctx, each_value_3, i));
+    	}
+
+    	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			each_1_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, each_1_anchor, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*cart, itemQuantity*/ 2050) {
+    				each_value_3 = /*cart*/ ctx[1];
+    				validate_each_argument(each_value_3);
+    				let i;
+
+    				for (i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3$2(ctx, each_value_3, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block_3$2(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+    					}
+    				}
+
+    				group_outros();
+
+    				for (i = each_value_3.length; i < each_blocks.length; i += 1) {
+    					out(i);
+    				}
+
+    				check_outros();
+    			}
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			for (let i = 0; i < each_value_3.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(each_1_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_6$2.name,
+    		type: "if",
+    		source: "(472:4) {#if cart.length > 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (473:5) {#each cart as cart_item, i}
+    function create_each_block_3$2(ctx) {
+    	let div1;
+    	let p0;
+    	let t0_value = /*cart_item*/ ctx[33].product_name + "";
+    	let t0;
+    	let t1;
+    	let div0;
+    	let i0;
+    	let t2;
+    	let input;
+    	let input_updating = false;
+    	let t3;
+    	let i1;
+    	let t4;
+    	let p1;
+    	let t5;
+    	let t6_value = formatRupiah$3(/*cart_item*/ ctx[33].product_price * /*cart_item*/ ctx[33].product_qty, "Rp. ") + "";
+    	let t6;
+    	let t7;
+    	let div1_transition;
+    	let current;
+    	let dispose;
+
+    	function click_handler_7(...args) {
+    		return /*click_handler_7*/ ctx[27](/*i*/ ctx[35], ...args);
+    	}
+
+    	function input_input_handler_3() {
+    		input_updating = true;
+    		/*input_input_handler_3*/ ctx[28].call(input, /*cart_item*/ ctx[33]);
+    	}
+
+    	function click_handler_8(...args) {
+    		return /*click_handler_8*/ ctx[29](/*i*/ ctx[35], ...args);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			p0 = element("p");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			div0 = element("div");
+    			i0 = element("i");
+    			t2 = space();
+    			input = element("input");
+    			t3 = space();
+    			i1 = element("i");
+    			t4 = space();
+    			p1 = element("p");
+    			t5 = text("@");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			attr_dev(p0, "class", "m-0 ml-2 product-name svelte-p5mhsi");
+    			add_location(p0, file$a, 474, 7, 13674);
+    			attr_dev(i0, "class", "fa fa-plus p-2 bg-success mr-2 svelte-p5mhsi");
+    			add_location(i0, file$a, 476, 8, 13814);
+    			attr_dev(input, "class", "form-control pl-0 pr-0 svelte-p5mhsi");
+    			set_style(input, "width", "42px");
+    			set_style(input, "height", "26px");
+    			set_style(input, "font-size", "0.7rem");
+    			set_style(input, "text-align", "center");
+    			attr_dev(input, "min", "1");
+    			attr_dev(input, "max", "999");
+    			attr_dev(input, "type", "number");
+    			attr_dev(input, "oninput", "validity.valid||(value=1);");
+    			add_location(input, file$a, 477, 8, 13905);
+    			attr_dev(i1, "class", "fa fa-minus p-2 bg-danger ml-2 svelte-p5mhsi");
+    			add_location(i1, file$a, 478, 8, 14128);
+    			attr_dev(p1, "class", "m-0 ml-2 product-price svelte-p5mhsi");
+    			add_location(p1, file$a, 479, 8, 14219);
+    			attr_dev(div0, "class", "cart-item-quantity-container ml-2 mt-1 mb-1 flex svelte-p5mhsi");
+    			add_location(div0, file$a, 475, 7, 13743);
+    			attr_dev(div1, "class", "card p-2 cart-item mb-2 svelte-p5mhsi");
+    			add_location(div1, file$a, 473, 6, 13583);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, p0);
+    			append_dev(p0, t0);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(div0, i0);
+    			append_dev(div0, t2);
+    			append_dev(div0, input);
+    			set_input_value(input, /*cart_item*/ ctx[33].product_qty);
+    			append_dev(div0, t3);
+    			append_dev(div0, i1);
+    			append_dev(div0, t4);
+    			append_dev(div0, p1);
+    			append_dev(p1, t5);
+    			append_dev(p1, t6);
+    			append_dev(div1, t7);
+    			current = true;
+
+    			dispose = [
+    				listen_dev(i0, "click", click_handler_7, false, false, false),
+    				listen_dev(input, "input", input_input_handler_3),
+    				listen_dev(i1, "click", click_handler_8, false, false, false)
+    			];
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if ((!current || dirty[0] & /*cart*/ 2) && t0_value !== (t0_value = /*cart_item*/ ctx[33].product_name + "")) set_data_dev(t0, t0_value);
+
+    			if (!input_updating && dirty[0] & /*cart*/ 2) {
+    				set_input_value(input, /*cart_item*/ ctx[33].product_qty);
+    			}
+
+    			input_updating = false;
+    			if ((!current || dirty[0] & /*cart*/ 2) && t6_value !== (t6_value = formatRupiah$3(/*cart_item*/ ctx[33].product_price * /*cart_item*/ ctx[33].product_qty, "Rp. ") + "")) set_data_dev(t6, t6_value);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+
+    			add_render_callback(() => {
+    				if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fly, { y: -200, duration: 650 }, true);
+    				div1_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			if (!div1_transition) div1_transition = create_bidirectional_transition(div1, fly, { y: -200, duration: 650 }, false);
+    			div1_transition.run(0);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    			if (detaching && div1_transition) div1_transition.end();
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block_3$2.name,
+    		type: "each",
+    		source: "(473:5) {#each cart as cart_item, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (358:8) {#if i >= active_first - 1 && i < active_last && product[4].data == 1}
+    function create_if_block_3$3(ctx) {
+    	let div1;
+    	let div0;
+    	let p0;
+    	let t0_value = /*product*/ ctx[39][1].data + "";
+    	let t0;
+    	let t1;
+    	let p1;
+    	let t2_value = formatRupiah$3(/*product*/ ctx[39][2].data, "Rp. ") + "";
+    	let t2;
+    	let t3;
+    	let t4;
+    	let button;
+    	let i;
+    	let t5;
+    	let t6;
+    	let dispose;
+
+    	function click_handler(...args) {
+    		return /*click_handler*/ ctx[18](/*i*/ ctx[35], ...args);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			p0 = element("p");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			p1 = element("p");
+    			t2 = text(t2_value);
+    			t3 = text("/pcs");
+    			t4 = space();
+    			button = element("button");
+    			i = element("i");
+    			t5 = text("TAMBAHKAN");
+    			t6 = space();
+    			attr_dev(p0, "class", "mb-1");
+    			set_style(p0, "font-size", "1.0rem");
+    			add_location(p0, file$a, 360, 11, 8611);
+    			attr_dev(p1, "class", "mb-2");
+    			set_style(p1, "font-weight", "bold");
+    			set_style(p1, "font-size", "0.8rem");
+    			add_location(p1, file$a, 361, 11, 8685);
+    			attr_dev(i, "class", "fa fa-plus p-2 bg-success ");
+    			add_location(i, file$a, 362, 78, 8870);
+    			attr_dev(button, "class", "btn btn-success btn-sm");
+    			add_location(button, file$a, 362, 11, 8803);
+    			attr_dev(div0, "class", "card p-3");
+    			add_location(div0, file$a, 359, 10, 8577);
+    			attr_dev(div1, "class", "col-lg-4");
+    			add_location(div1, file$a, 358, 9, 8543);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -9619,8 +10559,8 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*data_bind*/ 4 && t0_value !== (t0_value = /*product*/ ctx[31][1].data + "")) set_data_dev(t0, t0_value);
-    			if (dirty[0] & /*data_bind*/ 4 && t2_value !== (t2_value = formatRupiah$3(/*product*/ ctx[31][2].data, "Rp. ") + "")) set_data_dev(t2, t2_value);
+    			if (dirty[0] & /*data_bind*/ 4 && t0_value !== (t0_value = /*product*/ ctx[39][1].data + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*data_bind*/ 4 && t2_value !== (t2_value = formatRupiah$3(/*product*/ ctx[39][2].data, "Rp. ") + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
@@ -9630,19 +10570,19 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_5$2.name,
+    		id: create_if_block_3$3.name,
     		type: "if",
-    		source: "(361:8) {#if i >= active_first - 1 && i < active_last}",
+    		source: "(358:8) {#if i >= active_first - 1 && i < active_last && product[4].data == 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:7) {#each data_bind as product, i}
+    // (357:7) {#each data_bind as product, i}
     function create_each_block_2$2(ctx) {
     	let if_block_anchor;
-    	let if_block = /*i*/ ctx[27] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[27] < /*active_last*/ ctx[9] && create_if_block_5$2(ctx);
+    	let if_block = /*i*/ ctx[35] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[35] < /*active_last*/ ctx[9] && /*product*/ ctx[39][4].data == 1 && create_if_block_3$3(ctx);
 
     	const block = {
     		c: function create() {
@@ -9654,11 +10594,11 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (/*i*/ ctx[27] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[27] < /*active_last*/ ctx[9]) {
+    			if (/*i*/ ctx[35] >= /*active_first*/ ctx[8] - 1 && /*i*/ ctx[35] < /*active_last*/ ctx[9] && /*product*/ ctx[39][4].data == 1) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block_5$2(ctx);
+    					if_block = create_if_block_3$3(ctx);
     					if_block.c();
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
     				}
@@ -9677,18 +10617,18 @@ var app = (function () {
     		block,
     		id: create_each_block_2$2.name,
     		type: "each",
-    		source: "(360:7) {#each data_bind as product, i}",
+    		source: "(357:7) {#each data_bind as product, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (374:14) {#each num_of_page as page}
+    // (371:14) {#each num_of_page as page}
     function create_each_block_1$3(ctx) {
     	let li;
     	let a;
-    	let t_value = /*page*/ ctx[28] + "";
+    	let t_value = /*page*/ ctx[36] + "";
     	let t;
     	let dispose;
 
@@ -9698,10 +10638,10 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "class", "page-link");
-    			add_location(a, file$a, 374, 108, 9408);
+    			add_location(a, file$a, 371, 108, 9283);
     			attr_dev(li, "class", "page-item");
-    			toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[28]);
-    			add_location(li, file$a, 374, 17, 9317);
+    			toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[36]);
+    			add_location(li, file$a, 371, 17, 9192);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -9712,7 +10652,7 @@ var app = (function () {
     				li,
     				"click",
     				function () {
-    					if (is_function(/*choosePage*/ ctx[12](/*page*/ ctx[28]))) /*choosePage*/ ctx[12](/*page*/ ctx[28]).apply(this, arguments);
+    					if (is_function(/*choosePage*/ ctx[12](/*page*/ ctx[36]))) /*choosePage*/ ctx[12](/*page*/ ctx[36]).apply(this, arguments);
     				},
     				false,
     				false,
@@ -9721,10 +10661,10 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty[0] & /*num_of_page*/ 64 && t_value !== (t_value = /*page*/ ctx[28] + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*num_of_page*/ 64 && t_value !== (t_value = /*page*/ ctx[36] + "")) set_data_dev(t, t_value);
 
     			if (dirty[0] & /*active_now, num_of_page*/ 192) {
-    				toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[28]);
+    				toggle_class(li, "active", /*active_now*/ ctx[7] === /*page*/ ctx[36]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -9737,22 +10677,22 @@ var app = (function () {
     		block,
     		id: create_each_block_1$3.name,
     		type: "each",
-    		source: "(374:14) {#each num_of_page as page}",
+    		source: "(371:14) {#each num_of_page as page}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (400:31) 
-    function create_if_block_4$3(ctx) {
+    // (398:31) 
+    function create_if_block_2$3(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Belum ada produk yang dipilih";
-    			add_location(p, file$a, 400, 5, 10554);
+    			add_location(p, file$a, 398, 5, 10445);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -9767,17 +10707,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_4$3.name,
+    		id: create_if_block_2$3.name,
     		type: "if",
-    		source: "(400:31) ",
+    		source: "(398:31) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:4) {#if cart.length > 0}
-    function create_if_block_3$3(ctx) {
+    // (385:4) {#if cart.length > 0}
+    function create_if_block_1$4(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value = /*cart*/ ctx[1];
@@ -9863,20 +10803,20 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3$3.name,
+    		id: create_if_block_1$4.name,
     		type: "if",
-    		source: "(388:4) {#if cart.length > 0}",
+    		source: "(385:4) {#if cart.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (389:5) {#each cart as cart_item, i}
+    // (386:5) {#each cart as cart_item, i}
     function create_each_block$4(ctx) {
     	let div1;
     	let p0;
-    	let t0_value = /*cart_item*/ ctx[25].product_name + "";
+    	let t0_value = /*cart_item*/ ctx[33].product_name + "";
     	let t0;
     	let t1;
     	let div0;
@@ -9889,7 +10829,7 @@ var app = (function () {
     	let t4;
     	let p1;
     	let t5;
-    	let t6_value = formatRupiah$3(/*cart_item*/ ctx[25].product_price * /*cart_item*/ ctx[25].product_qty, "Rp. ") + "";
+    	let t6_value = formatRupiah$3(/*cart_item*/ ctx[33].product_price * /*cart_item*/ ctx[33].product_qty, "Rp. ") + "";
     	let t6;
     	let t7;
     	let div1_transition;
@@ -9897,16 +10837,16 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_1(...args) {
-    		return /*click_handler_1*/ ctx[19](/*i*/ ctx[27], ...args);
+    		return /*click_handler_1*/ ctx[19](/*i*/ ctx[35], ...args);
     	}
 
     	function input_input_handler_1() {
     		input_updating = true;
-    		/*input_input_handler_1*/ ctx[20].call(input, /*cart_item*/ ctx[25]);
+    		/*input_input_handler_1*/ ctx[20].call(input, /*cart_item*/ ctx[33]);
     	}
 
     	function click_handler_2(...args) {
-    		return /*click_handler_2*/ ctx[21](/*i*/ ctx[27], ...args);
+    		return /*click_handler_2*/ ctx[21](/*i*/ ctx[35], ...args);
     	}
 
     	const block = {
@@ -9927,9 +10867,9 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			attr_dev(p0, "class", "m-0 ml-2 product-name svelte-p5mhsi");
-    			add_location(p0, file$a, 390, 7, 9821);
+    			add_location(p0, file$a, 388, 8, 9705);
     			attr_dev(i0, "class", "fa fa-plus p-2 bg-success mr-2 svelte-p5mhsi");
-    			add_location(i0, file$a, 392, 8, 9961);
+    			add_location(i0, file$a, 390, 9, 9847);
     			attr_dev(input, "class", "form-control pl-0 pr-0 svelte-p5mhsi");
     			set_style(input, "width", "42px");
     			set_style(input, "height", "26px");
@@ -9939,15 +10879,15 @@ var app = (function () {
     			attr_dev(input, "max", "999");
     			attr_dev(input, "type", "number");
     			attr_dev(input, "oninput", "validity.valid||(value=1);");
-    			add_location(input, file$a, 393, 8, 10052);
+    			add_location(input, file$a, 391, 9, 9939);
     			attr_dev(i1, "class", "fa fa-minus p-2 bg-danger ml-2 svelte-p5mhsi");
-    			add_location(i1, file$a, 394, 8, 10275);
+    			add_location(i1, file$a, 392, 9, 10163);
     			attr_dev(p1, "class", "m-0 ml-2 product-price svelte-p5mhsi");
-    			add_location(p1, file$a, 395, 8, 10366);
+    			add_location(p1, file$a, 393, 9, 10255);
     			attr_dev(div0, "class", "cart-item-quantity-container ml-2 mt-1 mb-1 flex svelte-p5mhsi");
-    			add_location(div0, file$a, 391, 7, 9890);
+    			add_location(div0, file$a, 389, 8, 9775);
     			attr_dev(div1, "class", "card p-2 cart-item mb-2 svelte-p5mhsi");
-    			add_location(div1, file$a, 389, 6, 9730);
+    			add_location(div1, file$a, 387, 7, 9613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -9958,7 +10898,7 @@ var app = (function () {
     			append_dev(div0, i0);
     			append_dev(div0, t2);
     			append_dev(div0, input);
-    			set_input_value(input, /*cart_item*/ ctx[25].product_qty);
+    			set_input_value(input, /*cart_item*/ ctx[33].product_qty);
     			append_dev(div0, t3);
     			append_dev(div0, i1);
     			append_dev(div0, t4);
@@ -9976,14 +10916,14 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty[0] & /*cart*/ 2) && t0_value !== (t0_value = /*cart_item*/ ctx[25].product_name + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty[0] & /*cart*/ 2) && t0_value !== (t0_value = /*cart_item*/ ctx[33].product_name + "")) set_data_dev(t0, t0_value);
 
     			if (!input_updating && dirty[0] & /*cart*/ 2) {
-    				set_input_value(input, /*cart_item*/ ctx[25].product_qty);
+    				set_input_value(input, /*cart_item*/ ctx[33].product_qty);
     			}
 
     			input_updating = false;
-    			if ((!current || dirty[0] & /*cart*/ 2) && t6_value !== (t6_value = formatRupiah$3(/*cart_item*/ ctx[25].product_price * /*cart_item*/ ctx[25].product_qty, "Rp. ") + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty[0] & /*cart*/ 2) && t6_value !== (t6_value = formatRupiah$3(/*cart_item*/ ctx[33].product_price * /*cart_item*/ ctx[33].product_qty, "Rp. ") + "")) set_data_dev(t6, t6_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -10011,7 +10951,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(389:5) {#each cart as cart_item, i}",
+    		source: "(386:5) {#each cart as cart_item, i}",
     		ctx
     	});
 
@@ -10028,7 +10968,7 @@ var app = (function () {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$4, create_if_block_1$4];
+    	const if_block_creators = [create_if_block$4, create_if_block_4$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -10371,6 +11311,24 @@ var app = (function () {
     	const click_handler_4 = () => checkoutToApi("save");
     	const click_handler_5 = () => goBack();
 
+    	function input_input_handler_2() {
+    		searchBox = this.value;
+    		$$invalidate(3, searchBox);
+    	}
+
+    	const click_handler_6 = i => addToCart(i);
+    	const click_handler_7 = i => itemQuantity("+", i);
+
+    	function input_input_handler_3(cart_item) {
+    		cart_item.product_qty = to_number(this.value);
+    		$$invalidate(1, cart);
+    	}
+
+    	const click_handler_8 = i => itemQuantity("-", i);
+    	const click_handler_9 = () => checkoutToApi("checkout");
+    	const click_handler_10 = () => checkoutToApi("save");
+    	const click_handler_11 = () => goBack();
+
     	$$self.$set = $$props => {
     		if ("id" in $$props) $$invalidate(0, id = $$props.id);
     	};
@@ -10503,7 +11461,15 @@ var app = (function () {
     		click_handler_2,
     		click_handler_3,
     		click_handler_4,
-    		click_handler_5
+    		click_handler_5,
+    		input_input_handler_2,
+    		click_handler_6,
+    		click_handler_7,
+    		input_input_handler_3,
+    		click_handler_8,
+    		click_handler_9,
+    		click_handler_10,
+    		click_handler_11
     	];
     }
 
@@ -10536,8 +11502,964 @@ var app = (function () {
     	}
     }
 
+    /* src/Pages/PembelianInventaris.svelte generated by Svelte v3.19.2 */
+
+    const { console: console_1$4 } = globals;
+    const file$b = "src/Pages/PembelianInventaris.svelte";
+
+    function get_each_context$5(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[17] = list[i];
+    	child_ctx[19] = i;
+    	return child_ctx;
+    }
+
+    // (255:32) 
+    function create_if_block_1$5(ctx) {
+    	let each_1_anchor;
+    	let each_value = /*cart*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			each_1_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(target, anchor);
+    			}
+
+    			insert_dev(target, each_1_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*selectItem, removeItem, formatRupiah, cart*/ 49) {
+    				each_value = /*cart*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(each_1_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$5.name,
+    		type: "if",
+    		source: "(255:32) ",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (253:6) {#if cart.length == 0}
+    function create_if_block$5(ctx) {
+    	let td;
+
+    	const block = {
+    		c: function create() {
+    			td = element("td");
+    			td.textContent = "Belum ada data di cart";
+    			add_location(td, file$b, 253, 7, 6635);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, td, anchor);
+    		},
+    		p: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(td);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$5.name,
+    		type: "if",
+    		source: "(253:6) {#if cart.length == 0}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (256:7) {#each cart as cart_item, i}
+    function create_each_block$5(ctx) {
+    	let tr;
+    	let td0;
+    	let t0_value = /*cart_item*/ ctx[17].product_name + "";
+    	let t0;
+    	let t1;
+    	let td1;
+    	let t2_value = formatRupiah$4(/*cart_item*/ ctx[17].product_price, "Rp. ") + "";
+    	let t2;
+    	let t3;
+    	let td2;
+    	let t4_value = /*cart_item*/ ctx[17].product_qty + "";
+    	let t4;
+    	let t5;
+    	let t6;
+    	let td3;
+    	let t7;
+    	let t8_value = formatRupiah$4(/*cart_item*/ ctx[17].product_price * /*cart_item*/ ctx[17].product_qty) + "";
+    	let t8;
+    	let t9;
+    	let td4;
+    	let button;
+    	let i_1;
+    	let t10;
+    	let dispose;
+
+    	function click_handler(...args) {
+    		return /*click_handler*/ ctx[12](/*i*/ ctx[19], ...args);
+    	}
+
+    	function click_handler_1(...args) {
+    		return /*click_handler_1*/ ctx[13](/*i*/ ctx[19], ...args);
+    	}
+
+    	const block = {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = text(" pcs");
+    			t6 = space();
+    			td3 = element("td");
+    			t7 = text("Rp. ");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			td4 = element("td");
+    			button = element("button");
+    			i_1 = element("i");
+    			t10 = space();
+    			add_location(td0, file$b, 257, 9, 6814);
+    			add_location(td1, file$b, 258, 9, 6857);
+    			add_location(td2, file$b, 259, 9, 6923);
+    			add_location(td3, file$b, 260, 9, 6969);
+    			attr_dev(i_1, "class", "fa fa-trash pt-1");
+    			add_location(i_1, file$b, 262, 138, 7217);
+    			attr_dev(button, "type", "button");
+    			attr_dev(button, "rel", "tooltip");
+    			attr_dev(button, "class", "btn btn-danger btn-icon btn-sm ");
+    			attr_dev(button, "data-original-title", "");
+    			attr_dev(button, "title", "");
+    			add_location(button, file$b, 262, 30, 7109);
+    			attr_dev(td4, "class", "td-actions");
+    			add_location(td4, file$b, 261, 9, 7055);
+    			set_style(tr, "cursor", "pointer");
+    			add_location(tr, file$b, 256, 8, 6744);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, tr, anchor);
+    			append_dev(tr, td0);
+    			append_dev(td0, t0);
+    			append_dev(tr, t1);
+    			append_dev(tr, td1);
+    			append_dev(td1, t2);
+    			append_dev(tr, t3);
+    			append_dev(tr, td2);
+    			append_dev(td2, t4);
+    			append_dev(td2, t5);
+    			append_dev(tr, t6);
+    			append_dev(tr, td3);
+    			append_dev(td3, t7);
+    			append_dev(td3, t8);
+    			append_dev(tr, t9);
+    			append_dev(tr, td4);
+    			append_dev(td4, button);
+    			append_dev(button, i_1);
+    			append_dev(tr, t10);
+
+    			dispose = [
+    				listen_dev(i_1, "click", click_handler, false, false, false),
+    				listen_dev(tr, "click", click_handler_1, false, false, false)
+    			];
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*cart*/ 1 && t0_value !== (t0_value = /*cart_item*/ ctx[17].product_name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*cart*/ 1 && t2_value !== (t2_value = formatRupiah$4(/*cart_item*/ ctx[17].product_price, "Rp. ") + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*cart*/ 1 && t4_value !== (t4_value = /*cart_item*/ ctx[17].product_qty + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*cart*/ 1 && t8_value !== (t8_value = formatRupiah$4(/*cart_item*/ ctx[17].product_price * /*cart_item*/ ctx[17].product_qty) + "")) set_data_dev(t8, t8_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(tr);
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$5.name,
+    		type: "each",
+    		source: "(256:7) {#each cart as cart_item, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$i(ctx) {
+    	let div14;
+    	let span0;
+    	let t0;
+    	let t1_value = /*purchaseDetail*/ ctx[2].purchase_id + "";
+    	let t1;
+    	let t2;
+    	let span1;
+    	let t4;
+    	let div13;
+    	let div5;
+    	let div4;
+    	let form;
+    	let h5;
+    	let t6;
+    	let div0;
+    	let label0;
+    	let t8;
+    	let input0;
+    	let t9;
+    	let div1;
+    	let label1;
+    	let t11;
+    	let input1;
+    	let input1_updating = false;
+    	let t12;
+    	let input2;
+    	let input2_value_value;
+    	let t13;
+    	let div2;
+    	let label2;
+    	let t15;
+    	let input3;
+    	let input3_updating = false;
+    	let t16;
+    	let div3;
+    	let button0;
+    	let t18;
+    	let div12;
+    	let div6;
+    	let table;
+    	let thead;
+    	let th0;
+    	let t20;
+    	let th1;
+    	let t22;
+    	let th2;
+    	let t24;
+    	let th3;
+    	let t26;
+    	let th4;
+    	let t28;
+    	let tbody;
+    	let t29;
+    	let div11;
+    	let div10;
+    	let div8;
+    	let div7;
+    	let p0;
+    	let t31;
+    	let p1;
+    	let t32_value = formatRupiah$4(/*purchaseDetail*/ ctx[2].purchase_total, "Rp. ") + "";
+    	let t32;
+    	let t33;
+    	let div9;
+    	let button1;
+    	let t35;
+    	let button2;
+    	let t37;
+    	let button3;
+    	let dispose;
+
+    	function input1_input_handler() {
+    		input1_updating = true;
+    		/*input1_input_handler*/ ctx[10].call(input1);
+    	}
+
+    	function input3_input_handler() {
+    		input3_updating = true;
+    		/*input3_input_handler*/ ctx[11].call(input3);
+    	}
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*cart*/ ctx[0].length == 0) return create_if_block$5;
+    		if (/*cart*/ ctx[0].length > 0) return create_if_block_1$5;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type && current_block_type(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div14 = element("div");
+    			span0 = element("span");
+    			t0 = text("ID PEMBELIAN #");
+    			t1 = text(t1_value);
+    			t2 = space();
+    			span1 = element("span");
+    			span1.textContent = "PEMBELIAN BARU";
+    			t4 = space();
+    			div13 = element("div");
+    			div5 = element("div");
+    			div4 = element("div");
+    			form = element("form");
+    			h5 = element("h5");
+    			h5.textContent = "Tambah Pembelian Inventaris";
+    			t6 = space();
+    			div0 = element("div");
+    			label0 = element("label");
+    			label0.textContent = "Nama Item";
+    			t8 = space();
+    			input0 = element("input");
+    			t9 = space();
+    			div1 = element("div");
+    			label1 = element("label");
+    			label1.textContent = "Harga Item";
+    			t11 = space();
+    			input1 = element("input");
+    			t12 = space();
+    			input2 = element("input");
+    			t13 = space();
+    			div2 = element("div");
+    			label2 = element("label");
+    			label2.textContent = "Jumlah Item";
+    			t15 = space();
+    			input3 = element("input");
+    			t16 = space();
+    			div3 = element("div");
+    			button0 = element("button");
+    			button0.textContent = "SIMPAN";
+    			t18 = space();
+    			div12 = element("div");
+    			div6 = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			th0 = element("th");
+    			th0.textContent = "Nama Produk";
+    			t20 = space();
+    			th1 = element("th");
+    			th1.textContent = "Harga Satuan";
+    			t22 = space();
+    			th2 = element("th");
+    			th2.textContent = "Qty";
+    			t24 = space();
+    			th3 = element("th");
+    			th3.textContent = "Total";
+    			t26 = space();
+    			th4 = element("th");
+    			th4.textContent = "Aksi";
+    			t28 = space();
+    			tbody = element("tbody");
+    			if (if_block) if_block.c();
+    			t29 = space();
+    			div11 = element("div");
+    			div10 = element("div");
+    			div8 = element("div");
+    			div7 = element("div");
+    			p0 = element("p");
+    			p0.textContent = "Total";
+    			t31 = space();
+    			p1 = element("p");
+    			t32 = text(t32_value);
+    			t33 = space();
+    			div9 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Checkout";
+    			t35 = space();
+    			button2 = element("button");
+    			button2.textContent = "Simpan";
+    			t37 = space();
+    			button3 = element("button");
+    			button3.textContent = "Batal";
+    			attr_dev(span0, "class", "badge badge-pill badge-primary mb-2");
+    			add_location(span0, file$b, 191, 1, 4527);
+    			attr_dev(span1, "class", "badge badge-pill badge-success");
+    			add_location(span1, file$b, 192, 1, 4628);
+    			set_style(h5, "margin-left", "20px");
+    			set_style(h5, "margin-top", "20px");
+    			set_style(h5, "margin-bottom", "20px");
+    			set_style(h5, "font-weight", "bold");
+    			add_location(h5, file$b, 203, 5, 4917);
+    			attr_dev(label0, "for", "service important-form");
+    			add_location(label0, file$b, 207, 6, 5118);
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "placeholder", "Nama Barang..");
+    			input0.required = "true";
+    			attr_dev(input0, "class", "form-control");
+    			attr_dev(input0, "id", "service");
+    			add_location(input0, file$b, 208, 6, 5178);
+    			attr_dev(div0, "class", "form-group col-md-12 ml-1 mr-1");
+    			add_location(div0, file$b, 206, 5, 5067);
+    			attr_dev(label1, "for", "service important-form");
+    			add_location(label1, file$b, 213, 6, 5410);
+    			attr_dev(input1, "type", "number");
+    			input1.required = "true";
+    			attr_dev(input1, "class", "form-control");
+    			attr_dev(input1, "id", "service");
+    			attr_dev(input1, "placeholder", "Harga...");
+    			add_location(input1, file$b, 214, 6, 5471);
+    			attr_dev(input2, "type", "text");
+    			set_style(input2, "margin-top", "10px");
+    			input2.disabled = "true";
+    			input2.value = input2_value_value = formatRupiah$4(/*input_data*/ ctx[1].product_price, "Rp");
+    			attr_dev(input2, "class", "form-control");
+    			attr_dev(input2, "id", "service");
+    			attr_dev(input2, "placeholder", "Rp. 0");
+    			add_location(input2, file$b, 215, 6, 5612);
+    			attr_dev(div1, "class", "form-group col-md-12 ml-1 mr-1");
+    			add_location(div1, file$b, 212, 5, 5359);
+    			attr_dev(label2, "for", "service important-form");
+    			add_location(label2, file$b, 220, 6, 5876);
+    			attr_dev(input3, "type", "number");
+    			attr_dev(input3, "placeholder", "Jumlah Item...");
+    			input3.required = "true";
+    			attr_dev(input3, "class", "form-control");
+    			attr_dev(input3, "id", "service");
+    			add_location(input3, file$b, 221, 6, 5938);
+    			attr_dev(div2, "class", "form-group col-md-12 ml-1 mr-1");
+    			add_location(div2, file$b, 219, 5, 5825);
+    			attr_dev(button0, "type", "submit");
+    			attr_dev(button0, "class", "btn btn-primary");
+    			add_location(button0, file$b, 225, 12, 6133);
+    			attr_dev(div3, "class", "card-footer");
+    			add_location(div3, file$b, 224, 5, 6095);
+    			attr_dev(form, "class", "mt-3");
+    			add_location(form, file$b, 201, 4, 4824);
+    			attr_dev(div4, "class", "card card-primary card-outline");
+    			add_location(div4, file$b, 199, 3, 4774);
+    			attr_dev(div5, "class", "col-lg-5");
+    			add_location(div5, file$b, 197, 2, 4747);
+    			add_location(th0, file$b, 244, 6, 6462);
+    			add_location(th1, file$b, 245, 6, 6489);
+    			add_location(th2, file$b, 246, 6, 6517);
+    			add_location(th3, file$b, 247, 6, 6536);
+    			add_location(th4, file$b, 248, 6, 6557);
+    			add_location(thead, file$b, 243, 5, 6448);
+    			add_location(tbody, file$b, 251, 5, 6591);
+    			attr_dev(table, "class", "table");
+    			add_location(table, file$b, 241, 4, 6420);
+    			attr_dev(div6, "class", "card card-primary card-outline");
+    			set_style(div6, "height", "300px");
+    			set_style(div6, "overflow-y", "scroll");
+    			add_location(div6, file$b, 239, 3, 6324);
+    			set_style(p0, "font-weight", "bold");
+    			set_style(p0, "margin-bottom", "0px");
+    			set_style(p0, "margin-top", "10px");
+    			add_location(p0, file$b, 278, 7, 7545);
+    			set_style(p1, "font-family", "bold");
+    			set_style(p1, "font-family", "'Lato'");
+    			set_style(p1, "font-size", "18px");
+    			set_style(p1, "margin-top", "0px");
+    			add_location(p1, file$b, 279, 7, 7628);
+    			attr_dev(div7, "class", "ml-4");
+    			add_location(div7, file$b, 277, 6, 7519);
+    			attr_dev(div8, "class", "col-lg-4");
+    			add_location(div8, file$b, 276, 5, 7490);
+    			attr_dev(button1, "class", "col btn btn-primary");
+    			add_location(button1, file$b, 283, 6, 7858);
+    			attr_dev(button2, "class", "col btn btn-outline-success");
+    			add_location(button2, file$b, 284, 6, 7962);
+    			attr_dev(button3, "class", "col btn btn-outline-danger");
+    			add_location(button3, file$b, 285, 6, 8067);
+    			attr_dev(div9, "class", "col-lg-8 row mt-4");
+    			set_style(div9, "height", "20px");
+    			add_location(div9, file$b, 282, 5, 7798);
+    			attr_dev(div10, "class", "row");
+    			add_location(div10, file$b, 275, 4, 7467);
+    			attr_dev(div11, "class", "card card-primary card-outline");
+    			add_location(div11, file$b, 274, 3, 7418);
+    			attr_dev(div12, "class", "col-lg-7");
+    			add_location(div12, file$b, 237, 2, 6293);
+    			attr_dev(div13, "class", "row");
+    			add_location(div13, file$b, 194, 1, 4697);
+    			attr_dev(div14, "class", "container mt-5 svelte-16r2jnj");
+    			add_location(div14, file$b, 189, 0, 4496);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div14, anchor);
+    			append_dev(div14, span0);
+    			append_dev(span0, t0);
+    			append_dev(span0, t1);
+    			append_dev(div14, t2);
+    			append_dev(div14, span1);
+    			append_dev(div14, t4);
+    			append_dev(div14, div13);
+    			append_dev(div13, div5);
+    			append_dev(div5, div4);
+    			append_dev(div4, form);
+    			append_dev(form, h5);
+    			append_dev(form, t6);
+    			append_dev(form, div0);
+    			append_dev(div0, label0);
+    			append_dev(div0, t8);
+    			append_dev(div0, input0);
+    			set_input_value(input0, /*input_data*/ ctx[1].product_name);
+    			append_dev(form, t9);
+    			append_dev(form, div1);
+    			append_dev(div1, label1);
+    			append_dev(div1, t11);
+    			append_dev(div1, input1);
+    			set_input_value(input1, /*input_data*/ ctx[1].product_price);
+    			append_dev(div1, t12);
+    			append_dev(div1, input2);
+    			append_dev(form, t13);
+    			append_dev(form, div2);
+    			append_dev(div2, label2);
+    			append_dev(div2, t15);
+    			append_dev(div2, input3);
+    			set_input_value(input3, /*input_data*/ ctx[1].product_qty);
+    			append_dev(form, t16);
+    			append_dev(form, div3);
+    			append_dev(div3, button0);
+    			append_dev(div13, t18);
+    			append_dev(div13, div12);
+    			append_dev(div12, div6);
+    			append_dev(div6, table);
+    			append_dev(table, thead);
+    			append_dev(thead, th0);
+    			append_dev(thead, t20);
+    			append_dev(thead, th1);
+    			append_dev(thead, t22);
+    			append_dev(thead, th2);
+    			append_dev(thead, t24);
+    			append_dev(thead, th3);
+    			append_dev(thead, t26);
+    			append_dev(thead, th4);
+    			append_dev(table, t28);
+    			append_dev(table, tbody);
+    			if (if_block) if_block.m(tbody, null);
+    			append_dev(div12, t29);
+    			append_dev(div12, div11);
+    			append_dev(div11, div10);
+    			append_dev(div10, div8);
+    			append_dev(div8, div7);
+    			append_dev(div7, p0);
+    			append_dev(div7, t31);
+    			append_dev(div7, p1);
+    			append_dev(p1, t32);
+    			append_dev(div10, t33);
+    			append_dev(div10, div9);
+    			append_dev(div9, button1);
+    			append_dev(div9, t35);
+    			append_dev(div9, button2);
+    			append_dev(div9, t37);
+    			append_dev(div9, button3);
+
+    			dispose = [
+    				listen_dev(input0, "input", /*input0_input_handler*/ ctx[9]),
+    				listen_dev(input1, "input", input1_input_handler),
+    				listen_dev(input3, "input", input3_input_handler),
+    				listen_dev(
+    					form,
+    					"submit",
+    					prevent_default(function () {
+    						if (is_function(/*addToCart*/ ctx[3](/*input_data*/ ctx[1].product_name))) /*addToCart*/ ctx[3](/*input_data*/ ctx[1].product_name).apply(this, arguments);
+    					}),
+    					false,
+    					true,
+    					false
+    				),
+    				listen_dev(button1, "click", /*click_handler_2*/ ctx[14], false, false, false),
+    				listen_dev(button2, "click", /*click_handler_3*/ ctx[15], false, false, false),
+    				listen_dev(button3, "click", /*click_handler_4*/ ctx[16], false, false, false)
+    			];
+    		},
+    		p: function update(new_ctx, [dirty]) {
+    			ctx = new_ctx;
+    			if (dirty & /*purchaseDetail*/ 4 && t1_value !== (t1_value = /*purchaseDetail*/ ctx[2].purchase_id + "")) set_data_dev(t1, t1_value);
+
+    			if (dirty & /*input_data*/ 2 && input0.value !== /*input_data*/ ctx[1].product_name) {
+    				set_input_value(input0, /*input_data*/ ctx[1].product_name);
+    			}
+
+    			if (!input1_updating && dirty & /*input_data*/ 2) {
+    				set_input_value(input1, /*input_data*/ ctx[1].product_price);
+    			}
+
+    			input1_updating = false;
+
+    			if (dirty & /*input_data*/ 2 && input2_value_value !== (input2_value_value = formatRupiah$4(/*input_data*/ ctx[1].product_price, "Rp")) && input2.value !== input2_value_value) {
+    				prop_dev(input2, "value", input2_value_value);
+    			}
+
+    			if (!input3_updating && dirty & /*input_data*/ 2) {
+    				set_input_value(input3, /*input_data*/ ctx[1].product_qty);
+    			}
+
+    			input3_updating = false;
+
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
+    				if (if_block) if_block.d(1);
+    				if_block = current_block_type && current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(tbody, null);
+    				}
+    			}
+
+    			if (dirty & /*purchaseDetail*/ 4 && t32_value !== (t32_value = formatRupiah$4(/*purchaseDetail*/ ctx[2].purchase_total, "Rp. ") + "")) set_data_dev(t32, t32_value);
+    		},
+    		i: noop,
+    		o: noop,
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div14);
+
+    			if (if_block) {
+    				if_block.d();
+    			}
+
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$i.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function formatRupiah$4(angka, prefix) {
+    	if (angka != undefined) {
+    		angka = angka.toString();
+    		var number_string = angka.replace(/[^,\d]/g, "").toString();
+    		var split = number_string.split(",");
+    		var sisa = split[0].length % 3;
+    		var rupiah = split[0].substr(0, sisa);
+    		var ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+    		var separator;
+
+    		// tambahkan titik jika yang di input sudah menjadi angka ribuan
+    		if (ribuan) {
+    			separator = sisa ? "." : "";
+    			rupiah += separator + ribuan.join(".");
+    		}
+
+    		rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+
+    		return prefix == undefined
+    		? rupiah
+    		: rupiah ? "Rp. " + rupiah : "";
+    	}
+
+    	return "Rp. 0";
+    }
+
+    function generateNewPurchaseId$1() {
+    	var randVal = 101 + Math.random() * (999 - 101);
+    	return "180-" + Date.now() + "" + Math.round(randVal);
+    }
+
+    function goBack$1() {
+    	window.history.back();
+    }
+
+    function instance$i($$self, $$props, $$invalidate) {
+    	let { id } = $$props;
+    	let cart = [];
+
+    	let input_data = {
+    		product_name: "",
+    		product_price: "",
+    		product_qty: ""
+    	};
+
+    	let purchaseDetail = {
+    		purchase_id: "180",
+    		purchase_total: 0,
+    		purchase_status: 0,
+    		purchase_date: 0,
+    		purchase_items: []
+    	};
+
+    	// on mount
+    	onMount(async () => {
+    		if (id != "pembelian-baru") {
+    			fetch("http://127.0.0.1/lumeraAPI/pos_purchase/getAllInventaris.php?purchase_id=" + id, { method: "GET" }).then(res => res.json()).then(data => {
+    				$$invalidate(2, purchaseDetail.purchase_id = data.purchase_id, purchaseDetail);
+    				$$invalidate(2, purchaseDetail.purchase_status = data.purchase_status, purchaseDetail);
+    				$$invalidate(2, purchaseDetail.purchase_total = data.purchase_total, purchaseDetail);
+    				$$invalidate(2, purchaseDetail.purchase_date = data.purchase_date, purchaseDetail);
+    				$$invalidate(2, purchaseDetail.purchase_items = data.cart, purchaseDetail);
+    				$$invalidate(0, cart = data.cart);
+    			}).catch(err => {
+    				
+    			});
+    		} else {
+    			$$invalidate(2, purchaseDetail.purchase_id = generateNewPurchaseId$1(), purchaseDetail);
+    		}
+    	});
+
+    	// add item to cart
+    	function addToCart(product_name) {
+    		let i = 0;
+    		let alreadyOnCart = false;
+
+    		for (i; i < cart.length; i++) {
+    			// only add the qty, if the same item already listed in cart
+    			if (product_name.toLowerCase() == cart[i].product_name.toLowerCase()) {
+    				alreadyOnCart = true;
+    				$$invalidate(0, cart[i].product_qty += input_data.product_qty, cart);
+    				clearInput();
+    			}
+    		}
+
+    		// add new item to the cart if the same item didn't exist yet
+    		if (alreadyOnCart == false) {
+    			$$invalidate(0, cart = [
+    				...cart,
+    				{
+    					product_name: input_data.product_name,
+    					product_price: input_data.product_price,
+    					product_qty: input_data.product_qty
+    				}
+    			]);
+
+    			clearInput();
+    		}
+    	}
+
+    	function clearInput() {
+    		$$invalidate(1, input_data.product_name = "", input_data);
+    		$$invalidate(1, input_data.product_price = "", input_data);
+    		$$invalidate(1, input_data.product_qty = "", input_data);
+    	}
+
+    	// select item
+    	function selectItem(i) {
+    		$$invalidate(1, input_data.product_name = cart[i].product_name, input_data);
+    		$$invalidate(1, input_data.product_price = cart[i].product_price, input_data);
+    		$$invalidate(1, input_data.product_qty = cart[i].product_qty, input_data);
+    	}
+
+    	// remove item
+    	function removeItem(i) {
+    		cart.splice(i, 1);
+    		$$invalidate(0, cart);
+    	}
+
+    	function checkoutToApi(statusChooser) {
+    		// if status is 0 it means only save
+    		// if status is 1 it means checkout
+    		let status = 0;
+
+    		if (statusChooser == "checkout") {
+    			status = 1;
+    		}
+
+    		if (cart.length == 0) {
+    			alert("Keranjang checkout tidak boleh kosong");
+    		} else {
+    			let confirm_changes;
+
+    			if (status == 0) {
+    				confirm_changes = confirm("Anda yakin akan menyimpan pembelian ini?\n* Data masih bisa dirubah");
+    			} else {
+    				confirm_changes = confirm("Anda yakin akan menyimpan pembelian ini?\n* Dengan melakukan checkout data sudah tidak bisa dirubah lagi");
+    			}
+
+    			if (confirm_changes == true) {
+    				// fill the object 
+    				$$invalidate(2, purchaseDetail.purchase_items = cart, purchaseDetail);
+
+    				$$invalidate(2, purchaseDetail.purchase_status = status, purchaseDetail);
+
+    				fetch("http://127.0.0.1/lumeraAPI/pos_purchase/saveInventory.php", {
+    					method: "POST",
+    					body: JSON.stringify(purchaseDetail),
+    					headers: {
+    						"Content-Type": "application/x-www-form-urlencoded"
+    					}
+    				}).then(
+    					function (response) {
+    						response.status; //=> number 100–599
+    						response.statusText; //=> String
+    						response.headers; //=> Headers
+    						response.url; //=> String
+    						alert("Data berhasil disimpan");
+    						goBack$1();
+    						console.log(response);
+    					},
+    					function (error) {
+    						error.message; //=> String
+    					}
+    				);
+    			}
+    		}
+    	}
+
+    	const writable_props = ["id"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$4.warn(`<PembelianInventaris> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("PembelianInventaris", $$slots, []);
+
+    	function input0_input_handler() {
+    		input_data.product_name = this.value;
+    		$$invalidate(1, input_data);
+    	}
+
+    	function input1_input_handler() {
+    		input_data.product_price = to_number(this.value);
+    		$$invalidate(1, input_data);
+    	}
+
+    	function input3_input_handler() {
+    		input_data.product_qty = to_number(this.value);
+    		$$invalidate(1, input_data);
+    	}
+
+    	const click_handler = i => removeItem(i);
+    	const click_handler_1 = i => selectItem(i);
+    	const click_handler_2 = () => checkoutToApi("checkout");
+    	const click_handler_3 = () => checkoutToApi("save");
+    	const click_handler_4 = () => goBack$1();
+
+    	$$self.$set = $$props => {
+    		if ("id" in $$props) $$invalidate(7, id = $$props.id);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		onMount,
+    		id,
+    		cart,
+    		input_data,
+    		purchaseDetail,
+    		formatRupiah: formatRupiah$4,
+    		addToCart,
+    		clearInput,
+    		selectItem,
+    		removeItem,
+    		generateNewPurchaseId: generateNewPurchaseId$1,
+    		goBack: goBack$1,
+    		checkoutToApi
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("id" in $$props) $$invalidate(7, id = $$props.id);
+    		if ("cart" in $$props) $$invalidate(0, cart = $$props.cart);
+    		if ("input_data" in $$props) $$invalidate(1, input_data = $$props.input_data);
+    		if ("purchaseDetail" in $$props) $$invalidate(2, purchaseDetail = $$props.purchaseDetail);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*cart, purchaseDetail*/ 5) {
+    			 {
+    				let i;
+    				$$invalidate(2, purchaseDetail.purchase_total = 0, purchaseDetail);
+
+    				for (i = 0; i < cart.length; i++) {
+    					$$invalidate(2, purchaseDetail.purchase_total += cart[i].product_price * cart[i].product_qty, purchaseDetail);
+    				}
+    			}
+    		}
+    	};
+
+    	return [
+    		cart,
+    		input_data,
+    		purchaseDetail,
+    		addToCart,
+    		selectItem,
+    		removeItem,
+    		checkoutToApi,
+    		id,
+    		clearInput,
+    		input0_input_handler,
+    		input1_input_handler,
+    		input3_input_handler,
+    		click_handler,
+    		click_handler_1,
+    		click_handler_2,
+    		click_handler_3,
+    		click_handler_4
+    	];
+    }
+
+    class PembelianInventaris extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { id: 7 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "PembelianInventaris",
+    			options,
+    			id: create_fragment$i.name
+    		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*id*/ ctx[7] === undefined && !("id" in props)) {
+    			console_1$4.warn("<PembelianInventaris> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get id() {
+    		throw new Error("<PembelianInventaris>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<PembelianInventaris>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
     /* src/Pages/TablePembelianProdukKecantikan.svelte generated by Svelte v3.19.2 */
-    const file$b = "src/Pages/TablePembelianProdukKecantikan.svelte";
+    const file$c = "src/Pages/TablePembelianProdukKecantikan.svelte";
 
     // (49:40) <Link to = "dashboard">
     function create_default_slot$7(ctx) {
@@ -10566,7 +12488,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$i(ctx) {
+    function create_fragment$j(ctx) {
     	let div4;
     	let section;
     	let div3;
@@ -10617,25 +12539,25 @@ var app = (function () {
     			li1.textContent = "Pembelian Produk Kecantikan";
     			t3 = space();
     			create_component(tableviewer.$$.fragment);
-    			add_location(h1, file$b, 44, 10, 1255);
+    			add_location(h1, file$c, 44, 10, 1255);
     			attr_dev(div0, "class", "col-sm-6");
-    			add_location(div0, file$b, 43, 8, 1222);
+    			add_location(div0, file$c, 43, 8, 1222);
     			attr_dev(li0, "class", "breadcrumb-item");
-    			add_location(li0, file$b, 48, 12, 1372);
+    			add_location(li0, file$c, 48, 12, 1372);
     			attr_dev(li1, "class", "breadcrumb-item active");
-    			add_location(li1, file$b, 49, 12, 1457);
+    			add_location(li1, file$c, 49, 12, 1457);
     			attr_dev(ol, "class", "breadcrumb float-sm-right");
-    			add_location(ol, file$b, 47, 10, 1321);
+    			add_location(ol, file$c, 47, 10, 1321);
     			attr_dev(div1, "class", "col-sm-6");
-    			add_location(div1, file$b, 46, 8, 1288);
+    			add_location(div1, file$c, 46, 8, 1288);
     			attr_dev(div2, "class", "row mb-2");
-    			add_location(div2, file$b, 42, 6, 1191);
+    			add_location(div2, file$c, 42, 6, 1191);
     			attr_dev(div3, "class", "container-fluid");
-    			add_location(div3, file$b, 41, 4, 1155);
+    			add_location(div3, file$c, 41, 4, 1155);
     			attr_dev(section, "class", "content-header");
-    			add_location(section, file$b, 40, 2, 1118);
+    			add_location(section, file$c, 40, 2, 1118);
     			attr_dev(div4, "class", "container");
-    			add_location(div4, file$b, 38, 0, 1052);
+    			add_location(div4, file$c, 38, 0, 1052);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10687,7 +12609,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$i.name,
+    		id: create_fragment$j.name,
     		type: "component",
     		source: "",
     		ctx
@@ -10696,7 +12618,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$i($$self, $$props, $$invalidate) {
+    function instance$j($$self, $$props, $$invalidate) {
     	let { apiBaseUrl = "http://127.0.0.1/lumeraAPI" } = $$props;
 
     	let controller = {
@@ -10752,13 +12674,13 @@ var app = (function () {
     class TablePembelianProdukKecantikan extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, { apiBaseUrl: 1 });
+    		init(this, options, instance$j, create_fragment$j, safe_not_equal, { apiBaseUrl: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "TablePembelianProdukKecantikan",
     			options,
-    			id: create_fragment$i.name
+    			id: create_fragment$j.name
     		});
     	}
 
@@ -10771,11 +12693,246 @@ var app = (function () {
     	}
     }
 
-    /* src/App.svelte generated by Svelte v3.19.2 */
-    const file$c = "src/App.svelte";
+    /* src/Pages/TablePembelianInventaris.svelte generated by Svelte v3.19.2 */
+    const file$d = "src/Pages/TablePembelianInventaris.svelte";
 
-    // (50:5) <Route path="/layanan/edit/:id" let:params>
-    function create_default_slot_5(ctx) {
+    // (49:40) <Link to = "dashboard">
+    function create_default_slot$8(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Dashboard");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$8.name,
+    		type: "slot",
+    		source: "(49:40) <Link to = \\\"dashboard\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$k(ctx) {
+    	let div4;
+    	let section;
+    	let div3;
+    	let div2;
+    	let div0;
+    	let h1;
+    	let t0;
+    	let div1;
+    	let ol;
+    	let li0;
+    	let t1;
+    	let li1;
+    	let t3;
+    	let current;
+
+    	const link = new Link({
+    			props: {
+    				to: "dashboard",
+    				$$slots: { default: [create_default_slot$8] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const tableviewer = new TableViewer({
+    			props: {
+    				action: "purchase",
+    				controller: /*controller*/ ctx[0]
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			div4 = element("div");
+    			section = element("section");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			h1 = element("h1");
+    			t0 = space();
+    			div1 = element("div");
+    			ol = element("ol");
+    			li0 = element("li");
+    			create_component(link.$$.fragment);
+    			t1 = space();
+    			li1 = element("li");
+    			li1.textContent = "Pembelian Produk Inventaris";
+    			t3 = space();
+    			create_component(tableviewer.$$.fragment);
+    			add_location(h1, file$d, 44, 10, 1241);
+    			attr_dev(div0, "class", "col-sm-6");
+    			add_location(div0, file$d, 43, 8, 1208);
+    			attr_dev(li0, "class", "breadcrumb-item");
+    			add_location(li0, file$d, 48, 12, 1358);
+    			attr_dev(li1, "class", "breadcrumb-item active");
+    			add_location(li1, file$d, 49, 12, 1443);
+    			attr_dev(ol, "class", "breadcrumb float-sm-right");
+    			add_location(ol, file$d, 47, 10, 1307);
+    			attr_dev(div1, "class", "col-sm-6");
+    			add_location(div1, file$d, 46, 8, 1274);
+    			attr_dev(div2, "class", "row mb-2");
+    			add_location(div2, file$d, 42, 6, 1177);
+    			attr_dev(div3, "class", "container-fluid");
+    			add_location(div3, file$d, 41, 4, 1141);
+    			attr_dev(section, "class", "content-header");
+    			add_location(section, file$d, 40, 2, 1104);
+    			attr_dev(div4, "class", "container");
+    			add_location(div4, file$d, 38, 0, 1038);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, section);
+    			append_dev(section, div3);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, h1);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, ol);
+    			append_dev(ol, li0);
+    			mount_component(link, li0, null);
+    			append_dev(ol, t1);
+    			append_dev(ol, li1);
+    			append_dev(div4, t3);
+    			mount_component(tableviewer, div4, null);
+    			current = true;
+    		},
+    		p: function update(ctx, [dirty]) {
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 4) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(link.$$.fragment, local);
+    			transition_in(tableviewer.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(link.$$.fragment, local);
+    			transition_out(tableviewer.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div4);
+    			destroy_component(link);
+    			destroy_component(tableviewer);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$k.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$k($$self, $$props, $$invalidate) {
+    	let { apiBaseUrl = "http://127.0.0.1/lumeraAPI" } = $$props;
+
+    	let controller = {
+    		name: "beli-inventaris",
+    		title: "Pembelian Produk Iventaris",
+    		sub_title: "Kelola pembelian Inventaris",
+    		icon: "fa fa-users",
+    		search_selector: 1,
+    		button: {
+    			text: "Pembelian Baru",
+    			icon: "fa fa-plus",
+    			link: "pembelian-baru"
+    		},
+    		table_header: ["#", "No. Invoice", "Total", "Status", "Tipe", "Tanggal Pembelian", "Aksi"],
+    		apiUrl: apiBaseUrl + "/pos_purchase/getAllInventaris.php"
+    	};
+
+    	const writable_props = ["apiBaseUrl"];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<TablePembelianInventaris> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+    	validate_slots("TablePembelianInventaris", $$slots, []);
+
+    	$$self.$set = $$props => {
+    		if ("apiBaseUrl" in $$props) $$invalidate(1, apiBaseUrl = $$props.apiBaseUrl);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		apiBaseUrl,
+    		Router,
+    		Link,
+    		Route,
+    		onMount,
+    		TableViewer,
+    		controller
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ("apiBaseUrl" in $$props) $$invalidate(1, apiBaseUrl = $$props.apiBaseUrl);
+    		if ("controller" in $$props) $$invalidate(0, controller = $$props.controller);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [controller, apiBaseUrl];
+    }
+
+    class TablePembelianInventaris extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$k, create_fragment$k, safe_not_equal, { apiBaseUrl: 1 });
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "TablePembelianInventaris",
+    			options,
+    			id: create_fragment$k.name
+    		});
+    	}
+
+    	get apiBaseUrl() {
+    		throw new Error("<TablePembelianInventaris>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set apiBaseUrl(value) {
+    		throw new Error("<TablePembelianInventaris>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/App.svelte generated by Svelte v3.19.2 */
+    const file$e = "src/App.svelte";
+
+    // (52:5) <Route path="/layanan/edit/:id" let:params>
+    function create_default_slot_6(ctx) {
     	let current;
 
     	const tambahlayanan = new TambahLayanan({
@@ -10812,17 +12969,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5.name,
+    		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(50:5) <Route path=\\\"/layanan/edit/:id\\\" let:params>",
+    		source: "(52:5) <Route path=\\\"/layanan/edit/:id\\\" let:params>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:5) <Route path="/staf/edit/:id" let:params>
-    function create_default_slot_4(ctx) {
+    // (59:5) <Route path="/staf/edit/:id" let:params>
+    function create_default_slot_5(ctx) {
     	let current;
 
     	const tambahstaf = new TambahStaf({
@@ -10859,17 +13016,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_4.name,
+    		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(57:5) <Route path=\\\"/staf/edit/:id\\\" let:params>",
+    		source: "(59:5) <Route path=\\\"/staf/edit/:id\\\" let:params>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:5) <Route path="/produkkecantikan/edit/:id" let:params>
-    function create_default_slot_3$1(ctx) {
+    // (66:5) <Route path="/produkkecantikan/edit/:id" let:params>
+    function create_default_slot_4(ctx) {
     	let current;
 
     	const tambahprodukkecantikan = new TambahProdukkecantikan({
@@ -10906,17 +13063,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_3$1.name,
+    		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(64:5) <Route path=\\\"/produkkecantikan/edit/:id\\\" let:params>",
+    		source: "(66:5) <Route path=\\\"/produkkecantikan/edit/:id\\\" let:params>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:5) <Route path="/pasien/edit/:id" let:params>
-    function create_default_slot_2$1(ctx) {
+    // (73:5) <Route path="/pasien/edit/:id" let:params>
+    function create_default_slot_3$1(ctx) {
     	let current;
 
     	const tambahpasien = new TambahPasien({
@@ -10953,17 +13110,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_2$1.name,
+    		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(71:5) <Route path=\\\"/pasien/edit/:id\\\" let:params>",
+    		source: "(73:5) <Route path=\\\"/pasien/edit/:id\\\" let:params>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:2) <Route path="/beli-produkkecantikan/:id" let:params>
-    function create_default_slot_1$3(ctx) {
+    // (78:2) <Route path="/beli-produkkecantikan/:id" let:params>
+    function create_default_slot_2$1(ctx) {
     	let current;
 
     	const pembelianprodukkecantikan = new PembelianProdukKecantikan({
@@ -11000,17 +13157,64 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_1$3.name,
+    		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(76:2) <Route path=\\\"/beli-produkkecantikan/:id\\\" let:params>",
+    		source: "(78:2) <Route path=\\\"/beli-produkkecantikan/:id\\\" let:params>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:0) <Router>
-    function create_default_slot$8(ctx) {
+    // (83:2) <Route path="/beli-inventaris/:id" let:params>
+    function create_default_slot_1$3(ctx) {
+    	let current;
+
+    	const pembelianinventaris = new PembelianInventaris({
+    			props: { id: /*params*/ ctx[2].id },
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(pembelianinventaris.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(pembelianinventaris, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const pembelianinventaris_changes = {};
+    			if (dirty & /*params*/ 4) pembelianinventaris_changes.id = /*params*/ ctx[2].id;
+    			pembelianinventaris.$set(pembelianinventaris_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(pembelianinventaris.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(pembelianinventaris.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(pembelianinventaris, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_1$3.name,
+    		type: "slot",
+    		source: "(83:2) <Route path=\\\"/beli-inventaris/:id\\\" let:params>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (42:0) <Router>
+    function create_default_slot$9(ctx) {
     	let t0;
     	let div0;
     	let t1;
@@ -11028,16 +13232,18 @@ var app = (function () {
     	let t13;
     	let t14;
     	let t15;
+    	let t16;
+    	let t17;
     	let footer;
     	let div1;
     	let b;
-    	let t17;
-    	let t18;
-    	let strong;
     	let t19;
-    	let a;
+    	let t20;
+    	let strong;
     	let t21;
-    	let t22;
+    	let a;
+    	let t23;
+    	let t24;
     	let current;
     	const sidebar = new Sidebar({ $$inline: true });
     	sidebar.$on("message", /*handleMessage*/ ctx[1]);
@@ -11065,7 +13271,7 @@ var app = (function () {
     				path: "/layanan/edit/:id",
     				$$slots: {
     					default: [
-    						create_default_slot_5,
+    						create_default_slot_6,
     						({ params }) => ({ 2: params }),
     						({ params }) => params ? 4 : 0
     					]
@@ -11093,7 +13299,7 @@ var app = (function () {
     				path: "/staf/edit/:id",
     				$$slots: {
     					default: [
-    						create_default_slot_4,
+    						create_default_slot_5,
     						({ params }) => ({ 2: params }),
     						({ params }) => params ? 4 : 0
     					]
@@ -11124,7 +13330,7 @@ var app = (function () {
     				path: "/produkkecantikan/edit/:id",
     				$$slots: {
     					default: [
-    						create_default_slot_3$1,
+    						create_default_slot_4,
     						({ params }) => ({ 2: params }),
     						({ params }) => params ? 4 : 0
     					]
@@ -11152,7 +13358,7 @@ var app = (function () {
     				path: "/pasien/edit/:id",
     				$$slots: {
     					default: [
-    						create_default_slot_2$1,
+    						create_default_slot_3$1,
     						({ params }) => ({ 2: params }),
     						({ params }) => params ? 4 : 0
     					]
@@ -11173,6 +13379,29 @@ var app = (function () {
     	const route14 = new Route({
     			props: {
     				path: "/beli-produkkecantikan/:id",
+    				$$slots: {
+    					default: [
+    						create_default_slot_2$1,
+    						({ params }) => ({ 2: params }),
+    						({ params }) => params ? 4 : 0
+    					]
+    				},
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const route15 = new Route({
+    			props: {
+    				path: "/beli-inventaris",
+    				component: TablePembelianInventaris
+    			},
+    			$$inline: true
+    		});
+
+    	const route16 = new Route({
+    			props: {
+    				path: "/beli-inventaris/:id",
     				$$slots: {
     					default: [
     						create_default_slot_1$3,
@@ -11220,30 +13449,34 @@ var app = (function () {
     			t14 = space();
     			create_component(route14.$$.fragment);
     			t15 = space();
+    			create_component(route15.$$.fragment);
+    			t16 = space();
+    			create_component(route16.$$.fragment);
+    			t17 = space();
     			footer = element("footer");
     			div1 = element("div");
     			b = element("b");
     			b.textContent = "Version";
-    			t17 = text(" 1.0");
-    			t18 = space();
+    			t19 = text(" 1.0");
+    			t20 = space();
     			strong = element("strong");
-    			t19 = text("Copyright © 2020 ");
+    			t21 = text("Copyright © 2020 ");
     			a = element("a");
     			a.textContent = "Lumera System";
-    			t21 = text(".");
-    			t22 = text(" All rights reserved.");
+    			t23 = text(".");
+    			t24 = text(" All rights reserved.");
     			attr_dev(div0, "class", "content-wrapper svelte-kqx5hh");
     			set_style(div0, "margin-left", /*containerMarginVisibletoSidebar*/ ctx[0] + "px");
-    			add_location(div0, file$c, 42, 3, 1379);
-    			add_location(b, file$c, 84, 8, 2911);
+    			add_location(div0, file$e, 44, 3, 1530);
+    			add_location(b, file$e, 91, 8, 3242);
     			attr_dev(div1, "class", "float-right d-none d-sm-block");
-    			add_location(div1, file$c, 83, 5, 2859);
+    			add_location(div1, file$e, 90, 5, 3190);
     			attr_dev(a, "href", "#");
-    			add_location(a, file$c, 86, 35, 2977);
-    			add_location(strong, file$c, 86, 5, 2947);
+    			add_location(a, file$e, 93, 35, 3308);
+    			add_location(strong, file$e, 93, 5, 3278);
     			attr_dev(footer, "class", "main-footer svelte-kqx5hh");
     			set_style(footer, "margin-left", /*containerMarginVisibletoSidebar*/ ctx[0] + "px");
-    			add_location(footer, file$c, 82, 3, 2767);
+    			add_location(footer, file$e, 89, 3, 3098);
     		},
     		m: function mount(target, anchor) {
     			mount_component(sidebar, target, anchor);
@@ -11278,17 +13511,21 @@ var app = (function () {
     			mount_component(route13, div0, null);
     			append_dev(div0, t14);
     			mount_component(route14, div0, null);
-    			insert_dev(target, t15, anchor);
+    			append_dev(div0, t15);
+    			mount_component(route15, div0, null);
+    			append_dev(div0, t16);
+    			mount_component(route16, div0, null);
+    			insert_dev(target, t17, anchor);
     			insert_dev(target, footer, anchor);
     			append_dev(footer, div1);
     			append_dev(div1, b);
-    			append_dev(div1, t17);
-    			append_dev(footer, t18);
+    			append_dev(div1, t19);
+    			append_dev(footer, t20);
     			append_dev(footer, strong);
-    			append_dev(strong, t19);
-    			append_dev(strong, a);
     			append_dev(strong, t21);
-    			append_dev(footer, t22);
+    			append_dev(strong, a);
+    			append_dev(strong, t23);
+    			append_dev(footer, t24);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -11327,6 +13564,13 @@ var app = (function () {
     			}
 
     			route14.$set(route14_changes);
+    			const route16_changes = {};
+
+    			if (dirty & /*$$scope, params*/ 12) {
+    				route16_changes.$$scope = { dirty, ctx };
+    			}
+
+    			route16.$set(route16_changes);
 
     			if (!current || dirty & /*containerMarginVisibletoSidebar*/ 1) {
     				set_style(div0, "margin-left", /*containerMarginVisibletoSidebar*/ ctx[0] + "px");
@@ -11354,6 +13598,8 @@ var app = (function () {
     			transition_in(route12.$$.fragment, local);
     			transition_in(route13.$$.fragment, local);
     			transition_in(route14.$$.fragment, local);
+    			transition_in(route15.$$.fragment, local);
+    			transition_in(route16.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
@@ -11373,6 +13619,8 @@ var app = (function () {
     			transition_out(route12.$$.fragment, local);
     			transition_out(route13.$$.fragment, local);
     			transition_out(route14.$$.fragment, local);
+    			transition_out(route15.$$.fragment, local);
+    			transition_out(route16.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -11394,28 +13642,30 @@ var app = (function () {
     			destroy_component(route12);
     			destroy_component(route13);
     			destroy_component(route14);
-    			if (detaching) detach_dev(t15);
+    			destroy_component(route15);
+    			destroy_component(route16);
+    			if (detaching) detach_dev(t17);
     			if (detaching) detach_dev(footer);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$8.name,
+    		id: create_default_slot$9.name,
     		type: "slot",
-    		source: "(40:0) <Router>",
+    		source: "(42:0) <Router>",
     		ctx
     	});
 
     	return block;
     }
 
-    function create_fragment$j(ctx) {
+    function create_fragment$l(ctx) {
     	let current;
 
     	const router = new Router({
     			props: {
-    				$$slots: { default: [create_default_slot$8] },
+    				$$slots: { default: [create_default_slot$9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -11457,7 +13707,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$j.name,
+    		id: create_fragment$l.name,
     		type: "component",
     		source: "",
     		ctx
@@ -11466,7 +13716,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$j($$self, $$props, $$invalidate) {
+    function instance$l($$self, $$props, $$invalidate) {
     	let containerMarginVisibletoSidebar = 250;
 
     	function handleMessage(event) {
@@ -11494,7 +13744,9 @@ var app = (function () {
     		TambahPasien,
     		Dashboard,
     		PembelianProdukKecantikan,
+    		PembelianInventaris,
     		TabelPembelianProdukKecantikan: TablePembelianProdukKecantikan,
+    		TabelPembelianInventaris: TablePembelianInventaris,
     		Router,
     		Link,
     		Route,
@@ -11516,13 +13768,13 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$j, create_fragment$j, safe_not_equal, {});
+    		init(this, options, instance$l, create_fragment$l, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$j.name
+    			id: create_fragment$l.name
     		});
     	}
     }
