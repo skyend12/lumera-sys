@@ -2490,7 +2490,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (227:10) {#if nav_item.nav_child.length > 0}
+    // (232:10) {#if nav_item.nav_child.length > 0}
     function create_if_block_2(ctx) {
     	let div1;
     	let div0;
@@ -2527,13 +2527,13 @@ var app = (function () {
     			if (if_block1) if_block1.c();
     			if_block1_anchor = empty();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_item*/ ctx[11].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 229, 16, 6193);
+    			add_location(i, file$2, 234, 16, 6307);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 230, 16, 6270);
+    			add_location(p, file$2, 235, 16, 6384);
     			attr_dev(div0, "class", "row text-white position-relative");
-    			add_location(div0, file$2, 228, 14, 6130);
+    			add_location(div0, file$2, 233, 14, 6244);
     			attr_dev(div1, "class", "nav-argon-item mt-2 svelte-j1xut8");
-    			add_location(div1, file$2, 227, 12, 6040);
+    			add_location(div1, file$2, 232, 12, 6154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -2613,14 +2613,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(227:10) {#if nav_item.nav_child.length > 0}",
+    		source: "(232:10) {#if nav_item.nav_child.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:16) {#if nav_item.nav_child.length > 0}
+    // (237:16) {#if nav_item.nav_child.length > 0}
     function create_if_block_4(ctx) {
     	let i;
 
@@ -2632,7 +2632,7 @@ var app = (function () {
     			set_style(i, "right", "10px");
     			set_style(i, "top", "7px");
     			set_style(i, "font-size", "13px");
-    			add_location(i, file$2, 232, 18, 6387);
+    			add_location(i, file$2, 237, 18, 6501);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -2646,14 +2646,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(232:16) {#if nav_item.nav_child.length > 0}",
+    		source: "(237:16) {#if nav_item.nav_child.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (237:12) {#if nav_item.nav_show_child == true}
+    // (242:12) {#if nav_item.nav_show_child == true}
     function create_if_block_3(ctx) {
     	let div;
     	let div_transition;
@@ -2678,7 +2678,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(div, file$2, 237, 14, 6613);
+    			add_location(div, file$2, 242, 14, 6727);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2754,14 +2754,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(237:12) {#if nav_item.nav_show_child == true}",
+    		source: "(242:12) {#if nav_item.nav_show_child == true}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (240:18) <Link to="{nav_child.nav_to}">
+    // (245:18) <Link to="{nav_child.nav_to}">
     function create_default_slot_1(ctx) {
     	let div;
     	let i;
@@ -2786,11 +2786,11 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = space();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_child*/ ctx[14].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 241, 22, 6922);
+    			add_location(i, file$2, 246, 22, 7036);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 242, 22, 7006);
+    			add_location(p, file$2, 247, 22, 7120);
     			attr_dev(div, "class", "nav-argon-item row text-white position-relative ml-1 svelte-j1xut8");
-    			add_location(div, file$2, 240, 20, 6791);
+    			add_location(div, file$2, 245, 20, 6905);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2821,14 +2821,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(240:18) <Link to=\\\"{nav_child.nav_to}\\\">",
+    		source: "(245:18) <Link to=\\\"{nav_child.nav_to}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (239:16) {#each nav_item.nav_child as nav_child}
+    // (244:16) {#each nav_item.nav_child as nav_child}
     function create_each_block_1(ctx) {
     	let current;
 
@@ -2877,14 +2877,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(239:16) {#each nav_item.nav_child as nav_child}",
+    		source: "(244:16) {#each nav_item.nav_child as nav_child}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:10) {#if nav_item.nav_child.length == 0}
+    // (256:10) {#if nav_item.nav_child.length == 0}
     function create_if_block$1(ctx) {
     	let current;
 
@@ -2933,14 +2933,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(251:10) {#if nav_item.nav_child.length == 0}",
+    		source: "(256:10) {#if nav_item.nav_child.length == 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (257:18) {#if nav_item.nav_child.length > 0}
+    // (262:18) {#if nav_item.nav_child.length > 0}
     function create_if_block_1$1(ctx) {
     	let i;
 
@@ -2952,7 +2952,7 @@ var app = (function () {
     			set_style(i, "right", "10px");
     			set_style(i, "top", "7px");
     			set_style(i, "font-size", "13px");
-    			add_location(i, file$2, 257, 20, 7619);
+    			add_location(i, file$2, 262, 20, 7733);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, i, anchor);
@@ -2966,14 +2966,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(257:18) {#if nav_item.nav_child.length > 0}",
+    		source: "(262:18) {#if nav_item.nav_child.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:12) <Link to="{nav_item.nav_to}">
+    // (257:12) <Link to="{nav_item.nav_to}">
     function create_default_slot(ctx) {
     	let div1;
     	let div0;
@@ -2999,13 +2999,13 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t3 = space();
     			attr_dev(i, "class", i_class_value = "nav-icon " + /*nav_item*/ ctx[11].nav_icon + " mt-1 col-1 mr-0" + " svelte-j1xut8");
-    			add_location(i, file$2, 254, 18, 7419);
+    			add_location(i, file$2, 259, 18, 7533);
     			attr_dev(p, "class", "mt-0 col-10");
-    			add_location(p, file$2, 255, 18, 7498);
+    			add_location(p, file$2, 260, 18, 7612);
     			attr_dev(div0, "class", "row text-white position-relative");
-    			add_location(div0, file$2, 253, 16, 7354);
+    			add_location(div0, file$2, 258, 16, 7468);
     			attr_dev(div1, "class", "nav-argon-item mt-2 svelte-j1xut8");
-    			add_location(div1, file$2, 252, 14, 7304);
+    			add_location(div1, file$2, 257, 14, 7418);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3047,14 +3047,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(252:12) <Link to=\\\"{nav_item.nav_to}\\\">",
+    		source: "(257:12) <Link to=\\\"{nav_item.nav_to}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (225:8) {#each navbar_item as nav_item}
+    // (230:8) {#each navbar_item as nav_item}
     function create_each_block(ctx) {
     	let t;
     	let if_block1_anchor;
@@ -3140,7 +3140,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(225:8) {#each navbar_item as nav_item}",
+    		source: "(230:8) {#each navbar_item as nav_item}",
     		ctx
     	});
 
@@ -3251,78 +3251,78 @@ var app = (function () {
     			attr_dev(img0, "alt", "Lumera Logo");
     			set_style(img0, "width", "80px");
     			set_style(img0, "height", "80px");
-    			add_location(img0, file$2, 197, 10, 4890);
+    			add_location(img0, file$2, 202, 10, 5004);
     			attr_dev(div0, "class", "col-4");
-    			add_location(div0, file$2, 196, 8, 4860);
+    			add_location(div0, file$2, 201, 8, 4974);
     			attr_dev(p0, "class", "brand-text-1 mb-1 font-weight-light svelte-j1xut8");
-    			add_location(p0, file$2, 200, 10, 5039);
+    			add_location(p0, file$2, 205, 10, 5153);
     			attr_dev(p1, "class", "brand-text-2 mt-0 font-weight-bold svelte-j1xut8");
-    			add_location(p1, file$2, 201, 10, 5110);
+    			add_location(p1, file$2, 206, 10, 5224);
     			attr_dev(div1, "class", "col-6 mt-3 ml-2");
-    			add_location(div1, file$2, 199, 8, 4999);
+    			add_location(div1, file$2, 204, 8, 5113);
     			attr_dev(div2, "class", "row w-100");
-    			add_location(div2, file$2, 195, 6, 4828);
+    			add_location(div2, file$2, 200, 6, 4942);
     			attr_dev(a0, "href", "#");
     			attr_dev(a0, "class", "brand-link");
-    			add_location(a0, file$2, 194, 4, 4790);
+    			add_location(a0, file$2, 199, 4, 4904);
     			attr_dev(img1, "alt", "Image placeholder");
     			if (img1.src !== (img1_src_value = "./assets/img/profile_picture/avatar_1.jpg")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file$2, 212, 14, 5502);
+    			add_location(img1, file$2, 217, 14, 5616);
     			attr_dev(a1, "href", "javascript:;");
     			attr_dev(a1, "class", "avatar rounded-circle");
-    			add_location(a1, file$2, 211, 10, 5434);
+    			add_location(a1, file$2, 216, 10, 5548);
     			attr_dev(p2, "class", "user-authorization-name m-0 mb-1 svelte-j1xut8");
-    			add_location(p2, file$2, 215, 12, 5655);
+    			add_location(p2, file$2, 220, 12, 5769);
     			attr_dev(p3, "class", "user-authorization-status svelte-j1xut8");
-    			add_location(p3, file$2, 216, 12, 5725);
+    			add_location(p3, file$2, 221, 12, 5839);
     			attr_dev(div3, "class", "user-authorization-info svelte-j1xut8");
-    			add_location(div3, file$2, 214, 10, 5605);
+    			add_location(div3, file$2, 219, 10, 5719);
     			attr_dev(div4, "class", "user-panel mt-1 ml-0 d-flex elevation-2 pt-3 pl-3 pb-1 svelte-j1xut8");
-    			add_location(div4, file$2, 209, 6, 5317);
+    			add_location(div4, file$2, 214, 6, 5431);
     			attr_dev(hr, "class", "mt-3 mb-4");
-    			add_location(hr, file$2, 220, 6, 5817);
+    			add_location(hr, file$2, 225, 6, 5931);
     			attr_dev(nav0, "class", "mt-3 container");
-    			add_location(nav0, file$2, 223, 6, 5877);
+    			add_location(nav0, file$2, 228, 6, 5991);
     			attr_dev(div5, "class", "sidebar");
-    			add_location(div5, file$2, 207, 4, 5244);
+    			add_location(div5, file$2, 212, 4, 5358);
     			attr_dev(div6, "class", "text-white");
     			set_style(div6, "margin", "7px");
-    			add_location(div6, file$2, 191, 2, 4711);
+    			add_location(div6, file$2, 196, 2, 4825);
     			attr_dev(aside, "class", "main-sidebar bg-primary elevation-4 sidebar-anim svelte-j1xut8");
     			set_style(aside, "position", "fixed");
     			set_style(aside, "height", "100vh");
     			set_style(aside, "transform", "translateX(" + /*sidebar_visible*/ ctx[1] + "px)");
     			set_style(aside, "overflow-y", "auto");
-    			add_location(aside, file$2, 189, 0, 4542);
+    			add_location(aside, file$2, 194, 0, 4656);
     			attr_dev(i0, "class", "fas fa-bars");
-    			add_location(i0, file$2, 274, 80, 8267);
+    			add_location(i0, file$2, 279, 80, 8381);
     			attr_dev(a2, "class", "nav-link text-primary");
     			attr_dev(a2, "role", "button");
-    			add_location(a2, file$2, 274, 8, 8195);
+    			add_location(a2, file$2, 279, 8, 8309);
     			attr_dev(li0, "class", "nav-item");
     			set_style(li0, "cursor", "pointer");
-    			add_location(li0, file$2, 273, 6, 8140);
+    			add_location(li0, file$2, 278, 6, 8254);
     			attr_dev(ul0, "class", "navbar-nav");
-    			add_location(ul0, file$2, 272, 4, 8110);
+    			add_location(ul0, file$2, 277, 4, 8224);
     			attr_dev(i1, "class", "fas fa-cogs");
-    			add_location(i1, file$2, 280, 99, 8516);
+    			add_location(i1, file$2, 285, 99, 8630);
     			attr_dev(a3, "class", "nav-link");
     			attr_dev(a3, "data-widget", "control-sidebar");
     			attr_dev(a3, "data-slide", "true");
     			attr_dev(a3, "href", "#");
     			attr_dev(a3, "role", "button");
-    			add_location(a3, file$2, 280, 8, 8425);
+    			add_location(a3, file$2, 285, 8, 8539);
     			attr_dev(li1, "class", "nav-item");
-    			add_location(li1, file$2, 279, 6, 8395);
+    			add_location(li1, file$2, 284, 6, 8509);
     			attr_dev(ul1, "class", "navbar-nav ml-auto");
-    			add_location(ul1, file$2, 278, 4, 8357);
+    			add_location(ul1, file$2, 283, 4, 8471);
     			attr_dev(nav1, "class", "main-header navbar navbar-expand");
     			set_style(nav1, "margin-left", /*navbar_margin*/ ctx[2] + "px");
     			set_style(nav1, "transition", "all 0.5s linear");
     			set_style(nav1, "padding", "0px 0px 18px 0px ");
     			set_style(nav1, "height", "auto");
     			set_style(nav1, "background-color", "#fff");
-    			add_location(nav1, file$2, 270, 2, 7900);
+    			add_location(nav1, file$2, 275, 2, 8014);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3471,7 +3471,7 @@ var app = (function () {
     				},
     				{
     					nav_body: "Produk Kecantikan",
-    					nav_icon: "fa fa-cube",
+    					nav_icon: "fas fa-spa",
     					nav_to: "produkkecantikan"
     				},
     				{
@@ -3498,7 +3498,7 @@ var app = (function () {
     				},
     				{
     					nav_body: "Inventaris",
-    					nav_icon: "far fa-circle",
+    					nav_icon: "fa fa-cubes",
     					nav_to: "beli-inventaris"
     				}
     			]
@@ -3510,11 +3510,16 @@ var app = (function () {
     			nav_child: [
     				{
     					nav_body: "Produk Kecantikan",
-    					nav_icon: "far fa-circle",
+    					nav_icon: "fas fa-spa",
     					nav_to: "produkkecantikan"
     				},
     				{
-    					nav_body: "Jasa",
+    					nav_body: "Klinik",
+    					nav_icon: "far fa-circle",
+    					nav_to: "jasa"
+    				},
+    				{
+    					nav_body: "Salon",
     					nav_icon: "far fa-circle",
     					nav_to: "jasa"
     				}
@@ -7119,7 +7124,7 @@ var app = (function () {
     				required: true,
     				text: "",
     				type: "select_box",
-    				option: ["Administrator", "Kasir"]
+    				option: ["Administrator", "Kasir", "Clinician", "Stylist", "Hair Washer"]
     			},
     			{
     				label: "Status",
@@ -7280,25 +7285,25 @@ var app = (function () {
     			li1.textContent = "Produk Kecantikan";
     			t3 = space();
     			create_component(tableviewer.$$.fragment);
-    			add_location(h1, file$6, 45, 10, 1223);
+    			add_location(h1, file$6, 45, 10, 1222);
     			attr_dev(div0, "class", "col-sm-6");
-    			add_location(div0, file$6, 44, 8, 1190);
+    			add_location(div0, file$6, 44, 8, 1189);
     			attr_dev(li0, "class", "breadcrumb-item");
-    			add_location(li0, file$6, 49, 12, 1340);
+    			add_location(li0, file$6, 49, 12, 1339);
     			attr_dev(li1, "class", "breadcrumb-item active");
-    			add_location(li1, file$6, 50, 12, 1425);
+    			add_location(li1, file$6, 50, 12, 1424);
     			attr_dev(ol, "class", "breadcrumb float-sm-right");
-    			add_location(ol, file$6, 48, 10, 1289);
+    			add_location(ol, file$6, 48, 10, 1288);
     			attr_dev(div1, "class", "col-sm-6");
-    			add_location(div1, file$6, 47, 8, 1256);
+    			add_location(div1, file$6, 47, 8, 1255);
     			attr_dev(div2, "class", "row mb-2");
-    			add_location(div2, file$6, 43, 6, 1159);
+    			add_location(div2, file$6, 43, 6, 1158);
     			attr_dev(div3, "class", "container-fluid");
-    			add_location(div3, file$6, 42, 4, 1123);
+    			add_location(div3, file$6, 42, 4, 1122);
     			attr_dev(section, "class", "content-header");
-    			add_location(section, file$6, 41, 2, 1086);
+    			add_location(section, file$6, 41, 2, 1085);
     			attr_dev(div4, "class", "container");
-    			add_location(div4, file$6, 39, 0, 1020);
+    			add_location(div4, file$6, 39, 0, 1019);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7366,7 +7371,7 @@ var app = (function () {
     		name: "produkkecantikan",
     		title: "Daftar Produk Kecantikan",
     		sub_title: "Kelola produk kecantikan disini",
-    		icon: "fa fa-cubes",
+    		icon: "fas fa-spa",
     		search_selector: 1,
     		button: {
     			text: "Tambah Produk Kecantikan",
@@ -8095,25 +8100,25 @@ var app = (function () {
     			li1.textContent = "Pasien";
     			t3 = space();
     			create_component(tableviewer.$$.fragment);
-    			add_location(h1, file$8, 44, 10, 1181);
+    			add_location(h1, file$8, 44, 10, 1188);
     			attr_dev(div0, "class", "col-sm-6");
-    			add_location(div0, file$8, 43, 8, 1148);
+    			add_location(div0, file$8, 43, 8, 1155);
     			attr_dev(li0, "class", "breadcrumb-item");
-    			add_location(li0, file$8, 48, 12, 1298);
+    			add_location(li0, file$8, 48, 12, 1305);
     			attr_dev(li1, "class", "breadcrumb-item active");
-    			add_location(li1, file$8, 49, 12, 1383);
+    			add_location(li1, file$8, 49, 12, 1390);
     			attr_dev(ol, "class", "breadcrumb float-sm-right");
-    			add_location(ol, file$8, 47, 10, 1247);
+    			add_location(ol, file$8, 47, 10, 1254);
     			attr_dev(div1, "class", "col-sm-6");
-    			add_location(div1, file$8, 46, 8, 1214);
+    			add_location(div1, file$8, 46, 8, 1221);
     			attr_dev(div2, "class", "row mb-2");
-    			add_location(div2, file$8, 42, 6, 1117);
+    			add_location(div2, file$8, 42, 6, 1124);
     			attr_dev(div3, "class", "container-fluid");
-    			add_location(div3, file$8, 41, 4, 1081);
+    			add_location(div3, file$8, 41, 4, 1088);
     			attr_dev(section, "class", "content-header");
-    			add_location(section, file$8, 40, 2, 1044);
+    			add_location(section, file$8, 40, 2, 1051);
     			attr_dev(div4, "class", "container");
-    			add_location(div4, file$8, 38, 0, 978);
+    			add_location(div4, file$8, 38, 0, 985);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8181,7 +8186,7 @@ var app = (function () {
     		name: "pasien",
     		title: "Daftar Pasien",
     		sub_title: "Kelola pasien disini",
-    		icon: "fa fa-users",
+    		icon: "fa fa-address-book",
     		search_selector: 1,
     		button: {
     			text: "Tambah Pasien",
@@ -11590,7 +11595,7 @@ var app = (function () {
     		c: function create() {
     			td = element("td");
     			td.textContent = "Belum ada data di cart";
-    			add_location(td, file$b, 253, 7, 6635);
+    			add_location(td, file$b, 253, 7, 6656);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, td, anchor);
@@ -11668,22 +11673,22 @@ var app = (function () {
     			button = element("button");
     			i_1 = element("i");
     			t10 = space();
-    			add_location(td0, file$b, 257, 9, 6814);
-    			add_location(td1, file$b, 258, 9, 6857);
-    			add_location(td2, file$b, 259, 9, 6923);
-    			add_location(td3, file$b, 260, 9, 6969);
+    			add_location(td0, file$b, 257, 9, 6835);
+    			add_location(td1, file$b, 258, 9, 6878);
+    			add_location(td2, file$b, 259, 9, 6944);
+    			add_location(td3, file$b, 260, 9, 6990);
     			attr_dev(i_1, "class", "fa fa-trash pt-1");
-    			add_location(i_1, file$b, 262, 138, 7217);
+    			add_location(i_1, file$b, 262, 138, 7238);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "rel", "tooltip");
     			attr_dev(button, "class", "btn btn-danger btn-icon btn-sm ");
     			attr_dev(button, "data-original-title", "");
     			attr_dev(button, "title", "");
-    			add_location(button, file$b, 262, 30, 7109);
+    			add_location(button, file$b, 262, 30, 7130);
     			attr_dev(td4, "class", "td-actions");
-    			add_location(td4, file$b, 261, 9, 7055);
+    			add_location(td4, file$b, 261, 9, 7076);
     			set_style(tr, "cursor", "pointer");
-    			add_location(tr, file$b, 256, 8, 6744);
+    			add_location(tr, file$b, 256, 8, 6765);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11919,7 +11924,7 @@ var app = (function () {
     			attr_dev(label0, "for", "service important-form");
     			add_location(label0, file$b, 207, 6, 5118);
     			attr_dev(input0, "type", "text");
-    			attr_dev(input0, "placeholder", "Nama Barang..");
+    			attr_dev(input0, "placeholder", "Masukkan Nama Barang");
     			input0.required = "true";
     			attr_dev(input0, "class", "form-control");
     			attr_dev(input0, "id", "service");
@@ -11927,13 +11932,13 @@ var app = (function () {
     			attr_dev(div0, "class", "form-group col-md-12 ml-1 mr-1");
     			add_location(div0, file$b, 206, 5, 5067);
     			attr_dev(label1, "for", "service important-form");
-    			add_location(label1, file$b, 213, 6, 5410);
+    			add_location(label1, file$b, 213, 6, 5417);
     			attr_dev(input1, "type", "number");
     			input1.required = "true";
     			attr_dev(input1, "class", "form-control");
     			attr_dev(input1, "id", "service");
-    			attr_dev(input1, "placeholder", "Harga...");
-    			add_location(input1, file$b, 214, 6, 5471);
+    			attr_dev(input1, "placeholder", "Masukkan Harga");
+    			add_location(input1, file$b, 214, 6, 5478);
     			attr_dev(input2, "type", "text");
     			set_style(input2, "margin-top", "10px");
     			input2.disabled = "true";
@@ -11941,71 +11946,71 @@ var app = (function () {
     			attr_dev(input2, "class", "form-control");
     			attr_dev(input2, "id", "service");
     			attr_dev(input2, "placeholder", "Rp. 0");
-    			add_location(input2, file$b, 215, 6, 5612);
+    			add_location(input2, file$b, 215, 6, 5625);
     			attr_dev(div1, "class", "form-group col-md-12 ml-1 mr-1");
-    			add_location(div1, file$b, 212, 5, 5359);
+    			add_location(div1, file$b, 212, 5, 5366);
     			attr_dev(label2, "for", "service important-form");
-    			add_location(label2, file$b, 220, 6, 5876);
+    			add_location(label2, file$b, 220, 6, 5889);
     			attr_dev(input3, "type", "number");
-    			attr_dev(input3, "placeholder", "Jumlah Item...");
+    			attr_dev(input3, "placeholder", "Masukkan Jumlah Barang");
     			input3.required = "true";
     			attr_dev(input3, "class", "form-control");
     			attr_dev(input3, "id", "service");
-    			add_location(input3, file$b, 221, 6, 5938);
+    			add_location(input3, file$b, 221, 6, 5951);
     			attr_dev(div2, "class", "form-group col-md-12 ml-1 mr-1");
-    			add_location(div2, file$b, 219, 5, 5825);
+    			add_location(div2, file$b, 219, 5, 5838);
     			attr_dev(button0, "type", "submit");
     			attr_dev(button0, "class", "btn btn-primary");
-    			add_location(button0, file$b, 225, 12, 6133);
+    			add_location(button0, file$b, 225, 12, 6154);
     			attr_dev(div3, "class", "card-footer");
-    			add_location(div3, file$b, 224, 5, 6095);
+    			add_location(div3, file$b, 224, 5, 6116);
     			attr_dev(form, "class", "mt-3");
     			add_location(form, file$b, 201, 4, 4824);
     			attr_dev(div4, "class", "card card-primary card-outline");
     			add_location(div4, file$b, 199, 3, 4774);
     			attr_dev(div5, "class", "col-lg-5");
     			add_location(div5, file$b, 197, 2, 4747);
-    			add_location(th0, file$b, 244, 6, 6462);
-    			add_location(th1, file$b, 245, 6, 6489);
-    			add_location(th2, file$b, 246, 6, 6517);
-    			add_location(th3, file$b, 247, 6, 6536);
-    			add_location(th4, file$b, 248, 6, 6557);
-    			add_location(thead, file$b, 243, 5, 6448);
-    			add_location(tbody, file$b, 251, 5, 6591);
+    			add_location(th0, file$b, 244, 6, 6483);
+    			add_location(th1, file$b, 245, 6, 6510);
+    			add_location(th2, file$b, 246, 6, 6538);
+    			add_location(th3, file$b, 247, 6, 6557);
+    			add_location(th4, file$b, 248, 6, 6578);
+    			add_location(thead, file$b, 243, 5, 6469);
+    			add_location(tbody, file$b, 251, 5, 6612);
     			attr_dev(table, "class", "table");
-    			add_location(table, file$b, 241, 4, 6420);
+    			add_location(table, file$b, 241, 4, 6441);
     			attr_dev(div6, "class", "card card-primary card-outline");
     			set_style(div6, "height", "300px");
     			set_style(div6, "overflow-y", "scroll");
-    			add_location(div6, file$b, 239, 3, 6324);
+    			add_location(div6, file$b, 239, 3, 6345);
     			set_style(p0, "font-weight", "bold");
     			set_style(p0, "margin-bottom", "0px");
     			set_style(p0, "margin-top", "10px");
-    			add_location(p0, file$b, 278, 7, 7545);
+    			add_location(p0, file$b, 278, 7, 7566);
     			set_style(p1, "font-family", "bold");
     			set_style(p1, "font-family", "'Lato'");
     			set_style(p1, "font-size", "18px");
     			set_style(p1, "margin-top", "0px");
-    			add_location(p1, file$b, 279, 7, 7628);
+    			add_location(p1, file$b, 279, 7, 7649);
     			attr_dev(div7, "class", "ml-4");
-    			add_location(div7, file$b, 277, 6, 7519);
+    			add_location(div7, file$b, 277, 6, 7540);
     			attr_dev(div8, "class", "col-lg-4");
-    			add_location(div8, file$b, 276, 5, 7490);
+    			add_location(div8, file$b, 276, 5, 7511);
     			attr_dev(button1, "class", "col btn btn-primary");
-    			add_location(button1, file$b, 283, 6, 7858);
+    			add_location(button1, file$b, 283, 6, 7879);
     			attr_dev(button2, "class", "col btn btn-outline-success");
-    			add_location(button2, file$b, 284, 6, 7962);
+    			add_location(button2, file$b, 284, 6, 7983);
     			attr_dev(button3, "class", "col btn btn-outline-danger");
-    			add_location(button3, file$b, 285, 6, 8067);
+    			add_location(button3, file$b, 285, 6, 8088);
     			attr_dev(div9, "class", "col-lg-8 row mt-4");
     			set_style(div9, "height", "20px");
-    			add_location(div9, file$b, 282, 5, 7798);
+    			add_location(div9, file$b, 282, 5, 7819);
     			attr_dev(div10, "class", "row");
-    			add_location(div10, file$b, 275, 4, 7467);
+    			add_location(div10, file$b, 275, 4, 7488);
     			attr_dev(div11, "class", "card card-primary card-outline");
-    			add_location(div11, file$b, 274, 3, 7418);
+    			add_location(div11, file$b, 274, 3, 7439);
     			attr_dev(div12, "class", "col-lg-7");
-    			add_location(div12, file$b, 237, 2, 6293);
+    			add_location(div12, file$b, 237, 2, 6314);
     			attr_dev(div13, "class", "row");
     			add_location(div13, file$b, 194, 1, 4697);
     			attr_dev(div14, "class", "container mt-5 svelte-16r2jnj");
@@ -12539,25 +12544,25 @@ var app = (function () {
     			li1.textContent = "Pembelian Produk Kecantikan";
     			t3 = space();
     			create_component(tableviewer.$$.fragment);
-    			add_location(h1, file$c, 44, 10, 1255);
+    			add_location(h1, file$c, 44, 10, 1254);
     			attr_dev(div0, "class", "col-sm-6");
-    			add_location(div0, file$c, 43, 8, 1222);
+    			add_location(div0, file$c, 43, 8, 1221);
     			attr_dev(li0, "class", "breadcrumb-item");
-    			add_location(li0, file$c, 48, 12, 1372);
+    			add_location(li0, file$c, 48, 12, 1371);
     			attr_dev(li1, "class", "breadcrumb-item active");
-    			add_location(li1, file$c, 49, 12, 1457);
+    			add_location(li1, file$c, 49, 12, 1456);
     			attr_dev(ol, "class", "breadcrumb float-sm-right");
-    			add_location(ol, file$c, 47, 10, 1321);
+    			add_location(ol, file$c, 47, 10, 1320);
     			attr_dev(div1, "class", "col-sm-6");
-    			add_location(div1, file$c, 46, 8, 1288);
+    			add_location(div1, file$c, 46, 8, 1287);
     			attr_dev(div2, "class", "row mb-2");
-    			add_location(div2, file$c, 42, 6, 1191);
+    			add_location(div2, file$c, 42, 6, 1190);
     			attr_dev(div3, "class", "container-fluid");
-    			add_location(div3, file$c, 41, 4, 1155);
+    			add_location(div3, file$c, 41, 4, 1154);
     			attr_dev(section, "class", "content-header");
-    			add_location(section, file$c, 40, 2, 1118);
+    			add_location(section, file$c, 40, 2, 1117);
     			attr_dev(div4, "class", "container");
-    			add_location(div4, file$c, 38, 0, 1052);
+    			add_location(div4, file$c, 38, 0, 1051);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12625,7 +12630,7 @@ var app = (function () {
     		name: "beli-produkkecantikan",
     		title: "Pembelian Produk Kecantikan",
     		sub_title: "Kelola pembelian produk",
-    		icon: "fa fa-users",
+    		icon: "fas fa-spa",
     		search_selector: 1,
     		button: {
     			text: "Pembelian Baru",
@@ -12774,25 +12779,25 @@ var app = (function () {
     			li1.textContent = "Pembelian Produk Inventaris";
     			t3 = space();
     			create_component(tableviewer.$$.fragment);
-    			add_location(h1, file$d, 44, 10, 1241);
+    			add_location(h1, file$d, 44, 10, 1242);
     			attr_dev(div0, "class", "col-sm-6");
-    			add_location(div0, file$d, 43, 8, 1208);
+    			add_location(div0, file$d, 43, 8, 1209);
     			attr_dev(li0, "class", "breadcrumb-item");
-    			add_location(li0, file$d, 48, 12, 1358);
+    			add_location(li0, file$d, 48, 12, 1359);
     			attr_dev(li1, "class", "breadcrumb-item active");
-    			add_location(li1, file$d, 49, 12, 1443);
+    			add_location(li1, file$d, 49, 12, 1444);
     			attr_dev(ol, "class", "breadcrumb float-sm-right");
-    			add_location(ol, file$d, 47, 10, 1307);
+    			add_location(ol, file$d, 47, 10, 1308);
     			attr_dev(div1, "class", "col-sm-6");
-    			add_location(div1, file$d, 46, 8, 1274);
+    			add_location(div1, file$d, 46, 8, 1275);
     			attr_dev(div2, "class", "row mb-2");
-    			add_location(div2, file$d, 42, 6, 1177);
+    			add_location(div2, file$d, 42, 6, 1178);
     			attr_dev(div3, "class", "container-fluid");
-    			add_location(div3, file$d, 41, 4, 1141);
+    			add_location(div3, file$d, 41, 4, 1142);
     			attr_dev(section, "class", "content-header");
-    			add_location(section, file$d, 40, 2, 1104);
+    			add_location(section, file$d, 40, 2, 1105);
     			attr_dev(div4, "class", "container");
-    			add_location(div4, file$d, 38, 0, 1038);
+    			add_location(div4, file$d, 38, 0, 1039);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12858,9 +12863,9 @@ var app = (function () {
 
     	let controller = {
     		name: "beli-inventaris",
-    		title: "Pembelian Produk Iventaris",
+    		title: "Pembelian Produk Inventaris",
     		sub_title: "Kelola pembelian Inventaris",
-    		icon: "fa fa-users",
+    		icon: "fa fa-cubes",
     		search_selector: 1,
     		button: {
     			text: "Pembelian Baru",

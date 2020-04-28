@@ -206,20 +206,20 @@ function checkoutToApi(statusChooser){
 					<!-- input name -->
 					<div class="form-group col-md-12 ml-1 mr-1">
 						<label for="service important-form">Nama Item</label>
-						<input bind:value="{input_data.product_name}" type="text" placeholder="Nama Barang.." required="true" class="form-control" id="service">
+						<input bind:value="{input_data.product_name}" type="text" placeholder="Masukkan Nama Barang" required="true" class="form-control" id="service">
 					</div>
 
 					<!-- input harga -->
 					<div class="form-group col-md-12 ml-1 mr-1">
 						<label for="service important-form">Harga Item</label>
-						<input bind:value="{input_data.product_price}" type="number" required="true" class="form-control" id="service" placeholder="Harga...">
+						<input bind:value="{input_data.product_price}" type="number" required="true" class="form-control" id="service" placeholder="Masukkan Harga">
 						<input type="text" style="margin-top: 10px;" disabled="true" value={formatRupiah((input_data.product_price),"Rp")} class="form-control" id="service" placeholder="Rp. 0">
 					</div>
 
 					<!-- input item -->
 					<div class="form-group col-md-12 ml-1 mr-1">
 						<label for="service important-form">Jumlah Item</label>
-						<input type="number" placeholder="Jumlah Item..." bind:value="{input_data.product_qty}" required="true" class="form-control" id="service">
+						<input type="number" placeholder="Masukkan Jumlah Barang" bind:value="{input_data.product_qty}" required="true" class="form-control" id="service">
 					</div>
 
 					<div class="card-footer">

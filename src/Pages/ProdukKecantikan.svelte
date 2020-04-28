@@ -8,7 +8,7 @@
       name      : "produkkecantikan",
       title     : "Daftar Produk Kecantikan",
       sub_title : "Kelola produk kecantikan disini",
-      icon      : "fa fa-cubes",
+      icon      : "fas fa-spa",
       search_selector : 1,
       button : {
         text : "Tambah Produk Kecantikan",

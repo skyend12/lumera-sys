@@ -8,7 +8,7 @@
       name : "beli-produkkecantikan",
       title : "Pembelian Produk Kecantikan",
       sub_title : "Kelola pembelian produk",
-      icon      : "fa fa-users",
+      icon      : "fas fa-spa",
       search_selector : 1,
       button : {
         text : "Pembelian Baru",

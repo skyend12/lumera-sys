@@ -56,7 +56,7 @@
         required : true,
         text : "",
         type : "select_box",
-        option : ["Administrator", "Kasir"]
+        option : ["Administrator", "Kasir", "Clinician", "Stylist", "Hair Washer"]
       },
       {
         label : "Status",

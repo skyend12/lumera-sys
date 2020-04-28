@@ -28,7 +28,7 @@
         },
         {
           nav_body : "Produk Kecantikan",
-          nav_icon : "fa fa-cube",
+          nav_icon : "fas fa-spa",
           nav_to   : "produkkecantikan"
         },
         {
@@ -55,7 +55,7 @@
         },
         {
           nav_body : "Inventaris",
-          nav_icon : "far fa-circle",
+          nav_icon : "fa fa-cubes",
           nav_to   : "beli-inventaris"
         },
       ]
@@ -67,11 +67,16 @@
       nav_child : [
         {
           nav_body : "Produk Kecantikan",
-          nav_icon : "far fa-circle",
+          nav_icon : "fas fa-spa",
           nav_to   : "produkkecantikan"
         },
         {
-          nav_body : "Jasa",
+          nav_body : "Klinik",
+          nav_icon : "far fa-circle",
+          nav_to   : "jasa"
+        },
+        {
+          nav_body : "Salon",
           nav_icon : "far fa-circle",
           nav_to   : "jasa"
         },

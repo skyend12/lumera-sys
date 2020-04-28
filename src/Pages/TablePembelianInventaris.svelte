@@ -6,9 +6,9 @@
  
   let controller = {
       name : "beli-inventaris",
-      title : "Pembelian Produk Iventaris",
+      title : "Pembelian Produk Inventaris",
       sub_title : "Kelola pembelian Inventaris",
-      icon      : "fa fa-users",
+      icon      : "fa fa-cubes",
       search_selector : 1,
       button : {
         text : "Pembelian Baru",

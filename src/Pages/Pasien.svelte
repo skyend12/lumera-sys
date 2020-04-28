@@ -8,7 +8,7 @@
       name : "pasien",
       title : "Daftar Pasien",
       sub_title : "Kelola pasien disini",
-      icon      : "fa fa-users",
+      icon      : "fa fa-address-book",
       search_selector : 1,
       button : {
         text : "Tambah Pasien",
