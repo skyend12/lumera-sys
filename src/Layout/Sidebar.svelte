@@ -66,9 +66,9 @@
       nav_icon  : "fas fa-cash-register",
       nav_child : [
         {
-          nav_body : "Produk Kecantikan",
+          nav_body : "Kasir",
           nav_icon : "fas fa-spa",
-          nav_to   : "produkkecantikan"
+          nav_to   : "kasir"
         },
         {
           nav_body : "Klinik",

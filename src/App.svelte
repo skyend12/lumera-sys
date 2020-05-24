@@ -16,6 +16,7 @@
 	import PembelianInventaris from './Pages/PembelianInventaris.svelte';
 	import TabelPembelianProdukKecantikan from './Pages/TablePembelianProdukKecantikan.svelte'
 	import TabelPembelianInventaris from './Pages/TablePembelianInventaris.svelte'
+	import Kasir from './Pages/Kasir.svelte'
 	import { Router, Link, Route } from "svelte-routing";
 
 	let containerMarginVisibletoSidebar = 250;
@@ -82,6 +83,11 @@
 		<Route path="/beli-inventaris" component="{TabelPembelianInventaris}"/>
 		<Route path="/beli-inventaris/:id" let:params>
 		  <PembelianInventaris id="{params.id}" />
+		</Route>
+		
+		<Route path="/kasir" component="{Kasir}"/>
+		<Route path="/kasir/:id" let:params>
+		  <Kasir id="{params.id}" />
 		</Route>
 
     </div>
