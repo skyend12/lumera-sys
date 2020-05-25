@@ -20,7 +20,7 @@
 	import { Router, Link, Route } from "svelte-routing";
 
 	let containerMarginVisibletoSidebar = 250;
-
+	
 	function handleMessage(event) {
 		containerMarginVisibletoSidebar = event.detail.text;
 	}
