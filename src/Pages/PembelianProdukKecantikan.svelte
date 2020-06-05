@@ -11,11 +11,13 @@
 	let cart      = [];
 	let data_bind = [];
 	let searchBox = "";
+	
 	let bill = {
 		sub_total : 0,
 		taxes : 0,
 		total : 0
 	}
+
 	let purchaseDetail = {
   		purchase_id : '102',
   		purchase_total : 0,
@@ -105,7 +107,8 @@
 
 		fetch("http://127.0.0.1/lumeraAPI/master_data/getAllProduct.php", {
 		    method : 'GET'
-		}).then(res => res.json())
+		})
+		.then(res => res.json())
 		.then(data => {
 		  	data_raw = data;
 		  	data_bind = data;

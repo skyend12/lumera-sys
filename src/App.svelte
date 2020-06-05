@@ -17,6 +17,8 @@
 	import TabelPembelianProdukKecantikan from './Pages/TablePembelianProdukKecantikan.svelte'
 	import TabelPembelianInventaris from './Pages/TablePembelianInventaris.svelte'
 	import Kasir from './Pages/Kasir.svelte'
+
+	import Modal from './Component/Modal.svelte'
 	import { Router, Link, Route } from "svelte-routing";
 
 	let containerMarginVisibletoSidebar = 250;
@@ -39,13 +41,15 @@
 	}
 
 </style>
-	
+
 <Router>
+
+	<!-- sidebar -->
 	<Sidebar on:message={handleMessage}/>
 
+	<!-- main content -->
   	<div class="content-wrapper" style="margin-left: {containerMarginVisibletoSidebar}px">
   		<Route path="dashboard" component="{Dashboard}" />
-    	
     	
     	<!-- layanan -->
     	<Route path="/layanan" component="{Layanan}" />

@@ -1,6 +1,11 @@
 <script>
 
 	import {onMount} from 'svelte'
+	import Modal from '../Component/Modal.svelte'
+	import {formatRupiah} from '../Functions/CurrencyFormatting.svelte'
+	import {HttpExecutor} from '../Functions/HttpModule.svelte'
+	import Cart from '../Component/Cart.svelte'
+
 	let data_bind = [];
 
 	/*
@@ -13,41 +18,27 @@
 	let topNav = [
 		{
 			nav_id    : "1",  
-			nav_data  : "Produk Kecantikan",
+			nav_data  : "Layanan Kecantikan",
 			nav_class : "active"
 		},
 		{
 			nav_id    : "2", 
-			nav_data  : "Layanan Kecantikan",
+			nav_data  : "Produk Kecantikan",
 			nav_class : ""
 		}
 	];
 
 	onMount(async() => {
-		getProduct("getAllProduct.php");
+		HttpExecutor("http://127.0.0.1/lumeraAPI/master_data/getAllSaloonServices.php", "GET")
+			.then(data => {
+				data_bind = data;
+		  		console.log(data_bind);
+		    	console.log(data_bind[1][1].data);
+			})
+			.catch(err => {
+
+			});
 	});
-
-	function formatRupiah(angka, prefix){
-
-		if(angka != undefined){
-			angka = angka.toString();
-		    var number_string = angka.replace(/[^,\d]/g, '').toString();
-		    var split         = number_string.split(',');
-		    var sisa          = split[0].length % 3;
-		    var rupiah        = split[0].substr(0, sisa);
-		    var ribuan        = split[0].substr(sisa).match(/\d{3}/gi);
-
-		    var separator;
-		    // tambahkan titik jika yang di input sudah menjadi angka ribuan
-		    if(ribuan){
-		      separator = sisa ? '.' : '';
-		      rupiah += separator + ribuan.join('.');
-		     }
-		 
-		    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-		    return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
-		}
-		return "Rp. 0"}
 
 	function changeNav(nav){
 		for(var i=0; i < topNav.length;i++){
@@ -55,11 +46,27 @@
 				topNav[i].nav_class = "active";
 
 				if(topNav[i].nav_id == "1"){
-					getProduct("getAllProduct.php");
+					HttpExecutor("http://127.0.0.1/lumeraAPI/master_data/getAllSaloonServices.php", "GET")
+						.then(data => {
+							data_bind = data;
+					  		console.log(data_bind);
+					    	console.log(data_bind[1][1].data);
+						})
+						.catch(err => {
+
+						});
 				}
 
 				else if(topNav[i].nav_id == "2"){
-					getProduct("getAllServices.php");
+					HttpExecutor("http://127.0.0.1/lumeraAPI/master_data/getAllSaloonServices.php", "GET")
+						.then(data => {
+							data_bind = data;
+					  		console.log(data_bind);
+					    	console.log(data_bind[1][1].data);
+						})
+						.catch(err => {
+
+						});
 				}
 
 			}
@@ -67,21 +74,6 @@
 				topNav[i].nav_class = "";	
 			}
 		}
-	}
-
-	function getProduct(api){
-		fetch("http://127.0.0.1/lumeraAPI/master_data/" + api, {
-		    method : 'GET'
-		})
-		.then(res => res.json())
-		.then(data => {
-		  	data_bind = data;
-		  	console.log(data_bind);
-		    console.log(data_bind[1][1].data);
-		})
-		.catch(err => {
-		           
-		})
 	}
 
 </script>
@@ -128,6 +120,8 @@
 
 </style>
 
+<Modal/>
+
 <div class="container mt-5">
 
 	<span class="badge badge-pill badge-primary mb-2">ID TRANSAKSI #{transactionDetail.id}</span>
@@ -155,20 +149,22 @@
 
 			<div class="row mt-4">
 				{#each data_bind as product, i}
-					<div class="col-lg-4"> 
-						<div class="card p-3">
-							<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
-							<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
-							<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
+					{#if product[2].data != "Klinik"}
+						<div class="col-lg-4"> 
+							<div class="card p-3">
+								<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
+								<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
+								<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
+							</div>
 						</div>
-					</div>
+					{/if}
 				{/each}
 			</div>
 
 		</div>
 
 		<div class="col-lg-4">
-			
+			<Cart/>
 		</div>
 
 	</div>
