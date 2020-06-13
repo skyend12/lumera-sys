@@ -4,9 +4,11 @@
 	import Modal from '../Component/Modal.svelte'
 	import {formatRupiah} from '../Functions/CurrencyFormatting.svelte'
 	import {HttpExecutor} from '../Functions/HttpModule.svelte'
+	import {noScroll, enableScroll} from '../Functions/LayoutControl.svelte'
 	import Cart from '../Component/Cart.svelte'
 
 	let data_bind = [];
+	let modal_state = false;
 
 	/*
 	Transaction detail variable and element
@@ -27,18 +29,26 @@
 			nav_class : ""
 		}
 	];
-
+	
 	onMount(async() => {
 		HttpExecutor("http://127.0.0.1/lumeraAPI/master_data/getAllSaloonServices.php", "GET")
 			.then(data => {
 				data_bind = data;
 		  		console.log(data_bind);
-		    	console.log(data_bind[1][1].data);
 			})
 			.catch(err => {
-
+				alert("Gagal mengambil data dari server");
 			});
+
 	});
+
+	function openModal(data){
+		modal_state = data;
+	}
+
+	function closeModal(event){
+		modal_state = false;
+	}
 
 	function changeNav(nav){
 		for(var i=0; i < topNav.length;i++){
@@ -120,10 +130,10 @@
 
 </style>
 
-<Modal/>
+<Modal modal_state={modal_state} on:modal_control={closeModal}/>
 
 <div class="container mt-5">
-
+	
 	<span class="badge badge-pill badge-primary mb-2">ID TRANSAKSI #{transactionDetail.id}</span>
 	<span class="badge badge-pill badge-success">TRANSAKSI BARU</span>
 
@@ -154,7 +164,7 @@
 							<div class="card p-3">
 								<p class="mb-1" style="font-size:1.0rem">{product[1].data}</p>
 								<p class="mb-2" style="font-weight: bold;font-size:0.8rem">{formatRupiah(product[2].data, "Rp. ")}/pcs</p>
-								<button class="btn btn-success btn-sm" on:click={()=>addToCart(i)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
+								<button class="btn btn-success btn-sm" on:click={()=>openModal(product[0].data)}><i class="fa fa-plus p-2 bg-success "></i>TAMBAHKAN</button>
 							</div>
 						</div>
 					{/if}
